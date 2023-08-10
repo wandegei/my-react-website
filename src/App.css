@@ -1,38 +1,386 @@
+/* Default styles for all screens */
 .App {
+  text-align: center;
+  padding: 0px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.blog-title {
+  margin-left: 10px;
+  color: rgba(117, 117, 117, 1);
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+.button {
+  background-color: rgba(246, 143, 30, 1);
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+main {
+  margin-top: -20px;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+/* header mobile resposivenees */
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo-container,
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-title {
+    margin: 10px 0;
+  }
+
+  nav ul li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    padding: 10px 30px;
+    display: block;
+  }
+}
+/*  END header mobile resposivenees */
+/*   START OF Main image and Content-container */
+.main-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text-image-container {
+  background-color: rgba(0, 162, 173, 1); /* Gray background color for text and image */
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  margin-left: -20px; /* Counteract the padding on the left */
+  margin-right: -20px; /* Counteract the padding on the right */
+}
+
+.text-container {
+  flex: 1; /* Expand to take available space */
+  text-align: left;
+}
+
+.image-container {
+  flex: 1; /* Expand to take available space */
+  display: flex;
+  justify-content: flex-end; /* Push image to the right */
   align-items: center;
+}
+
+.main-heading{
+  font-family: Suisse Works;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+
+}
+.main-paragraph{
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fff;
+
+}
+@media screen and (max-width: 768px) {
+  .text-image-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .text-container {
+    margin-bottom: 10px;
+  }
+
+  .text-image-container {
+    flex-direction: column;
+  }
+
+  .main-image {
+    margin-top: 20px;
+  }
+}
+/*   END OF Main image and Content-container */
+
+
+/* Start of navigation scroll lists */
+.general {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+ 
+}
+
+.headers {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  padding-left: 60px;
+  margin: 0;
+}
+
+.headers li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.headers li:first-child {
+  margin-left: 0;
+}
+
+.all-button button {
+  border-radius: 100px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 20px;
+  background-color: rgba(246, 143, 30, 1);
+  line-height: 28px;
+  padding: 5px 38px;
+}
+
+.headers a {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  text-decoration: none;
+  
+}
+
+.search-button button {
+  display: flex;
+  align-items: center;
+  background-color: #eeeeee;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Roboto';
+  font-style: normal;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.search-button .search-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* Add other styles as needed */
+}
+/* End of navigation scroll lists */
+
+
+
+/* styles.css */
+.container {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px; /* Adjust as needed */
+}
+
+.col-sm-4 {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust as needed */
+  margin: 10px; /* Adjust as needed */
+  background-color: rgba(246, 143, 30, 1);
+  padding: 20px;
   color: white;
+  border-radius: 5px;
+}
+.col-heading {
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.col-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 243, 243);
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0;
+  text-align: center;
+  width: 272px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 160px auto 30px; /* Adjust the margin-top value as needed */
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.col-button:hover {
+  background-color: rgb(224, 224, 224);
+  cursor: pointer;
 }
+
+
+
+
+.col-image {
+  width: 100%;
+  height: auto;
+}
+.content {
+  padding: 20px;
+}
+
+.date {
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 0px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.author-name {
+  margin: 0;
+  margin-left: 10px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.author-image {
+  
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.title {
+  max-width: 100%; /* Set maximum width to cover available space */
+  font-weight: 700;
+  margin-top: 20px; /* Adjusted margin for spacing */
+  font-family: Roboto;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+
+
+
+
+
+
+
+

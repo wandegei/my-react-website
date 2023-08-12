@@ -4,7 +4,7 @@ import './App.css'; // Import the external CSS file
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       {/* Logo and Blog on the left side */}
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" />

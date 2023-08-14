@@ -17,7 +17,7 @@ const Header = () => {
           <li>Home</li>
           <li>ContactUs</li>
         </ul>
-        <button className="button">Button</button>
+        <button className="button">Our Services</button>
       </nav>
     </header>
   );

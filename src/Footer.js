@@ -5,7 +5,7 @@ import sampleImage from './sampleImage.png';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main footer */}
       <div className="footer-columns">
         
       <div class="footer-column">
@@ -29,9 +29,7 @@ const Footer = () => {
             <div className="link-item">
               <a href="#Core">Our Core Values</a>
             </div>
-            <div className="link-item">
-              <a href="#Our">Our Achievements</a>
-            </div>
+           
           </div>
         </div>
         <div className="footer-column">

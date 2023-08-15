@@ -7,7 +7,7 @@ const Header = () => {
     <header className="header">
       {/* Logo and Blog on the left side */}
       <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo" style={{width: '163px'}} />
         <span className="blog-title">Blog</span>
       </div>
 
@@ -17,7 +17,7 @@ const Header = () => {
           <li>Home</li>
           <li>ContactUs</li>
         </ul>
-        <button className="button">Our Services</button>
+        <button className="button" style={{width: '140px'}}>Our Services</button>
       </nav>
     </header>
   );

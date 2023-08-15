@@ -16,18 +16,10 @@
   padding: 20px 30px;
   background-color: white;
   color: #333;
-  z-index: 1000; /* Adjust z-index as needed */
-  box-shadow: 0px  1px 3px rgba(0, 0, 0, 0.3); /* Add shadow color */
+  z-index: 1000;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.nav-list{
-  color: #000;
-  font-family: Roboto;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
 .logo-container {
   display: flex;
   align-items: center;
@@ -42,7 +34,6 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 35px;
-  letter-spacing: 0em;
   text-align: left;
 }
 
@@ -54,9 +45,7 @@ nav {
   font-size: 20px;
   font-weight: 500;
   line-height: 23px;
-  letter-spacing: 0em;
   text-align: left;
-
 }
 
 nav ul {
@@ -73,22 +62,21 @@ nav ul li {
 }
 
 .button {
-  color: #FFF;
-font-family: Roboto;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-border-radius: 5px;
-background: #F68F1E;
-width: 239px;
-height: 46px;
-flex-shrink: 0;
-border: none; 
-box-shadow: none;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 5px;
+  background: #f68f1e;
+  width: 160px; /* Reduce button width for small screens */
+  height: 46px;
+  flex-shrink: 0;
+  border: none;
+  box-shadow: none;
 }
 
-/* Media query for small screens */
+/* Media queries */
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -109,12 +97,41 @@ box-shadow: none;
     margin: 0;
     margin-bottom: 10px;
   }
-
   .button {
-    padding: 10px 30px;
+    padding: 5px 10px;
+    width: 100px;
     display: block;
+    text-align: center; /* Center the button text */
+    font-size: 16px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .logo-container {
+    padding-left: 20px;
+  }
+
+  nav {
+    padding-right: 20px;
+  }
+}
+
+/* Additional media query for larger screens */
+@media screen and (min-width: 1200px) {
+  /* .header {
+    padding: 30px 50px;
+  } */
+
+  .logo-container,
+  nav {
+    flex-direction: row;
+  }
+
+  .nav-list {
+    margin-left: auto;
+  }
+}
+
 
 /*  END header mobile resposivenees */
 /*   START OF Main image and Content-container */
@@ -210,7 +227,6 @@ main {
   padding: 10px;
   background-color: white;
   position: relative;
- 
 }
 
 .headers {
@@ -234,34 +250,18 @@ main {
 
 .all-button button {
   display: inline-flex;
-  padding: 5px 38px;
-  align-items: flex-start;
+  padding: 5px 28px; /* Adjust padding for smaller screens */
+  align-items: center;
   gap: 10px;
-  border: none; 
-  box-shadow: none; 
+  border: none;
   border-radius: 100px;
-  background: #F68F1E;
-  color: #FFF;
+  background: #f68f1e;
+  color: #fff;
   font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 18px; /* Slightly reduce font size for smaller screens */
   font-weight: 700;
   line-height: normal;
 }
-
-
-
-button, select {
-  text-transform: none;
-}
-
-button, input, optgroup, select, textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
 
 .headers a {
   display: block;
@@ -272,56 +272,57 @@ button, input, optgroup, select, textarea {
   font-weight: 540;
   color: #333333;
   text-decoration: none;
-  
 }
 
 .search-button button {
-  height: 46px;
+  height: 40px; /* Slightly reduce height for smaller screens */
   flex-shrink: 0;
   border-radius: 5px;
-  background: #EEE;
+  background: #eee;
   color: #000;
   font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 18px; /* Slightly reduce font size for smaller screens */
   font-weight: 300;
   line-height: normal;
   border: none;
   box-shadow: none;
   display: flex;
-  align-items: center; /* Vertically aligns icon and text */
-  padding: 0 30px; /* Adds space on left and right sides */
-  width: 200px;
+  align-items: center;
+  padding: 0 16px; /* Adjust padding for smaller screens */
+  width: 150px;
   margin-left: 10px;
 }
 
 .Icon-but {
-  width: 24px;
-  height: 24px;
+  width: 20px; /* Reduce icon size for smaller screens */
+  height: 20px; /* Reduce icon size for smaller screens */
   flex-shrink: 0;
-  margin-right: 10px; /* Adds space between icon and text */
+  margin-right: 8px; /* Adjust margin for smaller screens */
 }
 
 .search-button button svg {
   flex-shrink: 0;
-  margin-right: 10px; /* Adds space between icon and text */
+  margin-right: 8px; /* Adjust margin for smaller screens */
 }
 
 .search-button button span {
-  flex-grow: 1; /* Expands text to fill available space */
+  flex-grow: 1;
 }
-
 
 .fixed-nav {
   position: fixed;
-  top: 90px;
+  top: 80px; /* Adjust top position for smaller screens */
   width: 100%;
-  /* Add other styles as needed */
 }
+
+/* Media queries */
+
+
+
 /* End of navigation scroll lists */
 
 
-
+/* START OF COLUMNS */
 /* styles.css */
 .container {
   padding: 20px;
@@ -343,7 +344,7 @@ button, input, optgroup, select, textarea {
   border-radius: 5px;
 } */
 .col-heading {
-  width: 361px;
+  /* width: 361px; */
   color: #FFFDFD;
 text-align: center;
 font-family: Roboto;
@@ -366,7 +367,7 @@ margin-bottom: -30px;
   line-height: 1.17;
   letter-spacing: 0;
   text-align: center;
-  width: 272px;
+  /* width: 272px; */
   height: 60px;
   border-radius: 5px;
   margin: 160px auto 30px; /* Adjust the margin-top value as needed */
@@ -453,6 +454,38 @@ border-radius: 30px;
   text-align: left;
   margin-top: 70px;
 }
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .col-heading {
+    font-size: 24px; /* Further reduce font size for small screens */
+    margin-top: 20px; /* Further adjust margin for small screens */
+    margin-bottom: -5px; /* Further adjust margin for small screens */
+  }
+
+  .col-button {
+    font-size: 18px; /* Further reduce font size for small screens */
+    height: 35px; /* Further reduce height for small screens */
+    margin: 30px auto 5px; /* Further adjust margin for small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col-heading {
+    font-size: 20px; /* Further reduce font size for extra small screens */
+    margin-top: 15px; /* Further adjust margin for extra small screens */
+    margin-bottom: -3px; /* Further adjust margin for extra small screens */
+  }
+
+  .col-button {
+    font-size: 16px; /* Further reduce font size for extra small screens */
+    height: 30px; /* Further reduce height for extra small screens */
+    margin: 25px auto 3px; /* Further adjust margin for extra small screens */
+  }
+}
+
+/* END OF BUTTON */
 
 /* START OF THE FOOTER */
 
@@ -643,33 +676,7 @@ border-radius: 30px;
   }
 }
 
-/* Styles for large screens */
-@media screen and (min-width: 1024px) {
-  .footer-columns {
-    justify-content: space-between; /* Restore original alignment */
-  }
 
-  .footer-column {
-    min-width: auto; /* Remove minimum width for larger screens */
-  }
-
-  .social-icons {
-    padding-left: 120px; /* Restore original padding */
-  }
-
-  .footer-links {
-    justify-content: flex-start; /* Align links to the left */
-  }
-
-  .footer-copyright {
-    padding-left: 90px; 
-  }
-  
-
-  .footer-bottom {
-    padding-left: 90px; /* Restore original padding */
-  }
-}
 /* END OF THE FOOTER */
 /*  START OF subscribe-area */
 /* Common styles for all screen sizes */

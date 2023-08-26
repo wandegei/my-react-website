@@ -2,149 +2,223 @@
 .App {
   background-color: aliceblue;
   padding: 0px;
-  overflow: hidden;
+  overflow-x: hidden; 
 }
 
+/* Complete CSS with added styles */
+
+/* Complete CSS with responsive styles */
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 30px;
-  background-color: white;
+  padding: 1rem 5%;
+  background-color: #fff;
   color: #333;
   z-index: 1000;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  padding-left: 80px;
   cursor: pointer;
 }
 
-.blog-title {
-  margin-left: 10px;
-  color: rgba(117, 117, 117, 1);
-  font-family: Roboto;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 35px;
-  text-align: left;
-}
-
-nav {
+.logo-content {
   display: flex;
   align-items: center;
-  padding-right: 90px;
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 23px;
-  text-align: left;
 }
 
-nav ul {
+.blog-title {
+  margin-top: 0.5rem;
+  color: rgba(117, 117, 117, 1);
+  font-family: Roboto;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
-nav ul li {
-  margin-right: 20px;
+.menu-item {
+  margin-right: 1rem;
   cursor: pointer;
 }
 
-.button {
+.butt {
   color: #fff;
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: normal;
   border-radius: 5px;
   background: #f68f1e;
-  width: 160px; /* Reduce button width for small screens */
-  height: 46px;
+  width: 120px;
+  height: 36px;
   flex-shrink: 0;
   border: none;
   box-shadow: none;
 }
 
-/* Media queries */
-@media screen and (max-width: 768px) {
+/* Updated styles for menu icon and close icon */
+.menu-toggle {
+  cursor: pointer;
+}
+
+.icon {
+  display: none; /* Hide the menu icon by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icon-open .bar {
+  background-color: #f68f1e;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.close-icon-content {
+  color: #f68f1e;
+  font-size: 1.5rem;
+  
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .header .blog-title {
+    display: none;
+  }
+  .logo-content.logo{
+    margin-top: 20px;
+  }
+
   .header {
+    background-color: white; /* Add background color to cover the entire page */
+  }
+
+  .menu-item {
     flex-direction: column;
-    padding: 10px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 60px;
   }
-
-  .logo-container,
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-title {
-    margin: 10px 0;
-  }
-
-  nav ul li {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  .button {
-    padding: 5px 10px;
-    width: 100px;
-    display: block;
-    text-align: center; /* Center the button text */
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .logo-container {
-    padding-left: 20px;
-  }
-
-  nav {
-    padding-right: 20px;
-  }
-}
-
-/* Additional media query for larger screens */
-@media screen and (min-width: 1200px) {
-  /* .header {
-    padding: 30px 50px;
-  } */
-
-  .logo-container,
-  nav {
-    flex-direction: row;
-  }
-
+  
   .nav-list {
+    flex-direction: column;
+  }
+
+  .butt {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #f68f1e;
+    width: 120px;
+    height: 36px;
+    flex-shrink: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .icon {
+    display: flex; /* Show the menu icon on small screens */
+  }
+
+  .visible {
+    display: none; /* Hide menu items when the menu is closed on small screens */
+  }
+
+  /* Updated styles for close icon */
+  .close-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* Media query for large screens */
+@media (min-width: 769px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
     margin-left: auto;
   }
+
+  .menu-item,
+  .services-button {
+    display: block; /* Display the menu items and the button */
+    margin-right: 1rem;
+  }
+
+  /* Additional styles to reset hidden properties from smaller screens */
+  .icon {
+    display: none;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  /* Make sure there's no conflicting style affecting visibility */
+  .menu-item,
+  .services-button {
+    display: block !important;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*  END header mobile resposivenees */
 /*   START OF Main image and Content-container */
+
+main {
+  margin-top: 70px;
+}
 .main-image {
   max-width: 100%;
   height: auto;
 }
-main {
-  margin-top: 70px;
-}
-
-
-
 .content-container {
   display: flex;
   align-items: center;
@@ -208,6 +282,7 @@ main {
 
   .text-container {
     margin-bottom: 10px;
+    color: #F68F1E;
   }
 
   .text-image-container {
@@ -217,11 +292,29 @@ main {
   .main-image {
     margin-top: 20px;
   }
+  .main-heading{
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 20px;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 140px;
+  }
+  .main-paragraph{
+    font-size: 18px; 
+    font-weight: 80;
+    line-height: 19px;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
 }
 /*   END OF Main image and Content-container */
 
 
 /* Start of navigation scroll lists */
+/* Existing CSS */
+
 .general {
   text-align: center;
   padding: 10px;
@@ -261,6 +354,9 @@ main {
   font-size: 18px; /* Slightly reduce font size for smaller screens */
   font-weight: 700;
   line-height: normal;
+}
+.logo{
+  width:100px;
 }
 
 .headers a {
@@ -311,9 +407,115 @@ main {
 
 .fixed-nav {
   position: fixed;
-  top: 80px; /* Adjust top position for smaller screens */
+  top: 100px;
   width: 100%;
 }
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+  /* Adjustments for small screens */
+  #top-space {
+    height: 5px; /* Adjust height */
+  }
+  .fixed-nav {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+  }
+  .logo {
+    width: 100px;
+    margin-top: -90px;
+  }
+  .headers {
+    padding-left: 10px; /* Adjust padding */
+    align-items: center; /* Revert alignment */
+    margin-top: 30px;
+  }
+  
+  .headers li {
+    margin: 5px 0;
+  }
+  .logo {
+    width: 100px;
+    margin-top: -150px;
+  }
+  
+  .all-button button,
+  .search-button button {
+    width: 100%;
+    padding: 5px 12px; /* Adjust padding */
+    font-size: 14px;
+  }
+  
+  .Icon-but {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  .headers a{
+    font-size: 6px;
+    color:black;
+    line-height : 7px;
+    padding: 2px 6px;
+  }
+  
+  .search-button button svg,
+  .search-button button span {
+    margin-right: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+
+  }
+  
+  .search-button button svg {
+    width: 12px;
+  }
+  
+  .search-button button {
+    height: 36px;
+    width: 80%;
+  }
+  
+  .fixed-nav {
+    align-items: center;
+    padding-left: 10px; /* Adjust padding */
+    line-height: 20px;
+  }
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Adjustments for medium screens */
+  .headers {
+    padding-left: 30px; /* Adjust padding */
+  }
+  
+  .all-button button {
+    padding: 5px 16px; /* Adjust padding */
+    font-size: 16px;
+  }
+  .logo{
+    width:210px;
+  }
+  
+  .search-button button {
+    width: auto;
+    margin-left: 5px;
+  }
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+  /* No specific adjustments needed for large screens */
+  .headers {
+    padding-left: 60px;
+  }
+  .logo{
+    width: 120px;
+  }
+}
+
+
 
 /* Media queries */
 
@@ -346,14 +548,14 @@ main {
 .col-heading {
   /* width: 361px; */
   color: #FFFDFD;
-text-align: center;
-font-family: Roboto;
-font-size: 60px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: 60px;
-margin-bottom: -30px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 60px;
+  margin-bottom: -30px;
 }
 
 .col-button {
@@ -380,10 +582,6 @@ margin-bottom: -30px;
   background-color: rgb(224, 224, 224);
   cursor: pointer;
 }
-
-
-
-
 .col-image {
   width: 100%;
   height: auto;
@@ -438,9 +636,14 @@ margin-bottom: -30px;
 .author-image {
   margin-bottom: 14px;
   width: 30px;
-height: 30px;
-flex-shrink: 0;
-border-radius: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 30px;
+}
+.col-content{
+  
+  height: 454px;
+   
 }
 
 .title {
@@ -469,19 +672,44 @@ border-radius: 30px;
     height: 35px; /* Further reduce height for small screens */
     margin: 30px auto 5px; /* Further adjust margin for small screens */
   }
+  .title{
+    font-size: 18px;
+  }
+  
+  .author-name{
+    font-size: 16px;
+  }
+  .author-image {
+    margin-bottom: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+  }
+  .date {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    width: 126px;
+    height: 21px;
+    flex-shrink: 0;
+  
+  }
 }
 
 @media screen and (max-width: 480px) {
   .col-heading {
-    font-size: 20px; /* Further reduce font size for extra small screens */
-    margin-top: 15px; /* Further adjust margin for extra small screens */
-    margin-bottom: -3px; /* Further adjust margin for extra small screens */
+    font-size: 24px;
+    margin-top: 55px;
+    margin-bottom: -60px;
   }
 
   .col-button {
     font-size: 16px; /* Further reduce font size for extra small screens */
     height: 30px; /* Further reduce height for extra small screens */
-    margin: 25px auto 3px; /* Further adjust margin for extra small screens */
+    margin: 390px auto 7px;
   }
 }
 
@@ -489,11 +717,12 @@ border-radius: 30px;
 
 /* START OF THE FOOTER */
 
+/* Global styles */
+/* Global styles */
 .footer {
   padding: 20px;
   background-color: rgba(10, 80, 85, 1);
   margin-top: 30px;
-  
   color: #fff;
   padding: 10px;
   overflow: hidden;
@@ -502,7 +731,6 @@ border-radius: 30px;
 .footer-columns {
   display: flex;
   justify-content: space-between;
-  
 }
 
 .footer-column {
@@ -543,6 +771,11 @@ border-radius: 30px;
 .additional-links {
   margin-top: 50px;
   padding-left: 120px;
+  display: none; 
+}
+
+.additional-links.show {
+  display: block;
 }
 
 .link-item a {
@@ -555,7 +788,8 @@ border-radius: 30px;
 .link-item a:hover {
   color: white;
 }
-.CONT{
+
+.CONT {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
@@ -565,14 +799,16 @@ border-radius: 30px;
   cursor: pointer;
   padding-left: 90px;
 }
-.CONNT{
+
+.CONNT {
   width: 250px;
   height: 80px;
   top: 2531px;
   left: 238px;
   padding-left: 60px;
 }
-.cone{
+
+.cone {
   font-family: Roboto;
   font-size: 25px;
   font-weight: 700;
@@ -585,15 +821,14 @@ border-radius: 30px;
   padding-left: 120px;
 }
 
-
-.link-item{
+.link-item {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
-  color:white;
+  color: white;
 }
 
 .footer-links {
@@ -606,7 +841,7 @@ border-radius: 30px;
 }
 
 .footer-links a {
-  margin-right: 10px; /* Add some spacing between links */
+  margin-right: 10px;
   color: white;
   text-decoration: none;
 }
@@ -616,65 +851,68 @@ border-radius: 30px;
   padding-right: 10px;
   color: rgba(255, 255, 255, 1);
 }
-.footer-copyright{
-  padding-left: 90px;
-}
-/* Styles for small screens */
-@media screen and (max-width: 767px) {
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  /* Additional styles for small screens */
   .footer-columns {
-    flex-direction: column; /* Stack columns vertically */
-    align-items: center; /* Center columns horizontally */
+    flex-direction: column;
   }
-
+  
   .footer-column {
-    margin: 10px 0; /* Add spacing between stacked columns */
+    margin: 0;
+    padding: 0;
   }
 
-  .social-icons,
+  .footer-column .cone-container {
+    padding-left: 20px;
+  }
+
+  .footer-column .arrow {
+    display: block;
+    float: right;
+  }
+
+  .footer-column.show .additional-links,
+  .footer-column.show .social-icons {
+    display: block;
+    padding-left: 120px;
+  }
+
   .footer-links {
-    display: flex;
-    justify-content: center; /* Center social icons and links horizontally */
+    align-items: flex-start;
+    padding-left: 20px;
     margin-top: 20px;
   }
 
-  .footer-links {
-    flex-wrap: wrap; /* Allow links to wrap on small screens */
-  }
-
-  .footer-copyright {
-    text-align: center; /* Center copyright text */
-  }
-  .footer-bottom {
-    padding: 20px; /* Maintain padding for consistency */
-    text-align: center; /* Center footer-bottom content */
-  }
-  .footer-links {
-    align-items: flex-start; /* Center links vertically */
-    padding-right:50px;
-  }
- 
-}
-
-/* Styles for medium screens */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .contact {
-    text-align: center; /* Center contact text */
-  }
-
-  .contact p {
-    padding: 0 20px; /* Add some padding for better readability */
-  }
-
-  .additional-links,
-  .footer-links,
-  .social-icons {
-    padding: 0 20px; /* Adjust padding for better alignment */
-  }
-  .footer-bottom {
-    padding: 20px; /* Maintain padding for consistency */
-    
+  .CONNT,
+  .CONT {
+    display: none;
   }
 }
+
+
+/* Media query for large screens */
+@media (min-width: 769px) {
+  /* Show the arrow on large screens */
+  .footer-column .arrow {
+    display: none;
+  }
+
+  /* Show the content on large screens */
+  .footer-column.show .additional-links,
+  .footer-column.show .social-icons {
+    display: block;
+    padding-left: 120px;
+  }
+  
+  /* Display the links on large screens */
+  .footer-column .additional-links {
+    display: block;
+  }
+}
+
+
 
 
 /* END OF THE FOOTER */
@@ -726,6 +964,14 @@ border-radius: 30px;
   
   .form-group.formgroup2 a {
     margin-top: 10px; /* Add spacing between submit button and email input */
+  }
+  .dexx {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
   }
 }
 

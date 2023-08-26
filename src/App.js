@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Link, Route } from 'react-router-dom';
 import Header from './Header';
 import MainContent from './MainContent';
 import Footer from './Footer';
@@ -12,15 +12,22 @@ const App = () => {
     <Router>
       <div className="App">
         <Header />
-        <Switch>
+        <Routes>
           <Route exact path="/" component={MainContent} /> {/* Example: Render MainContent for the default route */}
           <Route path="/home" component={Home} /> {/* Route for the Home component */}
           <Route path="/contact" component={ContactUs} /> {/* Route for the ContactUs component */}
-        </Switch>
+        </Routes>
         <Footer />
       </div>
     </Router>
   );
 };
+
+
+
+
+
+
+
 
 export default App;

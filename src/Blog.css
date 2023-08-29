@@ -1,0 +1,511 @@
+
+    .ner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh; /* Set the height of the container to the full viewport height */
+      }
+      
+      /* CSS for small devices (e.g., smartphones) */
+      @media screen and (max-width: 767px) {
+        .ner {
+          background-color: lightblue;
+          padding: 20px;
+          text-align: center;
+        }
+        h1 {
+          font-size: 24px;
+          line-height: 1.2;
+          margin-bottom: 10px;
+        }
+        span {
+          display: block;
+          padding-left: 0;
+        }
+      }
+      
+      /* CSS for large devices (e.g., desktops) */
+      @media screen and (min-width: 768px) {
+        .ner {
+          background-color: white;
+          padding: 40px;
+          text-align: left;
+          margin-top: 50PX;
+        }
+        h1 {
+          font-size: 32px;
+          line-height: 1.4;
+          margin-bottom: 20px;
+        }
+        span {
+          display: inline;
+          
+        }
+      }
+
+      .blog-link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+      
+      .blog-link svg {
+        margin-right: 5px;
+        color: rgb(0, 0, 0);
+      }
+      
+      .blog-link span {
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: Roboto;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .blog-link span {
+          font-size: 16px;
+        }
+      }
+      #back-to-home {
+        background-color: white;
+        transition: background-color 0.3s ease;
+        z-index: 9999;
+        position: fixed;
+        top: 140px;
+        
+      }
+      
+      
+      .fixed {
+        
+        top: 100px; /* Adjust the desired height here */
+        left: 70px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: auto;
+      }
+
+      /* date and mark*/
+  .er {
+    display: flex;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    
+  }
+
+  .dat {
+    margin-right: 20px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  }
+
+  .max {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 70%;
+    margin-top: -40px;
+  }
+
+  .lex {
+    margin-right: 10px;
+  }
+
+  .js {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dat,
+    .js {
+      font-size: 16px;
+    }
+  }
+   /* date and mark*/
+   .ain {
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; /* Set a maximum width for the container */
+    padding: 3 20px; /* Add space at the left and right side of the container */
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+    .ain {
+      padding: 0 10px; /* Adjust the padding for small devices */
+    }
+  }
+
+
+
+  .conine {
+    display: flex;
+    justify-content: space-between; /* Spread items horizontally */
+    
+  }
+  
+  .cosex {
+    width: 50px;
+    position: fixed;
+    top: 50%; /* Adjust the positioning as needed */
+    left: 20px; /* Adjust the positioning as needed */
+    transform: translateY(-50%);
+    padding: 20px;
+  }
+  
+  .sociolumn {
+    width: 10%;
+    padding: 20px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 50%; /* Adjust the positioning as needed */
+    left: -20px; /* Adjust the positioning as needed */
+    transform: translateY(-50%);
+  }
+  
+  .icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .colex {
+    width: 80%; /* Adjust the width as needed */
+    padding: 20px;
+    display: flex;
+    
+  }
+  .fixed-content {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 400px;
+    z-index: 100;
+  }
+  
+  /* Existing styles */
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .cosex, .sociolumn, .colex {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .sociolumn {
+      display: none; 
+    }
+  
+    .colex {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .colex {
+      padding: 10px; /* Adjust padding for smaller screens */
+      position: fixed;
+      top: 50%; /* Adjust the positioning as needed */
+      left: 20px; /* Adjust the positioning as needed */
+      transform: translateY(-50%);
+      background-color: #ffffff; /* Set a background color for better visibility */
+      border: 1px solid #e0e0e0; /* Add a border for distinction */
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    }
+    
+  
+    h4 {
+      font-size: 16px; /* Smaller heading font size for mobile */
+    }
+  
+    ol {
+      font-size: 14px; /* Smaller font size for the list items */
+      line-height: 1.5; /* Improved line spacing for readability */
+      margin-left: 20px; /* Indent the list items */
+    }
+  
+    li {
+      margin-bottom: 10px; /* Add some spacing between list items */
+    }
+  
+    button {
+      margin: 10px auto; /* Center the "Back to top" button */
+    }
+  }
+  .blod{
+    width: 876px;
+    height: 408px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+  }
+  .blog-content{
+    margin-left:40px ;
+    padding-right: 160px;
+    margin-left: -190px;
+  }
+  .Blod{
+    width: 905px;
+    height: 373px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+  }
+  .dlog{
+    width: 923px;
+    height: 85px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+  }
+.blG{
+    width: 905px;
+    height: 375px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-left: 640px;
+    padding-right: 160px;
+}
+.flp{
+    width: 915px;
+    height: 361px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+}
+.feax{
+    margin-left: 640px; 
+    padding-right: 160px; 
+    
+}
+.ima{
+    margin-left: 98px;
+    margin-right: 40px;
+    width: 919px;
+    height: 454px;
+    flex-shrink: 0;
+    padding-right: 160px;
+    margin-left: 320px;
+}
+.becc{
+    width: 919px;
+    height: 323px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px; 
+    padding-right: 160px;
+}
+.clesr{
+    margin-left: 640px;
+    width: 919px;
+    
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-right: 160px;
+}
+.seam{
+    width: 891px;
+    height: 269px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+}
+.cfd{
+    width: 814px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Suisse Works;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+}
+.tyh{
+    width: 925px;
+    height: 460px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 640px;
+    padding-right: 160px;
+}
+.mat{
+    margin-left: 640px; 
+    padding-right: 160px; 
+}
+.fued{
+    width: 919px;
+    height: 323px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+     margin-left: 640px;  
+    padding-right: 160px; 
+}
+.gam{
+     margin-left: 640px;  
+    width: 814px;
+    color: #000;
+    font-family: Suisse Works;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    flex-shrink: 0;
+}
+.iczz{
+    width: 905px;
+    height: 460px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+     margin-left: 640px;  
+    padding-right: 160px;
+}
+.Flame {
+    width: 299px;
+    height: 325px;
+    flex-shrink: 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row; /* Horizontally arrange columns */
+    justify-content: space-between; /* Add space between columns */
+  }
+
+  .holo{
+     margin-left: 640px;  
+
+  }
+  .ograph{
+    width: 925px;
+    height: 460px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+     margin-left: 640px;  
+    padding-right: 160px;
+  }
+  .oice{
+     margin-left: 640px;  
+  }
+  .recog{
+    width: 1009px;
+    height: 460px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+     margin-left: 640px;  
+    padding-right: 160px;
+  }
+  .grat{
+     margin-left: 640px; 
+  }
+  .eco{
+    width: 947px;
+    height: 305px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+     margin-left: 640px;  
+    padding-right: 160px;
+  }
+  .mac{
+    width: 905px;
+    /* height: 454px; */
+    flex-shrink: 0;
+     margin-left: 640px;  
+  }
+  .Summi{
+    width: 924px;
+    height: 344px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+     margin-left: 640px;  
+    padding-right: 160px;
+
+  }

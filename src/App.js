@@ -14,9 +14,9 @@ const App = () => {
         <Header />
         <nav>
           <ul>
-            <li><Link to="/">Main</Link></li>
-            <li><Link to="/home">Home</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
+            <li className='ddss'><Link to="/">Main</Link></li>
+            <li className='ddss'><Link to="/home">Home</Link></li>
+            <li className='ddss'><Link to="/contact">Contact Us</Link></li>
           </ul>
         </nav>
         <Routes>

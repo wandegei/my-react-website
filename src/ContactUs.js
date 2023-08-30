@@ -20,27 +20,37 @@ const AboutUs = () => {
 
   const aboutContent = (
     <div>
-      <div class="ain">
+      <div className="ain">
       <p className="blog-link" id="back-to-home">
-        <Link to="/home" style={{ textDecoration: 'none' }}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M19 12H6M12 5l-7 7 7 7" />
-    </svg>
-    <span>Back to Home Blog</span>
+        <Link to="/home" style={{textDecoration: 'none'}}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M19 12H6M12 5l-7 7 7 7" />
+          </svg>
+          <span>Back to Home Blog</span>
         </Link>
       </p>
-      <div class="eres">
-      <p className="dat">May 20, 2023</p>
-      {/* Add your about us page content here */}
-      <div class="max">
-      <img src={man} alt="Mark Matovu" className="author-image" />
-      <p className="js">Mark Matovu</p>
-      </div>
+      <div className="eres">
+        <p className="dat">May 20, 2023</p>
+        {/* Add your about us page content here */}
+        <div className="max">
+          <img src={man} alt="Mark Matovu" className="author-image" />
+          <p className="js">Mark Matovu</p>
+        </div>
       </div>
       <div>
-      <img src={Rectangl} alt="Mark Matovu" className="lex" height="50%" width="94%"  />
+        <img src={Rectangl} alt="Mark Matovu" className="lex" />
       </div>
-      </div>
+    </div>
       <div className="conine">
   <div className="cosex">
     <div className="sociolumn">
@@ -55,6 +65,18 @@ const AboutUs = () => {
   </div>
   <div className="colex" id="mn">
   <div className="fixed-content">
+  <ol style={{
+      lineHeight: '30.44px',
+      fontWeight: 400,
+      fontSize: '20px',
+      fontFamily: 'Roboto',
+      width: '400px',
+      marginLeft: '40px',
+      marginTop: '149px',
+      backgroundColor:'white'
+      
+
+    }}>
     <h4 style={{
       color: 'rgba(246, 143, 30, 1)',
       fontFamily: 'Roboto',
@@ -65,18 +87,7 @@ const AboutUs = () => {
     }}>
       Introduction
     </h4>
-    <ol style={{
-      lineHeight: '30.44px',
-      fontWeight: 400,
-      fontSize: '20px',
-      fontFamily: 'Roboto',
-      width: '400px',
-      marginLeft: '40px',
-      marginTop: '190px',
-      backgroundColor:'white'
-      
-
-    }}>
+   
       <li>
         <a href="#personalized-user-experiences" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
           <span className="column-heading">Share</span> User Experiences <br />
@@ -122,10 +133,11 @@ const AboutUs = () => {
           <span style={{ marginLeft: '20px' }}>Elements</span>
         </a>
       </li>
-    </ol>
+    
     <button id="backToTop" style={{ marginTop: '10px', marginLeft: 'auto', marginRight: 'auto' }}>
       Back to top
     </button>
+    </ol>
   </div>
   </div>
 

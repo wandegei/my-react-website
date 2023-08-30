@@ -41,21 +41,21 @@ const Header = () => {
           <ul className={`nav-list ${isMenuOpen ? 'visible' : ''}`}>
             {/* Link to Home page */}
             <li className="nav-item menu-item">
-              <Link to="/" onClick={toggleMenu}>
+              <Link to="/" onClick={toggleMenu} style={{textDecoration: "none"}}>
                 Home
               </Link>
               <span className="arrow-icon d-md-none">&gt;</span>
             </li>
             {/* Link to Contact Us page */}
             <li className="nav-item menu-item">
-              <Link to="/contact" onClick={toggleMenu}>
+              <Link to="/contact" onClick={toggleMenu} style={{textDecoration: "none"}}>
                 Contact Us
               </Link>
               <span className="arrow-icon d-md-none">&gt;</span>
             </li>
             <li className={`nav-item services-button ${isMenuOpen ? 'visible' : ''}`}>
               <button style={{ backgroundColor: "#f68f1e" }} className="btn btn-primary">
-                <Link to="/services" onClick={toggleMenu}>
+                <Link to="/services" onClick={toggleMenu} style={{textDecoration: "none"}}>
                   Services
                 </Link>
               </button>

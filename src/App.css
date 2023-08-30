@@ -42,6 +42,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
+  text-decoration: none;
 }
 
 .nav {
@@ -179,6 +180,7 @@
   .services-button {
     display: block; /* Display the menu items and the button */
     margin-right: 1rem;
+    text-decoration: none;
   }
 
   /* Additional styles to reset hidden properties from smaller screens */
@@ -197,7 +199,9 @@
   }
 }
 
-
+.ddss{
+  text-decoration: none;
+}
 
 
 
@@ -337,6 +341,7 @@ main {
   margin-right: 20px;
 }
 
+
 .headers li:first-child {
   margin-left: 0;
 }
@@ -410,6 +415,7 @@ main {
   top: 100px;
   width: 100%;
 }
+
 
 /* Small screens (up to 600px) */
 @media (max-width: 600px) {

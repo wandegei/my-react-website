@@ -69,7 +69,7 @@
       #back-to-home {
         background-color: white;
         transition: background-color 0.3s ease;
-        z-index: 9999;
+        z-index: 9999999;
         position: fixed;
         top: 140px;
         
@@ -509,3 +509,15 @@
     padding-right: 160px;
 
   }
+
+
+
+  .JOSH {
+    
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative; /* Change to relative or remove this line */
+    z-index: 7777;
+    background-color: white;
+  }
+  

@@ -318,7 +318,7 @@ const AboutUs = () => {
         <button style={{ width: '460px', height: '83px', top: '11041px', marginLeft: '60px', left: '280px', borderRadius: '100px', marginTop: '60px', fontFamily: 'Roboto', fontSize: '30px', fontWeight: '700', lineHeight: '35px', letterSpacing: '0em', textAlign: 'center', backgroundColor: 'white' }}>Share it</button>
         <img src={Object} className="extended-image" alt="Extended" />
       </div>
-      </div>
+      
       <h1>Join Us and Stay Connected</h1>
       <p>To stay connected and receive regular updates on UI/UX design, and other exciting tech insights, we invite you to follow and subscribe to our social media platforms and be part of the discussion!</p>
       <ul className="sociall-links">
@@ -335,6 +335,8 @@ const AboutUs = () => {
           <button style={{ width: '460px', height: '83px', color: 'rgba(2, 162, 172, 1)', top: '12261px', backgroundColor: 'white', left: '921px', borderRadius: '100px' }}>Get Started</button>
         </div>
       </div>
+      </div>
+      <div>
     
     <section className="subscribe-area" style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
         <div className="container">
@@ -376,6 +378,7 @@ to our newsletter</h2>
         </div>
       </section>
       
+      </div>
       {/* Add more HTML snippets here */}
     </div>
   );

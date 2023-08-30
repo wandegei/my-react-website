@@ -17,6 +17,12 @@ import Object from './images/Object.png';
 
 const AboutUs = () => {
   const [showContent, setShowContent] = useState(true);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // You can change this to 'auto' for instant scrolling
+    });
+  };
 
   const aboutContent = (
     <div>
@@ -134,7 +140,7 @@ const AboutUs = () => {
         </a>
       </li>
     
-    <button id="backToTop" style={{ marginTop: '10px', marginLeft: 'auto', marginRight: 'auto' }}>
+      <button id="backToTop" style={{ marginTop: '10px', backgroundColor:'rgba(246, 143, 30, 1)', marginLeft: 'auto', marginRight: 'auto' }} onClick={scrollToTop}>
       Back to top
     </button>
     </ol>

@@ -13,7 +13,7 @@ const App = () => {
       <div className="App">
         <Header />
         <nav>
-          <ul>
+          <ul className='desktop-header'>
             <li className='ddss'><Link to="/">Main</Link></li>
             <li className='ddss'><Link to="/home">Home</Link></li>
             <li className='ddss'><Link to="/contact">Contact Us</Link></li>

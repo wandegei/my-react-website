@@ -199,7 +199,30 @@
     width: 400px;
     z-index: 100;
   }
-  
+  @media (max-width: 767px) {
+   .fixed-content {
+    padding-right: 60px;
+    margin-right: 50px;
+  }
+}
+.xxddse{
+  line-height: 30.44px;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: Roboto;
+  width: 400px;
+  margin-left: 40px;
+  margin-top: 149px;
+  background-color: white;
+}
+@media (max-width: 767px) {
+  .xxddse {
+   padding-right: 60px;
+   margin-right: 50px;
+   margin-left: -30px;
+   display: none;
+ }
+}
   /* Existing styles */
 
 /* Mobile Styles */
@@ -429,17 +452,7 @@
      margin-left: 640px;  
     padding-right: 160px;
 }
-.Flame {
-    width: 299px;
-    height: 325px;
-    flex-shrink: 0;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: row; /* Horizontally arrange columns */
-    justify-content: space-between; /* Add space between columns */
-  }
+
 
   .holo{
      margin-left: 640px;  

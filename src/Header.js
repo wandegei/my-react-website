@@ -12,6 +12,8 @@ const Header = () => {
   };
 
   return (
+
+    <div>
     <header className="header">
       <div className={`white-background ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}></div>
       <div className="container d-flex justify-content-between align-items-center">
@@ -22,11 +24,8 @@ const Header = () => {
             <Link to="/" className="blog-title">
               Blog
             </Link>
-          </div>
-        </div>
-        <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
-          <div className={`menu-toggle`} onClick={toggleMenu}>
-            {isMenuOpen ? (
+            <div className={`menu-toggle`} onClick={toggleMenu}>
+            {!isMenuOpen ? (
               <div className={`icon open-icon`}>
                 <span className="bar"></span>
                 <span className="bar"></span>
@@ -37,8 +36,17 @@ const Header = () => {
                 <span className="close-icon-content">x</span>
               </div>
             )}
+                  </div>
           </div>
-          <ul className={`nav-list ${isMenuOpen ? 'visible' : ''}`}>
+        </div>
+      </div>
+    </header>
+
+    <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
+         
+           
+    
+          <ul className={`nav-list ${!isMenuOpen ? 'visible' : ''}`}>
             {/* Link to Home page */}
             <li className="nav-item menu-item">
               <Link to="/" onClick={toggleMenu} style={{textDecoration: "none"}}>
@@ -62,8 +70,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </div>
-    </header>
+    </div>
   );
 };
 

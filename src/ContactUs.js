@@ -71,18 +71,7 @@ const AboutUs = () => {
   </div>
   <div className="colex" id="mn">
   <div className="fixed-content">
-  <ol style={{
-      lineHeight: '30.44px',
-      fontWeight: 400,
-      fontSize: '20px',
-      fontFamily: 'Roboto',
-      width: '400px',
-      marginLeft: '40px',
-      marginTop: '149px',
-      backgroundColor:'white'
-      
-
-    }}>
+  <ol className='xxddse'>
     <h4 style={{
       color: 'rgba(246, 143, 30, 1)',
       fontFamily: 'Roboto',
@@ -146,11 +135,7 @@ const AboutUs = () => {
     </ol>
   </div>
   </div>
-
-
-
-
-      {/* Additional HTML snippet */}
+  {/* Additional HTML snippet */}
       <div class="blog-content">
         <div className='blod'>
         <p>

@@ -5,6 +5,11 @@
   overflow-x: hidden; 
 }
 
+
+.desktop-header{
+  display: block;
+}
+
 /* Complete CSS with added styles */
 
 /* Complete CSS with responsive styles */
@@ -19,8 +24,7 @@
   padding: 1rem 5%;
   background-color: #fff;
   color: #333;
-  z-index: 99999999999999999999;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+ 
   overflow-x: hidden;
 }
 
@@ -28,11 +32,13 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  width: 100%;
 }
 
 .logo-content {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .blog-title {
@@ -82,6 +88,7 @@
 /* Updated styles for menu icon and close icon */
 .menu-toggle {
   cursor: pointer;
+  margin-left: auto !important;
 }
 
 .icon {
@@ -120,7 +127,9 @@
   }
 
   .header {
-    background-color: white; /* Add background color to cover the entire page */
+    background-color: white;
+    height: 80px;
+    /* Add background color to cover the entire page */
   }
 
   .menu-item {
@@ -501,7 +510,11 @@ main {
     font-size: 16px;
   }
   .logo{
-    width:210px;
+    width:150px;
+  }
+
+  .desktop-header{
+    display: none;
   }
   
   .search-button button {

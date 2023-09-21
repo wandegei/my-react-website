@@ -34,7 +34,7 @@ const MainContent = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const triggerHeight = 100;
+      const triggerHeight = 50;
 
       setFixedNav(scrollTop > triggerHeight);
     };
@@ -45,7 +45,7 @@ const MainContent = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  
   const currentDate = new Date(2023, 4, 20); // May is represented as 4 (0-indexed)
 
   return (
@@ -128,10 +128,10 @@ to our newsletter</h2>
                   <form action="#">
                   <div className="form-inline newsletter" style={{ display: 'flex' }}>
   <div className="form-group">
-    <input type="text" placeholder="Name" value="" style={{backgroundColor:'rgba(247, 144, 31, 1)',color:'rgba(255, 255, 255, 1)', marginTop:'20px'}} />
+    <input type="text" placeholder="Name" value="" style={{backgroundColor:'rgba(247, 144, 31, 1)',color:'rgba(255, 255, 255, 1)', marginTop:'20px', border: 'none'}} />
   </div>
   <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
-    <input type="email" placeholder="Email" style={{ borderLeft: '1px solid white', marginLeft: '-10px',marginTop:'20px',backgroundColor:'rgba(247, 144, 31, 1)',color:'rgba(255, 255, 255, 1)', borderRadius: '0px' }} value="" />
+    <input type="email" placeholder="Email" style={{ borderLeft: '1px solid white', marginLeft: '-10px',marginTop:'20px',backgroundColor:'rgba(247, 144, 31, 1)',color:'rgba(255, 255, 255, 1)', borderRadius: '0px',border: 'none' }} value="" />
     <div style={{ cursor: 'pointer', backgroundColor: 'rgba(247, 144, 31, 1)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '20px' }}>
       <a href="#services">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">

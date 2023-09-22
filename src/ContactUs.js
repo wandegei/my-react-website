@@ -339,7 +339,7 @@ const AboutUs = () => {
         </div>
       </div>
       </div>
-      <div>
+      <div><br></br><br></br><br></br><br></br><br></br><br></br>
     
     <section className="subscribe-area" style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
         <div className="container">

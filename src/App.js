@@ -6,19 +6,15 @@ import Footer from './Footer';
 import Home from './Home';
 import ContactUs from './ContactUs';
 import './App.css';
+import BurgerMenu from './BurgerMenu'; // Corrected import path
 
 const App = () => {
   return (
     <Router>
       <div className="App">
+        <BurgerMenu />
         <Header />
-        <nav>
-          <ul className='desktop-header'>
-            <li className='ddss'><Link to="/">Main</Link></li>
-            <li className='ddss'><Link to="/home">Home</Link></li>
-            <li className='ddss'><Link to="/contact">Contact Us</Link></li>
-          </ul>
-        </nav>
+       
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/home" element={<Home />} />

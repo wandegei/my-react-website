@@ -82,9 +82,9 @@ const Footer = () => {
           Copyright&copy; {new Date().getFullYear()} TALLEN. All rights reserved
         </p>
         <div className="footer-links">
-          <a href="#terms">Terms</a>
+          <a href="#Terms">Terms</a>
           <span className="footer-line"> | </span>
-          <a href="#privacy">Privacy</a>
+          <a href="#Privacy">Privacy</a>
           <span className="footer-line"> | </span>
           <a href="#help">Help</a>
           <span className="footer-line"> | </span>

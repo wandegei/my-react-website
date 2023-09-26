@@ -21,8 +21,11 @@ const Header = () => {
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo-container">
             <div className="logo-content">
+            <Link to="/Terms" className="blog-title">
               <img src={logo} alt="Logo" className="logo" />
-              <Link to="/" className="blog-title">
+            </Link> 
+
+              <Link to="/Terms" className="blog-title">
                 Blog
               </Link> 
             </div>
@@ -34,7 +37,7 @@ const Header = () => {
     Contact Us
   </Link>
   <button className="service-button">
-    <Link to="/services" className="blog-tle">
+    <Link to="/Terms" className="blog-tle">
       Services
     </Link>
   </button>

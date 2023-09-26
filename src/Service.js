@@ -128,7 +128,7 @@ const AboutUs = () => {
         </a>
       </li>
     
-      <button id="backToTop" style={{ marginTop: '10px', backgroundColor:'rgba(246, 143, 30, 1)', marginLeft: 'auto', marginRight: 'auto' }} onClick={scrollToTop}>
+      <button id="backToTop" style={{ marginTop: '10px', backgroundColor:'rgba(246, 143, 30, 1)', marginLeft: 'auto', marginRight: 'auto', border: 'none' }} onClick={scrollToTop}>
       Back to top
     </button>
     </ol>

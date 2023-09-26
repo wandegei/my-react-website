@@ -15,7 +15,7 @@ import Frame from './images/Frame.png';
 import Re from './images/Re.png';
 import Object from './images/Object.png';
 
-const AboutUs = () => {
+const Blog = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -394,9 +394,9 @@ to our newsletter</h2>
       <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>
       </h1>
     </div>
-    {aboutContent}
+      {aboutContent}
     </div>
   );
 };
 
-export default AboutUs;
+export default Blog;

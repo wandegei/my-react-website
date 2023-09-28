@@ -893,6 +893,7 @@ position: relative;
   margin-bottom: 5px;
   color: white;
   text-decoration: none;
+  margin-left: 28px;
 }
 
 .link-item a:hover {
@@ -938,7 +939,9 @@ position: relative;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
-  color: white;
+  color: #176899;
+  display: flex;
+  
 }
 
 .footer-links {

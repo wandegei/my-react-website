@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaAngleRight, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaAngleRight, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import sampleImage from './sampleImage.png';
 
 const sections = [
@@ -25,13 +25,18 @@ const sections = [
     id: 'social',
     title: 'Social Media',
     links: [
-      { id: 'facebook', label: 'Facebook', icon: <FaFacebook /> },
-      { id: 'twitter', label: 'Twitter', icon: <FaTwitter /> },
-      { id: 'instagram', label: 'Instagram', icon: <FaInstagram /> },
+      { id: 'facebook', label: 'Facebook', url: 'https://www.facebook.com' },
+      { id: 'twitter', label: 'Twitter', url: 'https://www.twitter.com' },
+      { id: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com' },
     ],
   },
 ];
 
+const socialIcons = {
+  facebook: <FaFacebook className="social-icon" />,
+  twitter: <FaTwitter className="social-icon" />,
+  linkedin: <FaLinkedin className="social-icon" />,
+};
 
 const Footer = () => {
   const [showSection, setShowSection] = useState({});
@@ -62,12 +67,12 @@ const Footer = () => {
                   onClick={() => toggleContent(section.id)}
                 />
               </h3>
-              
             </div>
             <div className={`additional-links ${showSection[section.id] ? 'show' : ''}`}>
               {section.links.map((link) => (
                 <div className="link-item" key={link.id}>
-                  <a href={`#${link.id}`}>{link.label}</a>
+                  {socialIcons[link.id]} {/* Render the icon based on the link id */}
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
                 </div>
               ))}
             </div>

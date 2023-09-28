@@ -15,7 +15,7 @@ const App = () => {
         <BurgerMenu />
         <Header />
 
-        <nav>
+        <nav style={{display:'none'}}>
           <ul>
             <li>
               <Link to="/">Home</Link>

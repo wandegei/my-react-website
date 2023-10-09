@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import './Blog.css';
 import './App.css';
@@ -59,13 +60,23 @@ const AboutUs = () => {
       <div className="conine">
   <div className="cosex">
     <div className="sociolumn">
-      <div className="icons-container">
-        <a href="https://www.facebook.com"><img className="socion" src={FacebookIcon} alt="Facebook" /></a>
-        <a href="https://www.twitter.com"><img className="socian" src={TwitterIcon} alt="Twitter" /></a>
-        <a href="https://www.instagram.com"><img className="sicon" src={VectorIcon} alt="Whatsup" /></a>
-        <a href="https://www.linkedin.com"><img className="sodn" src={FlatIcon} alt="linkedin" /></a>
-        {/* Add more social media icons here */}
-      </div>
+    <div className="icons-container">
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img className="socion" src={FacebookIcon} alt="Facebook" />
+    </a>
+    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+        <img className="socian" src={TwitterIcon} alt="Twitter" />
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <img className="sicon" src={VectorIcon} alt="Whatsup" />
+    </a>
+
+    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <img className="sodn" src={FlatIcon} alt="LinkedIn" />
+    </a>
+    {/* Add more social media icons here */}
+</div>
+
     </div>
   </div>
   <div className="colex" id="mn">
@@ -387,6 +398,12 @@ to our newsletter</h2>
 
   return (
     <div>
+      <Helmet>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; object-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; frame-src *;"
+        />
+      </Helmet>
       <div className="ner">
       <h1 style={{ textIndent: '10px', lineHeight: 1.1 }}>
       The Future of UI/UX Design: The<br />

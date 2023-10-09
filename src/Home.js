@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import mainImage from './mainImage.png';
 import Rectangl from './Rectangl.png';
 import man from './man.png';
-import './App.css';
+
 
 const ArticleCard = ({ date }) => (
   <div className="col-md-4">
@@ -29,14 +29,16 @@ const ArticleCard = ({ date }) => (
   </div>
 );
 
-const Home = () => {
+const MainContent = () => {
   const [fixedNav, setFixedNav] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const triggerHeight = 100;
-
+      const triggerHeight = 50;
       setFixedNav(scrollTop > triggerHeight);
     };
 
@@ -46,11 +48,21 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
+  
   const currentDate = new Date(2023, 4, 20); // May is represented as 4 (0-indexed)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (name.trim() === '' || email.trim() === '') {
+      setError('Please fill out both name and email fields.');
+    } else {
+      // Handle form submission logic here
+      console.log(`Name: ${name}, Email: ${email}`);
+      setError('');
+    }
+  };
 
   return (
-    <main style={{ overflow: 'hidden' }}>
+    <main style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
       <div className="content-container">
         <div className="text-image-container">
           <div className="text-container">
@@ -66,25 +78,27 @@ const Home = () => {
       </div>
 
       <div className={`general ${fixedNav ? 'fixed-nav' : ''}`}>
-        <div id="top-space" style={{ height: '10px' }}></div>
+        <div id="top-space" style={{ height: '8px', marginBottom:'-20px' }}></div>
         <nav>
           <ul className="headers">
             <li className="all-button">
-              <button>All</button>
+            <a href="/"><button>All</button></a>
             </li>
-            <li><a href="/software-development">Software Development</a></li>
-            <li><a href="/ai">Artificial Intelligence</a></li>
-            <li><a href="/cloud-computing">Cloud Computing</a></li>
-            <li><a href="/digital-business">Digital Business</a></li>
-            <li><a href="/general">General</a></li>
-            <li className="search-button">
+            <li><a href ="/contact">Software Development</a></li>
+            <li><a href="/contact">Artificial Intelligence</a></li>
+            <li><a href="/contact">Cloud Computing</a></li>
+            <li><a href="/contact">Digital Business</a></li>
+            <li><a href="/contact">General</a></li>
+            <li className="search-button"><a href="/contact">
   <button type="button">
     <svg xmlns="http://www.w3.org/2000/svg" className='Icon-but' width="2" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M22 22L20 20M11.5 21C12.7476 21 13.9829 20.7543 15.1355 20.2769C16.2881 19.7994 17.3354 19.0997 18.2175 18.2175C19.0997 17.3354 19.7994 16.2881 20.2769 15.1355C20.7543 13.9829 21 12.7476 21 11.5C21 10.2524 20.7543 9.0171 20.2769 7.86451C19.7994 6.71191 19.0997 5.66464 18.2175 4.78249C17.3354 3.90033 16.2881 3.20056 15.1355 2.72314C13.9829 2.24572 12.7476 2 11.5 2C8.98044 2 6.56408 3.00089 4.78249 4.78249C3.00089 6.56408 2 8.98044 2 11.5C2 14.0196 3.00089 16.4359 4.78249 18.2175C6.56408 19.9991 8.98044 21 11.5 21Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     Search Blog
   </button>
+  </a>
 </li>
+
           </ul>
         </nav>
       </div>
@@ -113,45 +127,79 @@ const Home = () => {
         </div>
       </div>
       
-      <section className="subscribe-area" style={{ overflow: 'hidden' }}>
-        <div className="container">
-          <div className="row footer-container">
-            <div className="col-md-4 col-sm-4 col-xs-4">
-              <div className="subscribe-text">
-                <h2 className="dexx">Stay updated by subscribing to our newsletter</h2>
-              </div>
-            </div>
-            <div className="col-md-8 col-sm-4 col-xs-4 form-item-footer">
-              <div className="subscribe-wrapper subscribe2-wrapper">
-                <div className="subscribe-form">
-                  <form action="#">
-                    <div className="form-inline newsletter" style={{ display: 'flex' }}>
-                      <div className="form-group">
-                        <input type="text" placeholder="Name" value="" style={{ backgroundColor: 'rgba(247, 144, 31, 1)', color: 'rgba(255, 255, 255, 1)', marginTop: '20px' }} />
-                      </div>
-                      <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
-                        <input type="email" placeholder="Email" style={{ borderLeft: '1px solid white', marginLeft: '-10px', marginTop: '20px', backgroundColor: 'rgba(247, 144, 31, 1)', color: 'rgba(255, 255, 255, 1)', borderRadius: '0px' }} value="" />
-                        <div style={{ cursor: 'pointer', backgroundColor: 'rgba(247, 144, 31, 1)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '20px' }}>
-                          <a href="#services">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-                              <path d="M0 0h24v24H0z" fill="none"/>
-                              <path d="M16.59 11H4v2h12.59l-3.29 3.29L14 18l6-6-6-6-1.29 1.29L16.59 11z"/>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+      <section className="subscribe-area" style={{ maxHeight: '600px', overflow: 'hidden' }}>
+  <div className="container">
+    <div className="row footer-container">
+      <div className="col-md-4 col-sm-4 col-xs-4">
+        <div className="subscribe-text">
+          <h2 className="dexx">Stay updated by subscribing to our newsletter</h2>
+        </div>
+      </div>
+      <div className="col-md-8 col-sm-4 col-xs-4 form-item-footer">
+        <div className="subscribe-wrapper subscribe2-wrapper">
+          <div className="subscribe-form">
+            <form onSubmit={handleSubmit}>
+              <div className="form-inline newsletter" style={{ display: 'flex' }}>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    style={inputStyle}
+                  />
+                </div>
+                <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={inputStyle}
+                  />
+                  <button type="submit" style={submitButtonStyle}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path d="M16.59 11H4v2h12.59l-3.29 3.29L14 18l6-6-6-6-1.29 1.29L16.59 11z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
-            </div>
+            </form>
+            {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
           </div>
-          <div style={{ display: 'flex' }}></div>
-          <div className="Toastify"></div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 };
+const inputStyle = {
+  backgroundColor: 'rgba(247, 144, 31, 1)',
+  color: 'rgba(255, 255, 255, 1)',
+  marginTop: '20px',
+  border: 'none',
+  marginRight: '12px',
+  width: '254px',
+  padding: '8px',
+  border:'none',
+  marginLeft: '-10px',
+};
 
-export default Home;
+const submitButtonStyle = {
+  cursor: 'pointer',
+  backgroundColor: 'rgba(247, 144, 31, 1)',
+  borderRadius: '50%',
+  width: '40px',
+  height: '40px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: '20px',
+  border:'none',
+};
+
+export default MainContent;

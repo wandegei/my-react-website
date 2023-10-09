@@ -31,12 +31,13 @@ const ArticleCard = ({ date }) => (
 
 const MainContent = () => {
   const [fixedNav, setFixedNav] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const triggerHeight = 50;
-
       setFixedNav(scrollTop > triggerHeight);
     };
 
@@ -48,6 +49,19 @@ const MainContent = () => {
   }, []);
   
   const currentDate = new Date(2023, 4, 20); // May is represented as 4 (0-indexed)
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Here, you can use the 'name' and 'email' state variables as needed
+    console.log(`Name: ${name}, Email: ${email}`);
+  };
 
   return (
     <main style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
@@ -66,7 +80,7 @@ const MainContent = () => {
       </div>
 
       <div className={`general ${fixedNav ? 'fixed-nav' : ''}`}>
-        <div id="top-space" style={{ height: '10px' }}></div>
+        <div id="top-space" style={{ height: '8px', marginBottom:'-20px' }}></div>
         <nav>
           <ul className="headers">
             <li className="all-button">
@@ -127,24 +141,37 @@ to our newsletter</h2>
             <div className="col-md-8 col-sm-4 col-xs-4 form-item-footer">
               <div className="subscribe-wrapper subscribe2-wrapper">
                 <div className="subscribe-form">
-                  <form action="#">
-                  <div className="form-inline newsletter" style={{ display: 'flex' }}>
-  <div className="form-group">
-    <input type="text" placeholder="Name" value="" style={{backgroundColor:'rgba(247, 144, 31, 1)',color:'rgba(255, 255, 255, 1)', marginTop:'20px', border: 'none'}} />
-  </div>
-  <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
-    <input type="email" placeholder="Email" style={{ borderLeft: '1px solid white', marginLeft: '-10px',marginTop:'20px',backgroundColor:'rgba(247, 144, 31, 1)',color:'rgba(255, 255, 255, 1)', borderRadius: '0px',border: 'none' }} value="" />
-    <div style={{ cursor: 'pointer', backgroundColor: 'rgba(247, 144, 31, 1)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '20px' }}>
-      <a href="#services">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M16.59 11H4v2h12.59l-3.29 3.29L14 18l6-6-6-6-1.29 1.29L16.59 11z"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
-
+                <form onSubmit={handleSubmit}>
+                    <div className="form-inline newsletter" style={{ display: 'flex' }}>
+                      <div className="form-group">
+                        <input
+                          type="text"
+                          placeholder="Name"
+                          value={name}
+                          onChange={handleNameChange}
+                          style={{ backgroundColor: 'rgba(247, 144, 31, 1)', color: 'rgba(255, 255, 255, 1)', marginTop: '20px', border: 'none', marginRight: '12px',width: '254px',
+                          padding: '8px'}}
+                        />
+                      </div>
+                      <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          value={email}
+                          onChange={handleEmailChange}
+                          style={{ borderLeft: '1px solid white', marginLeft: '-10px', marginTop: '20px', backgroundColor: 'rgba(247, 144, 31, 1)', color: 'rgba(255, 255, 255, 1)', borderRadius: '0px', border: 'none' , width: '254px',
+                          padding: '8px' }}
+                        />
+                        <div className='dfgrts' style={{ cursor: 'pointer', backgroundColor: 'rgba(247, 144, 31, 1)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '20px' }}>
+                      <a href="#services">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                          <path d="M0 0h24v24H0z" fill="none"/>
+                          <path d="M16.59 11H4v2h12.59l-3.29 3.29L14 18l6-6-6-6-1.29 1.29L16.59 11z"/>
+                        </svg>
+                      </a>
+                    </div>
+                      </div>
+                    </div>
                   </form>
                 </div>
               </div>

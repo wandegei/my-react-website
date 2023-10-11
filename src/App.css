@@ -355,9 +355,9 @@ main {
     margin-top: 18px;
   }
   .main-paragraph {
-    font-size: 15px;
+    
     font-weight: 80;
-    line-height: 18px;
+   
     align-items: center;
     padding-left: 7px;
     margin-top: 32px;
@@ -670,7 +670,7 @@ main {
   /* width: 361px; */
   color: #FFFDFD;
   text-align: center;
-  font-family: Roboto;
+  
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -787,7 +787,7 @@ main {
 /* Media queries */
 @media screen and (max-width: 768px) {
   .col-heading {
-    font-size: 24px; /* Further reduce font size for small screens */
+   
     margin-top: 20px; /* Further adjust margin for small screens */
     margin-bottom: -5px; /* Further adjust margin for small screens */
   }
@@ -817,22 +817,22 @@ main {
     
   }
   .title{
-    font-size: 18px;
+    font-size: 31px;
   }
   
-  .author-name{
+  /* .author-name{
     font-size: 16px;
-  }
+  } */
   .author-image {
     margin-bottom: 20px;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
   }
   .date {
     color: #000;
     font-family: Roboto;
-    font-size: 16px;
+    
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -1146,7 +1146,7 @@ main {
   }
   .dexx {
     font-family: Roboto;
-    font-size: 18px;
+   
     font-weight: 700;
     line-height: 35px;
     letter-spacing: 0em;

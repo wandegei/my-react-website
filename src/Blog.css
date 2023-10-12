@@ -686,7 +686,7 @@ background: #000;
 /* This class styles the menu itself */
 .blsee {
 background-color: white; /* You can replace 'blue' with your desired background color */
-width: 685px !important; /* Adjust the width of the menu as needed */
+width: 732px !important;
 height: 100%; /* Make sure it covers the whole height of the viewport */
 position: fixed;
 top: 0;
@@ -747,6 +747,6 @@ font-size: 17px;
 
 
 }
-.custom-icon-class{
-margin-left: 207px;
-}
+/* .custom-icon-class{
+  margin-left: 224px !important;
+} */

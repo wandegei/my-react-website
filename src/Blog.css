@@ -144,6 +144,7 @@ font-size: 16px;
 width: 100%;
 max-width: 744px;
 margin: 4px;
+height: 187px;
 }
 }
 /* date and mark*/
@@ -254,6 +255,7 @@ margin-right: 50px;
     text-align: center;
     background-color: white;
 }
+
 }
 .xxddse{
 line-height: 30.44px;
@@ -415,13 +417,13 @@ line-height: normal;
 margin-left: 640px;
 padding-right: 160px;
 }
-.blG{
-width: 905px;
-height: 375px;
-flex-shrink: 0;
-border-radius: 10px;
-margin-left: 640px;
-padding-right: 160px;
+.blG {
+  width: 905px;
+  height: 375px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-left: 628px;
+  padding-right: 160px;
 }
 .flp{
 width: 915px;
@@ -441,14 +443,14 @@ margin-left: 640px;
 padding-right: 160px; 
 
 }
-.ima{
-margin-left: 98px;
-margin-right: 40px;
-width: 919px;
-height: 454px;
-flex-shrink: 0;
-padding-right: 160px;
-margin-left: 320px;
+.ima {
+  margin-left: 98px;
+  margin-right: 40px;
+  width: 919px;
+  height: 454px;
+  flex-shrink: 0;
+  padding-right: 264px;
+  margin-left: 313px;
 }
 .becc{
 width: 919px;

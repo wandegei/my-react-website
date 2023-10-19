@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Blog.css';
 import './App.css';
-import man from './man.png';
+import nex from './nex.png';
 import Rectangl from './Rectangl.png';
 import FacebookIcon from './images/Facebook.png';
 import TwitterIcon from './images/Twitter.png';
@@ -16,17 +16,36 @@ import Re from './images/Re.png';
 import Object from './images/Object.png';
 
 const AboutUs = () => {
+  const [isBackToHomeFixed, setIsBackToHomeFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 300) {
+        setIsBackToHomeFixed(true);
+      } else {
+        setIsBackToHomeFixed(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
   };
+  const backToHomeClass = isBackToHomeFixed ? 'blog-link fixed' : 'blog-link';
 
   const aboutContent = (
     <div>
       <div className="ain">
-      <p className="blog-link" id="back-to-home">
+      <p className={backToHomeClass} id="back-to-home">
         <Link to="/home" style={{textDecoration: 'none'}}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +67,7 @@ const AboutUs = () => {
         <p className="dat">May 20, 2023</p>
         {/* Add your about us page content here */}
         <div className="max">
-          <img src={man} alt="Mark Matovu" className="author-image" />
+          <img src={nex} alt="Mark Matovu" className="emma-image" />
           <p className="js">Mark Matovu</p>
         </div>
       </div>
@@ -388,7 +407,7 @@ to our newsletter</h2>
   return (
     <div>
       <div className="ner">
-      <h1 style={{ textIndent: '10px', lineHeight: 1.1 }}>
+      <h1 style={{ textIndent: '10px', lineHeight: 1.1 , marginTop: '102px'}}>
       The Future of UI/UX Design: The<br />
       <span>Top 10 Trends and Predictions for</span><br />
       <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>

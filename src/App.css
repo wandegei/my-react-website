@@ -658,6 +658,16 @@ main {
   margin: -10px; /* Adjust as needed */
   
 }
+.custom-link {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit the color from the parent element */
+  transition: color 0.2s ease; /* Smooth transition for color change */
+}
+
+.custom-link:hover {
+  color: #007bff; /* Change the text color to blue when hovered */
+}
+
 
 /* .col-sm-4 {
   flex: 0 0 calc(33.33% - 20px); 
@@ -765,6 +775,16 @@ main {
   height: 30px;
   flex-shrink: 0;
   border-radius: 30px;
+ 
+}
+.emma-image {
+  margin-bottom: 14px;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  margin-top: -64px;
+ 
 }
 .col-content{
   

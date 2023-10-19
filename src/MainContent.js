@@ -5,27 +5,30 @@ import Rectangl from './Rectangl.png';
 import man from './man.png';
 
 
-const ArticleCard = ({ date }) => (
+const ArticleCard = ({ date, url }) => (
   <div className="col-md-4">
-    <img src={Rectangl} alt="" className="col-image" />
-    <div className="content">
-      <p className="date">
-        {date.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })}
-      </p>
-      <div className="image-wrapper">
-        <div className="author-info">
-          <img src={man} alt="Mark Matovu" className="author-image" />
-          <p className="author-name">Mark Matovu</p>
+    <a href={url} target="_blank" rel="noopener noreferrer" className='custom-link' >
+      <img src={Rectangl} alt="" className="col-image" />
+      <div className="content">
+        <p className="date">
+          {date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </p>
+        <div className="image-wrapper">
+          <div className="author-info">
+            
+           <a href='url="https://example.com/article3"'> <img src={man} alt="Mark Matovu" className="author-image" /></a>
+            <p className="author-name">Mark Matovu</p>
+          </div>
         </div>
+        <p className="title">
+          Revolutionize Your Business: How to Create a Winning Digital Transformation Strategy That Works
+        </p>
       </div>
-      <p className="title">
-        Revolutionize Your Business: How to Create a Winning Digital Transformation Strategy That Works
-      </p>
-    </div>
+    </a>
   </div>
 );
 
@@ -33,6 +36,7 @@ const MainContent = () => {
   const [fixedNav, setFixedNav] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,18 +53,15 @@ const MainContent = () => {
   }, []);
   
   const currentDate = new Date(2023, 4, 20); // May is represented as 4 (0-indexed)
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here, you can use the 'name' and 'email' state variables as needed
-    console.log(`Name: ${name}, Email: ${email}`);
+    if (name.trim() === '' || email.trim() === '') {
+      setError('Please fill out both name and email fields.');
+    } else {
+      // Handle form submission logic here
+      console.log(`Name: ${name}, Email: ${email}`);
+      setError('');
+    }
   };
 
   return (
@@ -107,8 +108,8 @@ const MainContent = () => {
 
       <br /><br /><br /><br /><br /><br /><br /><br />
 
-      {/* Article Cards */}
-      <div className="container">
+     {/* Article Cards */}
+     <div className="container">
         <div className="row">
           <div className="col-md-4">
             <div className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column' }}>
@@ -117,72 +118,91 @@ const MainContent = () => {
             </div>
           </div>
 
-          <ArticleCard date={currentDate} />
+          <ArticleCard date={currentDate} url="https://www.google.com"  className="custom-link "/>
 
-          <ArticleCard date={currentDate} />
+          <ArticleCard date={currentDate} url="https://example.com/article2" className="custom-link "/>
         </div>
         <br /><br />
         <div className="row">
-          <ArticleCard date={currentDate} />
-          <ArticleCard date={currentDate} />
-          <ArticleCard date={currentDate} />
+           <ArticleCard date={currentDate} url="https://example.com/article3" className="custom-link "/> 
+          <ArticleCard date={currentDate} url="https://example.com/article4" className="custom-link "/>
+          <ArticleCard date={currentDate} url="https://example.com/article5" className="custom-link "/>
         </div>
       </div>
       
-      <section className="subscribe-area" style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
-        <div className="container">
-          <div className="row footer-container">
-            <div className="col-md-4 col-sm-4 col-xs-4">
-              <div className="subscribe-text">
-                <h2 className="dexx">Stay updated by subscribing
-to our newsletter</h2>
-              </div>
-            </div>
-            <div className="col-md-8 col-sm-4 col-xs-4 form-item-footer">
-              <div className="subscribe-wrapper subscribe2-wrapper">
-                <div className="subscribe-form">
-                <form onSubmit={handleSubmit}>
-                    <div className="form-inline newsletter" style={{ display: 'flex' }}>
-                      <div className="form-group">
-                        <input
-                          type="text"
-                          placeholder="Name"
-                          value={name}
-                          onChange={handleNameChange}
-                          style={{ backgroundColor: 'rgba(247, 144, 31, 1)', color: 'rgba(255, 255, 255, 1)', marginTop: '20px', border: 'none', marginRight: '12px',width: '254px',
-                          padding: '8px'}}
-                        />
-                      </div>
-                      <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
-                        <input
-                          type="email"
-                          placeholder="Email"
-                          value={email}
-                          onChange={handleEmailChange}
-                          style={{ borderLeft: '1px solid white', marginLeft: '-10px', marginTop: '20px', backgroundColor: 'rgba(247, 144, 31, 1)', color: 'rgba(255, 255, 255, 1)', borderRadius: '0px', border: 'none' , width: '254px',
-                          padding: '8px' }}
-                        />
-                        <div className='dfgrts' style={{ cursor: 'pointer', backgroundColor: 'rgba(247, 144, 31, 1)', borderRadius: '50%', width: '40px', height: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '20px' }}>
-                      <a href="#services">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
-                          <path d="M0 0h24v24H0z" fill="none"/>
-                          <path d="M16.59 11H4v2h12.59l-3.29 3.29L14 18l6-6-6-6-1.29 1.29L16.59 11z"/>
-                        </svg>
-                      </a>
-                    </div>
-                      </div>
-                    </div>
-                  </form>
+      <section className="subscribe-area" style={{ maxHeight: '600px', overflow: 'hidden' }}>
+  <div className="container">
+    <div className="row footer-container">
+      <div className="col-md-4 col-sm-4 col-xs-4">
+        <div className="subscribe-text">
+          <h2 className="dexx">Stay updated by subscribing to our newsletter</h2>
+        </div>
+      </div>
+      <div className="col-md-8 col-sm-4 col-xs-4 form-item-footer">
+        <div className="subscribe-wrapper subscribe2-wrapper">
+          <div className="subscribe-form">
+            <form onSubmit={handleSubmit}>
+              <div className="form-inline newsletter" style={{ display: 'flex' }}>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    style={inputStyle}
+                  />
+                </div>
+                <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={inputStyle}
+                  />
+                  <button type="submit" style={submitButtonStyle}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path d="M16.59 11H4v2h12.59l-3.29 3.29L14 18l6-6-6-6-1.29 1.29L16.59 11z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
-            </div>
+            </form>
+            {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
           </div>
-          <div style={{ display: 'flex' }}></div>
-          <div className="Toastify"></div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
   );
+};
+const inputStyle = {
+  backgroundColor: 'rgba(247, 144, 31, 1)',
+  color: 'rgba(255, 255, 255, 1)',
+  marginTop: '20px',
+  border: 'none',
+  marginRight: '12px',
+  width: '254px',
+  padding: '8px',
+  border:'none',
+  marginLeft: '-10px',
+};
+
+const submitButtonStyle = {
+  cursor: 'pointer',
+  backgroundColor: 'rgba(247, 144, 31, 1)',
+  borderRadius: '50%',
+  width: '40px',
+  height: '40px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: '20px',
+  border:'none',
 };
 
 export default MainContent;

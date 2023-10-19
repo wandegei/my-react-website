@@ -5,27 +5,30 @@ import Rectangl from './Rectangl.png';
 import man from './man.png';
 
 
-const ArticleCard = ({ date }) => (
+const ArticleCard = ({ date, url }) => (
   <div className="col-md-4">
-    <img src={Rectangl} alt="" className="col-image" />
-    <div className="content">
-      <p className="date">
-        {date.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        })}
-      </p>
-      <div className="image-wrapper">
-        <div className="author-info">
-          <img src={man} alt="Mark Matovu" className="author-image" />
-          <p className="author-name">Mark Matovu</p>
+    <a href={url} target="_blank" rel="noopener noreferrer" className='custom-link' >
+      <img src={Rectangl} alt="" className="col-image" />
+      <div className="content">
+        <p className="date">
+          {date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          })}
+        </p>
+        <div className="image-wrapper">
+          <div className="author-info">
+            
+           <a href='url="https://example.com/article3"'> <img src={man} alt="Mark Matovu" className="author-image" /></a>
+            <p className="author-name">Mark Matovu</p>
+          </div>
         </div>
+        <p className="title">
+          Revolutionize Your Business: How to Create a Winning Digital Transformation Strategy That Works
+        </p>
       </div>
-      <p className="title">
-        Revolutionize Your Business: How to Create a Winning Digital Transformation Strategy That Works
-      </p>
-    </div>
+    </a>
   </div>
 );
 
@@ -105,8 +108,8 @@ const MainContent = () => {
 
       <br /><br /><br /><br /><br /><br /><br /><br />
 
-      {/* Article Cards */}
-      <div className="container">
+     {/* Article Cards */}
+     <div className="container">
         <div className="row">
           <div className="col-md-4">
             <div className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column' }}>
@@ -115,15 +118,15 @@ const MainContent = () => {
             </div>
           </div>
 
-          <ArticleCard date={currentDate} />
+          <ArticleCard date={currentDate} url="https://www.google.com"  className="custom-link "/>
 
-          <ArticleCard date={currentDate} />
+          <ArticleCard date={currentDate} url="https://example.com/article2" className="custom-link "/>
         </div>
         <br /><br />
         <div className="row">
-          <ArticleCard date={currentDate} />
-          <ArticleCard date={currentDate} />
-          <ArticleCard date={currentDate} />
+           <ArticleCard date={currentDate} url="https://example.com/article3" className="custom-link "/> 
+          <ArticleCard date={currentDate} url="https://example.com/article4" className="custom-link "/>
+          <ArticleCard date={currentDate} url="https://example.com/article5" className="custom-link "/>
         </div>
       </div>
       

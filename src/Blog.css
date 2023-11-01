@@ -189,22 +189,27 @@ padding-left: 38px;
 }
 
 .sociolumn {
+  
   width: 10%;
   padding: 20px;
   background-color: #ffff;
   display: flex;
-  flex-direction: column; /* Make it a column layout */
-  align-items: center; /* Center align the content vertically */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 100px; /* Adjust this value as needed */
+  justify-content: center;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  margin-left: -33px;
   height: 195px;
   line-height: 2.5;
   box-shadow: 0 0 22px #090707;
   margin-top: 309px;
 }
 
-
+.icons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
 
 

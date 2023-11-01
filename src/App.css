@@ -347,20 +347,19 @@ main {
     margin-top: -36px;
   }
   .main-heading {
-    font-size: 34px;
-    font-weight: 600;
-    line-height: 36px;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 25px;
     align-items: center;
-    padding-left: 1px;
-    margin-top: 18px;
+    padding-left: 11px;
+    margin-top: 20px;
   }
   .main-paragraph {
-    
-    font-weight: 80;
-   
+    font-weight: 30;
     align-items: center;
-    padding-left: 7px;
-    margin-top: 32px;
+    padding-left: 12px;
+    margin-top: 41px;
+    font-size: 19px;
   }
 }
 /*   END OF Main image and Content-container */
@@ -421,28 +420,30 @@ main {
   border-radius: 5px;
   font-family: 'Roboto';
   font-size: 14px;
-  font-weight: 540;
+  font-weight: 900;
   color: #333333;
   text-decoration: none;
 }
 
 .search-button button {
-  height: 40px; /* Slightly reduce height for smaller screens */
+  height: 40px;
   flex-shrink: 0;
   border-radius: 5px;
-  background: #eee;
+  background: #ccc;
   color: #000;
   font-family: Roboto;
-  font-size: 18px; /* Slightly reduce font size for smaller screens */
+  font-size: 18px;
   font-weight: 300;
   line-height: normal;
   border: none;
   box-shadow: none;
   display: flex;
   align-items: center;
-  padding: 0 16px; /* Adjust padding for smaller screens */
-  width: 150px;
-  margin-left: 10px;
+  padding: 0 11px;
+  width: 47px;
+  margin-left: 49px;
+  margin-right: 14px;
+  margin-top: -42px;
 }
 
 .Icon-but {
@@ -838,7 +839,7 @@ main {
     
   }
   .title{
-    font-size: 31px;
+    font-size: 20px;
   }
   
   /* .author-name{
@@ -866,15 +867,15 @@ main {
 
 @media screen and (max-width: 480px) {
   .col-heading {
-    width: 361px;
-    color: #FFFDFD;
+    width: 327px;
+    color: #ffff;
     text-align: center;
     font-family: Roboto;
-    font-size: 60px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 60px;
+    margin-top: 74px;
     margin-bottom: -30px;
   }
 
@@ -957,6 +958,7 @@ main {
   color: white;
   text-decoration: none;
   margin-left: 28px;
+  cursor: pointer;
 }
 
 .link-item a:hover {
@@ -1167,7 +1169,7 @@ main {
   }
   .dexx {
     font-family: Roboto;
-   
+    font-size: 23px;
     font-weight: 700;
     line-height: 35px;
     letter-spacing: 0em;

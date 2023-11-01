@@ -7,6 +7,15 @@ import Home from './Home';
 import ContactUs from './ContactUs';
 import Terms from './Terms';
 import BurgerMenu from './BurgerMenu';
+import Page1 from './Page1';
+import Page2 from './Page2';
+import Page3 from './Page3';
+import Page4 from './Page4';
+import Page5 from './Page5';
+import Page6 from './Page6';
+import Page7 from './Page7';
+import Page8 from './Page8';
+import Page9 from './Page9';
 
 const App = () => {
   return (
@@ -15,13 +24,11 @@ const App = () => {
         <BurgerMenu />
         <Header />
 
-        <nav style={{display:'none'}}>
+        {/* Navigation Menu */}
+        <nav style={{ display: 'none' }}>
           <ul>
             <li>
               <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -32,12 +39,22 @@ const App = () => {
           </ul>
         </nav>
 
+        {/* Routes */}
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/terms" element={<Terms />} />
-        </Routes>
+          <Route path="/Page1" element={<Page1 />} />
+          <Route path="/Page2" element={<Page2 />} />
+          <Route path="/Page3" element={<Page3 />} />
+          <Route path="/Page4" element={<Page4 />} />
+          <Route path="/Page5" element={<Page5 />} />
+          <Route path="/Page6" element={<Page6 />} />
+          <Route path="/Page7" element={<Page7 />} />
+          <Route path="/Page8" element={<Page8 />} />
+          <Route path="/Page9" element={<Page9 />} />
+      </Routes>
 
         <Footer />
       </div>

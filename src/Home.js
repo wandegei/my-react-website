@@ -1,13 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mainImage from './mainImage.png';
+import { Link } from "react-router-dom";
 import Rectangl from './Rectangl.png';
 import man from './man.png';
+import SearchBar from './SearchBar';
 
+const articles = [
+  { id: 1, title: 'Sample Article 1' },
+  { id: 2, title: 'Sample Article 2' },
+  { id: 3, title: 'Another Article3' },
+  { id: 4, title: 'Another Article4' },
+  { id: 4, title: 'Another Article7' },
+  { id: 5, title: 'Joshua' },
+  { id: 6, title: 'Wandegei' },
+  { id: 7, title: '@tallen.tech' },
+  // ... more articles
+];
 
-const ArticleCard = ({ date, url }) => (
+const handleSearch = (query) => {
+  // Implement your search logic here
+  const results = articles.filter(article =>
+    article.title.toLowerCase().includes(query.toLowerCase())
+  );
+
+  // Update search results in the state
+  
+};
+const ArticleCard = ({ date, to }) => (
   <div className="col-md-4">
-    <a href={url} target="_blank" rel="noopener noreferrer" className='custom-link' >
+    <Link to={to} className='custom-link'>
       <img src={Rectangl} alt="" className="col-image" />
       <div className="content">
         <p className="date">
@@ -19,8 +41,9 @@ const ArticleCard = ({ date, url }) => (
         </p>
         <div className="image-wrapper">
           <div className="author-info">
-            
-           <a href='url="https://example.com/article3"'> <img src={man} alt="Mark Matovu" className="author-image" /></a>
+            <Link to={to}>
+              <img src={man} alt="Mark Matovu" className="author-image" />
+            </Link>
             <p className="author-name">Mark Matovu</p>
           </div>
         </div>
@@ -28,7 +51,7 @@ const ArticleCard = ({ date, url }) => (
           Revolutionize Your Business: How to Create a Winning Digital Transformation Strategy That Works
         </p>
       </div>
-    </a>
+    </Link>
   </div>
 );
 
@@ -37,7 +60,17 @@ const MainContent = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [showResults, setShowResults] = useState(false);
 
+  const handleSearch = (query) => {
+    const results = articles.filter(article =>
+      article.title.toLowerCase().includes(query.toLowerCase())
+    );
+
+    setSearchResults(results);
+    setShowResults(true);
+  };
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -85,23 +118,24 @@ const MainContent = () => {
         <nav>
           <ul className="headers">
             <li className="all-button">
-            <a href="/"><button>All</button></a>
+              <Link to="/Home"><button>All</button></Link>
             </li>
-            <li><a href ="/contact">Software Development</a></li>
-            <li><a href="/contact">Artificial Intelligence</a></li>
-            <li><a href="/contact">Cloud Computing</a></li>
-            <li><a href="/contact">Digital Business</a></li>
-            <li><a href="/contact">General</a></li>
-            <li className="search-button"><a href="/contact">
-  <button type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" className='Icon-but' width="2" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M22 22L20 20M11.5 21C12.7476 21 13.9829 20.7543 15.1355 20.2769C16.2881 19.7994 17.3354 19.0997 18.2175 18.2175C19.0997 17.3354 19.7994 16.2881 20.2769 15.1355C20.7543 13.9829 21 12.7476 21 11.5C21 10.2524 20.7543 9.0171 20.2769 7.86451C19.7994 6.71191 19.0997 5.66464 18.2175 4.78249C17.3354 3.90033 16.2881 3.20056 15.1355 2.72314C13.9829 2.24572 12.7476 2 11.5 2C8.98044 2 6.56408 3.00089 4.78249 4.78249C3.00089 6.56408 2 8.98044 2 11.5C2 14.0196 3.00089 16.4359 4.78249 18.2175C6.56408 19.9991 8.98044 21 11.5 21Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Search Blog
-  </button>
-  </a>
-</li>
-
+            <li><Link to="/Page6">Software Development</Link></li>
+            <li><Link to="/Page7">Artificial Intelligence</Link></li>
+            <li><Link to="/Page8">Cloud Computing</Link></li>
+            <li><Link to="/Page9">Digital Business</Link></li>
+            <li><Link to="/Home">General</Link></li>
+            <li className="search-button">
+            <SearchBar onSearch={handleSearch} />
+            {showResults && searchResults.length > 0 ? (
+              <ul>
+                {searchResults.map(article => (
+                  <li key={article.id}>{article.title}</li>
+                ))}
+              </ul>
+            ) : null}
+            {showResults && searchResults.length === 0 && <p>No results found.</p>}
+          </li>
           </ul>
         </nav>
       </div>
@@ -114,19 +148,18 @@ const MainContent = () => {
           <div className="col-md-4">
             <div className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column' }}>
               <h2 className="col-heading">Explore our services</h2>
-              <a href="/services" className="col-button">Our Services</a>
+              <Link to="/services" className="col-button">Our Services</Link>
             </div>
           </div>
 
-          <ArticleCard date={currentDate} url="https://www.google.com"  className="custom-link "/>
-
-          <ArticleCard date={currentDate} url="https://example.com/article2" className="custom-link "/>
+          <ArticleCard date={currentDate} to="/Page1" />
+          <ArticleCard date={currentDate} to="/Page2" />
         </div>
         <br /><br />
         <div className="row">
-           <ArticleCard date={currentDate} url="https://example.com/article3" className="custom-link "/> 
-          <ArticleCard date={currentDate} url="https://example.com/article4" className="custom-link "/>
-          <ArticleCard date={currentDate} url="https://example.com/article5" className="custom-link "/>
+        <ArticleCard date={currentDate} to="/Page3" />
+        <ArticleCard date={currentDate} to="/Page4" />
+        <ArticleCard date={currentDate} to="/Page5" />
         </div>
       </div>
       

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Blog.css';
+import StickyHeader from './StickyHeader';
 import './App.css';
 import nex from './nex.png';
 import Rectangl from './Rectangl.png';
@@ -13,7 +14,9 @@ import Rect from './images/Rect.png';
 import angle from './images/angle.png';
 import Frame from './images/Frame.png';
 import Re from './images/Re.png';
-import Object from './images/Object.png';
+
+import { debounce } from 'lodash';
+import backgroundImage from './backgroundImage.png';
 
 const AboutUs = () => {
   const [isBackToHomeFixed, setIsBackToHomeFixed] = useState(false);
@@ -33,13 +36,9 @@ const AboutUs = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+    
   }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  
   const backToHomeClass = isBackToHomeFixed ? 'blog-link fixed' : 'blog-link';
 
   const aboutContent = (
@@ -76,6 +75,7 @@ const AboutUs = () => {
       </div>
     </div>
       <div className="conine">
+      <div className="parent-container">
   <div className="cosex">
     <div className="sociolumn">
       <div className="icons-container">
@@ -87,72 +87,9 @@ const AboutUs = () => {
       </div>
     </div>
   </div>
-  <div className="colex" id="mn">
-  <div className="fixed-content">
-  <ol className='xxddse'>
-    <h4 style={{
-      color: 'rgba(246, 143, 30, 1)',
-      fontFamily: 'Roboto',
-      fontWeight: 700,
-      fontSize: '20px',
-      lineHeight: '23.44px',
-      marginLeft: '90px'
-    }}>
-      Introduction
-    </h4>
-   
-      <li>
-        <a href="#personalized-user-experiences" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <span className="column-heading">Share</span> User Experiences <br />
-          <span style={{ marginLeft: '20px' }}> (UX)</span>
-        </a>
-      </li>
-      <li>
-        <a href="#integration-of-ai-and-machine-learning" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Integration of AI and Machine<br />
-          <span style={{ marginLeft: '20px' }}>Learning</span>
-        </a>
-      </li>
-      <li>
-        <a href="#inclusive-and-accessible-design" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Inclusive and Accessible Design
-        </a>
-      </li>
-      <li>
-        <a href="#inclusive-and-accesible-design" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Inclusive and Accessible Design
-        </a>
-      </li>
-      <li>
-        <a href="#simplified-user-interfaces-ui" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Simplified User Interfaces (UI)
-        </a>
-      </li>
-      <li>
-        <a href="#use-of-advanced-animations-and-transition" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Use of Advanced Animations and<br />
-          <span style={{ marginLeft: '20px' }}>Transition</span>
-        </a>
-      </li>
-      <li>
-        <a href="#gamification-and-interactive-design" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Gamification and Interactive<br />
-          <span style={{ marginLeft: '20px' }}>Design</span>
-        </a>
-      </li>
-      <li>
-        <a href="#gggg" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-          3D and Holographic Design<br />
-          <span style={{ marginLeft: '20px' }}>Elements</span>
-        </a>
-      </li>
-    
-      <button id="backToTop" style={{ marginTop: '10px', backgroundColor:'rgba(246, 143, 30, 1)', marginLeft: 'auto', marginRight: 'auto' }} onClick={scrollToTop}>
-      Back to top
-    </button>
-    </ol>
-  </div>
-  </div>
+</div>
+  
+  <StickyHeader />
   {/* Additional HTML snippet */}
       <div class="blog-content">
         <div className='blod'>
@@ -176,7 +113,7 @@ const AboutUs = () => {
         </p>
         </div><br></br><br></br>
         <div className='dlog'>
-        <h1 id="integration-of-ai-and-machine-learning">2. Integration of AI and Machine Learning</h1>
+        <h1 id="integration-of-ai-and-machine-learning" class="top-heading">2. Integration of AI and Machine Learning</h1>
         <p>The use of AI and machine learning is increasingly transforming the world of UX design. They allow designers to create more intelligent and intuitive interfaces that can adapt to user behavior.</p>
         </div><br></br><br></br><br></br><br></br>
         <img src={Rect} alt="AI and machine learning" className="blG" />
@@ -189,10 +126,7 @@ const AboutUs = () => {
         <p>Based on the user's search history and purchase behavior, Amazon suggests products that the user may be interested in. This saves time also helps the user discover new products that they may not have found otherwise.</p>
         </div>
         <div className='feax'><br></br>
-        <h1 id="inclusive-and-accessible-design">3. Inclusive and Accessible Design</h1>
-        </div>
-        <div className='ima'>
-        <img src={angle} alt="AI and machine learning" className="ima" />
+        <h1 id="inclusive-and-accessible-design" class="top-heading">3. Inclusive and Accessible Design</h1>
         </div>
         <br></br><br></br>
         <div className='becc'>
@@ -204,7 +138,7 @@ const AboutUs = () => {
         </div>
         <br></br><br></br>
         <div className='clesr'>
-        <h1 id="inclusive-and-accesible-design">4.Inclusive and Accessible Design</h1>
+        <h1 id="inclusive-and-accesible-design" class="top-heading">4.Inclusive and Accessible Design</h1>
         </div>
         <div className='seam'>
         <p>Users expect seamless experiences across all devices and platforms. UI/UX designers must create interfaces that work well on smartphones, tablets, desktops, and wearables. This requires a deep understanding of each platform's unique features and limitations. Multi-platform and multi-device design will be a top priority in 2023, ensuring that users can access and use the platform from any device.</p>
@@ -213,7 +147,7 @@ const AboutUs = () => {
           </div>
           <br></br><br></br>
           <div className='cfd'>
-        <h1 id="simplified-user-interfaces-ui" >5. Simplified User Interfaces (UI)</h1>
+        <h1 id="simplified-user-interfaces-ui" class="top-heading" >5. Simplified User Interfaces (UI)</h1>
         </div>
         <br></br><br></br>
         <div className='tyh'>
@@ -226,7 +160,10 @@ const AboutUs = () => {
         <p>An example of a simplified UI is Apple's Control Center. The interface is easy to access and provides quick access to frequently used settings and features, making it easy for users to customize their devices.</p>
         </div>
         <div className='mat'>
-        <h1 id="use-of-advanced-animations-and-transition">6. Use of Advanced Animations and Transitions</h1>
+        <h1 id="use-of-advanced-animations-and-transition" class="top-heading">6. Use of Advanced Animations and <br></br>Transitions</h1>
+        </div>
+        <div className='ima'>
+        <img src={angle} alt="AI and machine learning" className="ima" />
         </div>
         <div className='fued'>
         <p>feedback, creating a sense of fluidity in the platform, and creating a more immersive user experience. The goal is to create designs that feel alive and dynamic.</p>
@@ -236,7 +173,7 @@ const AboutUs = () => {
         <p> One example of advanced animations and changes is the Uber app. As the user requests a ride and the driver arrives, the app uses animations and transitions to provide real-time updates and create a sense of excitement and anticipation.</p>
         </div>
         <div className='gam'>
-        <h1 id="gamification-and-interactive-design">7. Gamification and Interactive Design</h1>
+        <h1 id="gamification-and-interactive-design" class="top-heading">7. Gamification and Interactive Design</h1>
         </div>
         <div className='iczz'>
         <p>Gamification has been a buzzword in the tech industry for years now. Interactive Design Gamification is a powerful tool widely adopted in UI/UX design.</p>
@@ -246,42 +183,24 @@ const AboutUs = () => {
         <p>
         For instance, Duolingo, the language learning app, uses gamification techniques to motivate and engage learners. The app rewards users with points and badges for completing language lessons and encourages users to maintain a daily streak by practicing their language skills. Similarly, Nike Run Club integrates gamification techniques by rewarding users with badges and trophies to complete milestones and challenges.
       </p>
+      </div> <br></br><br></br><br></br><br></br>
+      <div className="row-container">
+      <div className="left-column">
+        <h5 className="heading-five">Get a FREE</h5>
+        <h2 className="heading-two">Web/ App Audit</h2>
+        <p className="paragraph">Discover actionable insights, outshine competitors, and drive exceptional results</p>
+        <a href="/services"className="custom-button">BOOK NOW</a>
+
+        <br></br><br></br>
+        <p className='limitedt'>Limited Time Offer until June 20, 2023</p>
       </div>
-      <div className="row">
- 
-  <div
-    className="column"
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center', 
-      justifyContent: 'center',
-      textAlign: 'center',
-      // backgroundColor:'#00A2AD'
-    }}
-  >
-    <h5 style={{ margin: 0, color: 'white', fontFamily: 'Roboto', fontSize: '30px', fontWeight: 700, lineHeight: '10px', letterSpacing: '0em' }}>
-      Get a FREE
-    </h5>
-    <h2 style={{ margin: 0, color: 'white', fontFamily: 'Suisse Works', fontSize: '50px', fontWeight: 700, lineHeight: '65px', letterSpacing: '0em' }}>
-      Web/ App Audit
-    </h2>
-    <p style={{ margin: 0, fontFamily: 'Roboto', fontSize: '19px', color: 'white', fontWeight: 500, lineHeight: '23px', letterSpacing: '0em' }}>
-      Discover actionable insights, outshine competitors, and drive exceptional results
-    </p>
-    <button style={{ marginTop: '10px', color: 'rgba(0, 162, 173, 1)', backgroundColor: 'white' }}>
-      Click Me
-    </button>
-    <p style={{ margin: 0, fontFamily: 'Roboto', fontSize: '20px', fontWeight: 700, color: 'white', lineHeight: '26px', letterSpacing: '0em' }}>
-      Limited Time Offer until June 20, 2023
-    </p>
-    <div className="column">
-    <img src={Frame} alt="AI and machine learning" className="Flame" />
-  </div>
-  </div>
-</div><br></br>
+      <div className="right-column">
+        <img src={Frame} alt="AI and machine learning" className="Flame" />
+      </div>
+    </div>
+<br></br>
       <div className='holo'>
-      <h1 id="gggg">8. 3D and Holographic Design Elements</h1>
+      <h1 id="gggg" class="top-heading">8. 3D and Holographic Design Elements</h1>
       </div>
       <div className='ograph'>
       <p>The use of 3D and holographic design elements in UI/UX design is another trend expected to grow in the coming years. As virtual and augmented reality technologies become more advanced, we can expect to see more and more 3D and holographic design elements in UI/UX design.</p>
@@ -291,7 +210,7 @@ const AboutUs = () => {
       <p>For instance, Gucci, a fashion brand, used holographic runway models to showcase its latest collection during Milan Fashion Week. The holographic models appeared to walk on the runway, creating a captivating and immersive experience for viewers. Similarly, the augmented reality feature in the IKEA Place app allows users to place virtual furniture in their real-world surroundings and get a sense of how it will look in their homes.</p>
       </div>
       <div className='oice'>
-      <h1 id="Voice User Interface (VUI) and Conversational UI">9. Voice User Interface (VUI) and Conversational UI</h1>
+      <h1 id="Voice User Interface (VUI) and Conversational UI" class="top-heading">9. Voice User Interface (VUI) and Conversational UI</h1>
       </div>
       <div className='recog'>
       <p>As voice recognition technology becomes more advanced, we expect to see more and more applications of VUI and conversational UI in UI/UX design.</p>
@@ -303,7 +222,7 @@ const AboutUs = () => {
       <p> Another example is, the Starbucks app has integrated conversational UI in its ordering process, allowing users to order their favorite drinks by speaking directly to the app. Similarly, the Capital One app has integrated VUI, allowing users to check their account balances, make payments, and perform other banking transactions through voice commands.</p>
       </div><br></br><br></br>
       <div className='grat'>
-      <h1 id="Integration of Dark Mode">10. Integration of Dark Mode</h1>
+      <h1 id="Integration of Dark Mode" class="top-heading">10. Integration of Dark Mode</h1>
       </div>
       <div className='eco'>
       <p>Dark mode has become an increasingly popular trend in UI/UX design and is expected to become even more and more popular in the coming years. The dark mode is essentially an interface design that uses a dark color scheme instead of a light one, which can be easier on the eyes, particularly in low-light environments.</p>
@@ -329,33 +248,37 @@ const AboutUs = () => {
       
        {/* Add more content here */}
       </div>
-      </div>
+      </div><br></br><br></br><br></br>
       
       <div className="JOSH">
-      <h1>Spread the Word, Share the Blog</h1>
-      <p>We hope you found this blog on building effective landing pages insightful and valuable for your marketing endeavours. Have enjoyed reading this blog? Please share with your friends, colleagues, or relatives who might also benefit from this information. You can help others enhance their landing page strategies and achieve better conversion rates by spreading the word.</p>
-      <div className="lumn" style={{ backgroundColor: 'rgba(246, 143, 30, 1)' }}>
-        <h2 className="spread-knowledge">Spread the Knowledge,<br />Share the Value with others</h2>
-        <button style={{ width: '460px', height: '83px', top: '11041px', marginLeft: '60px', left: '280px', borderRadius: '100px', marginTop: '60px', fontFamily: 'Roboto', fontSize: '30px', fontWeight: '700', lineHeight: '35px', letterSpacing: '0em', textAlign: 'center', backgroundColor: 'white' }}>Share it</button>
-        <img src={Object} className="extended-image" alt="Extended" />
+      <h1 className='blakbn'>Spread the Word, Share the Blog</h1>
+      <p className='fasdfcc' >We hope you found this blog on building effective landing pages insightful and valuable for your marketing endeavours. Have enjoyed reading this blog? Please share with your friends, colleagues, or relatives who might also benefit from this information. You can help others enhance their landing page strategies and achieve better conversion rates by spreading the word.</p>
+      <div className="lumn" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: 'rgba(246, 143, 30, 1)' }}>
+        <h2 className='spreds'>Spread the Knowledge,<br />Share the Value with others</h2>
+        <a href="https://example.com"><button class="styled-button">Share it</button >
+        </a>
+        <h2 className='spreds'>Spread the Knowledge,<br />Share the Value with others</h2>
+        <h2 className='spreds'>Spread the Knowledge,<br />Share the Value with others</h2>
       </div>
       
-      <h1>Join Us and Stay Connected</h1>
-      <p>To stay connected and receive regular updates on UI/UX design, and other exciting tech insights, we invite you to follow and subscribe to our social media platforms and be part of the discussion!</p>
+      <h1 className='blakbn'>Join Us and Stay Connected</h1>
+      <p className='fasdfcc'>To stay connected and receive regular updates on UI/UX design, and other exciting tech insights, we invite you to follow and subscribe to our social media platforms and be part of the discussion!</p>
       <ul className="sociall-links">
-        <li>Follow us on Facebook: <a href="https://www.facebook.com/TALLEN" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN on Facebook</a></li>
-        <li>Follow us on Twitter: <a href="https://twitter.com/TALLEN" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN on Twitter</a></li>
-        <li>Connect with us on LinkedIn: <a href="https://www.linkedin.com/company/TALLEN" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN on LinkedIn</a></li>
+        <li className='liksf'>Follow us on Facebook: <a href="https://www.facebook.com/TALLEN" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN on Facebook</a></li>
+        <li className='liksf'>Follow us on Twitter: <a href="https://twitter.com/TALLEN" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN on Twitter</a></li>
+        <li className='liksf'>Connect with us on LinkedIn: <a href="https://www.linkedin.com/company/TALLEN" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN on LinkedIn</a></li>
       </ul>
-      <h1>Let's Collaborate, Unlock Success</h1>
-      <p>At <a href="lumn" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN</a>, we're excited to offer professional and reliable UI/UX design services to help elevate your brand. Our global team of experts specializes in UI/UX design, web development, mobile app development, digital marketing, and digital content creation. We will gladly partner with you to partner with us. We invite you to <a href="#" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>Get Started</a> today by requesting for a service! We aim to help your business thrive in the digital landscape and provide users with engaging experiences.</p>
-      <div className="lumn" style={{ backgroundColor: 'rgba(2, 162, 172, 1)', display: 'flex', alignItems: 'center' }}>
-        <img src={ram} alt="" width="700" height="300" />
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h2 style={{ fontFamily: 'Roboto', fontSize: '50px', fontWeight: '700', lineHeight: '59px', color: 'white', letterSpacing: '0em', textAlign: 'left' }}>Let's Collaborate,<br />Unlock Success</h2>
-          <button style={{ width: '460px', height: '83px', color: 'rgba(2, 162, 172, 1)', top: '12261px', backgroundColor: 'white', left: '921px', borderRadius: '100px' }}>Get Started</button>
-        </div>
+      <h1 className='blakbn'>Let's Collaborate, Unlock Success</h1>
+      <p className='fasdfcc'>At <a href="lumn" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>TALLEN</a>, we're excited to offer professional and reliable UI/UX design services to help elevate your brand. Our global team of experts specializes in UI/UX design, web development, mobile app development, digital marketing, and digital content creation. We will gladly partner with you to partner with us. We invite you to <a href="#" style={{ textDecoration: 'underline', color: 'rgba(246, 143, 30, 1)' }}>Get Started</a> today by requesting for a service! We aim to help your business thrive in the digital landscape and provide users with engaging experiences.</p>
+      <div className="lu">
+      <img src={ram} alt="" />
+      <div className="contenx">
+        <h2>
+          Let's Collaborate,<br />Unlock Success
+        </h2>
+        <a href="https://example.com"> <button>Get Started</button></a>
       </div>
+    </div>
       </div>
       <div><br></br><br></br><br></br><br></br><br></br><br></br>
     
@@ -407,7 +330,14 @@ to our newsletter</h2>
   return (
     <div>
       <div className="ner">
-      <h1 style={{ textIndent: '10px', lineHeight: 1.1 , marginTop: '102px'}}>
+      <h1 style={{
+      textIndent: '10px',
+      lineHeight: 1.1,
+      marginTop: '102px',
+      fontFamily: 'Font Suisse Works',
+      fontWeight: 700,
+      fontSize: '50px'
+    }}>
       The Future of UI/UX Design: The<br />
       <span>Top 10 Trends and Predictions for</span><br />
       <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>

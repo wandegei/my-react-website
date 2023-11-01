@@ -1,0 +1,102 @@
+/* External CSS styles go here */
+
+.page-containemnr {
+    max-width: 1268px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    cursor:pointer;
+  }
+  
+  .page-heading {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 41px;
+    margin-top: 101px;
+    font-weight: 700;
+    color: brown;
+    cursor:pointer;
+  }
+  .conclu{
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+    cursor: zoom-in;
+    color: blue;
+  }
+  
+  .article-heading {
+    font-size: 38px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700px;
+    text-decoration: underline;
+    text-align: justify;
+    color: rgb(72, 211, 125);
+    cursor:pointer;
+  }
+  
+  .article-meta {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+    cursor:pointer;
+  }
+  
+  .article {
+    margin-bottom: 56px;
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0em;
+    cursor:pointer;
+  }
+ 
+/* Improved Mobile responsiveness */
+@media (max-width: 768px) {
+    .page-containemnr {
+        padding: 10px;
+    }
+
+    .page-heading {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .conclu {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .article-heading {
+        font-size: 22px;
+        margin-bottom: 10px;
+        text-decoration: none; /* Remove underline for better readability */
+        text-align: left; /* Align heading to the left for better readability */
+    }
+
+    .article-meta {
+        font-size: 12px;
+        color: #777; /* Slightly darker gray for better contrast */
+        margin-bottom: 10px;
+    }
+
+    .article {
+        font-size: 16px;
+        line-height: 1.5; /* Improved line height for better readability */
+        margin-bottom: 20px;
+        text-align: justify; /* Justify text for better alignment */
+    }
+    
+    /* Increase spacing between elements for better touch interactions */
+    .page-heading, .conclu, .article-heading, .article-meta, .article {
+        padding: 10px;
+    }
+    
+    /* Adjust padding for better touch interactions on clickable elements */
+    .page-heading, .conclu, .article-heading, .article-meta, .article, .cursor-pointer {
+        cursor: pointer;
+    }
+}

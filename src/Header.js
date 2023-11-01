@@ -16,8 +16,7 @@ const Header = () => {
 
   return (
     <div className='xxds'>
-      <header className="header">
-        
+      <header className="header"> 
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo-container">
             <div className="logo-content">

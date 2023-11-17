@@ -1,75 +1,85 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import mainImage from './mainImage.png';
-import { Link } from "react-router-dom";
-import Rectangl from './Rectangl.png';
-import man from './man.png';
+import { Link, useLocation  } from 'react-router-dom';
 import SearchBar from './SearchBar';
+import CustomArticleCard from './CustomArticleCard'; // Adjust the path accordingly
 
-const articles = [
-  { id: 1, title: 'Sample Article 1' },
-  { id: 2, title: 'Sample Article 2' },
-  { id: 3, title: 'Another Article3' },
-  { id: 4, title: 'Another Article4' },
-  { id: 4, title: 'Another Article7' },
-  { id: 5, title: 'Joshua' },
-  { id: 6, title: 'Wandegei' },
-  { id: 7, title: '@tallen.tech' },
-  // ... more articles
-];
 
-const handleSearch = (query) => {
-  // Implement your search logic here
-  const results = articles.filter(article =>
-    article.title.toLowerCase().includes(query.toLowerCase())
-  );
 
-  // Update search results in the state
+
+const generateRandomArticles = (count) => {
+  const articles = [
+   
+    {
+      id: 1,
+      title: 'Your First Article Title',
+      content: 'Revolutionize Your Business: ' +
+        'How to Create a Winning Digital ' +
+        'Transformation Strategy That Works',
+      smallImageText: 'Software Development',
+    },
+   
+    
+    {
+      id: 3,
+      title: 'July 20, 2023',
+      content: "Dive into the world of Artificial Intelligence. Explore our articles for valuable insights and stay informed about the latest  in AI.",
+      smallImage: 'talen.png',
+      smallImageText: 'Artificial Intelligence',
+    },
+     {
+      id: 2,
+      title: 'July 20, 2023',
+      content: 'Revolutionize Your Business: ' +
+        'How to Create a Winning Digital ' +
+        'Transformation Strategy That Works',
+      smallImageText: 'Software Development',
+    },
+    {
+      id: 4,
+      title: 'July 20, 2023',
+      content: "Discover insights into Cloud Computing. Explore our articles for valuable information and stay informed about the latest trends.",
+      smallImage: 'talen.png',
+      smallImageText: 'Cloud Computing',
+    },
+    {
+      id: 5,
+      title: 'July 20, 2023',
+      content: "Explore the world of Digital Business. Dive into our articles for valuable insights and stay updated on the latest developments.",
+      smallImage: 'talen.png',
+      smallImageText: 'Digital Business',
+    },
+    {
+      id: 6,
+      title: 'July 20, 2023',
+      content: "Explore diverse topics for valuable insights, entertainment. Enrich your experience with our curated articles.",
+      smallImage: 'talen.png',
+      smallImageText: 'General',
+    },
+  ];
   
+  return articles.slice(0, count); // Limit the number of articles to the specified count
 };
-const ArticleCard = ({ date, to }) => (
-  <div className="col-md-4">
-    <Link to={to} className='custom-link'>
-      <img src={Rectangl} alt="" className="col-image" />
-      <div className="content">
-        <p className="date">
-          {date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </p>
-        <div className="image-wrapper">
-          <div className="author-info">
-            <Link to={to}>
-              <img src={man} alt="Mark Matovu" className="author-image" />
-            </Link>
-            <p className="author-name">Mark Matovu</p>
-          </div>
-        </div>
-        <p className="title">
-          Revolutionize Your Business: How to Create a Winning Digital Transformation Strategy That Works
-        </p>
-      </div>
-    </Link>
-  </div>
-);
 
 const MainContent = () => {
-  const [fixedNav, setFixedNav] = useState(false);
+   
+  const [fixedNav, setFixedNav] = useState(false); // Keep this line
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+  const location = useLocation();
+  const path = location.pathname;
+  
+
+  const articles = generateRandomArticles(6); // Generate 6 random articles
+
   const [searchResults, setSearchResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
 
-  const handleSearch = (query) => {
-    const results = articles.filter(article =>
-      article.title.toLowerCase().includes(query.toLowerCase())
-    );
-
-    setSearchResults(results);
-    setShowResults(true);
+  const handleSearch = () => {
+    // Implement the search functionality here
+    // Update searchResults and showResults accordingly
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -98,6 +108,7 @@ const MainContent = () => {
   };
 
   return (
+    
     <main style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
       <div className="content-container">
         <div className="text-image-container">
@@ -114,28 +125,29 @@ const MainContent = () => {
       </div>
 
       <div className={`general ${fixedNav ? 'fixed-nav' : ''}`}>
+     
         <div id="top-space" style={{ height: '8px', marginBottom:'-20px' }}></div>
         <nav>
           <ul className="headers">
             <li className="all-button">
               <Link to="/Home"><button>All</button></Link>
             </li>
-            <li><Link to="/Page6">Software Development</Link></li>
-            <li><Link to="/Page7">Artificial Intelligence</Link></li>
-            <li><Link to="/Page8">Cloud Computing</Link></li>
-            <li><Link to="/Page9">Digital Business</Link></li>
-            <li><Link to="/Home">General</Link></li>
+            <Link to="/page2">Software Development</Link>
+            <li><Link to="/contact">Artificial Intelligence</Link></li>
+            <li><Link to="/">Cloud Computing</Link></li>
+            <li><Link to="/">Digital Business</Link></li>
+            <li><Link to="/">General</Link></li>
             <li className="search-button">
-            <SearchBar onSearch={handleSearch} />
-            {showResults && searchResults.length > 0 ? (
-              <ul>
-                {searchResults.map(article => (
-                  <li key={article.id}>{article.title}</li>
-                ))}
-              </ul>
-            ) : null}
-            {showResults && searchResults.length === 0 && <p>No results found.</p>}
-          </li>
+                <SearchBar onSearch={handleSearch} />
+                {showResults && searchResults.length > 0 ? (
+                  <ul>
+                    {searchResults.map(article => (
+                      <li key={article.id}>{article.title}</li>
+                    ))}
+                  </ul>
+                ) : null}
+               
+              </li>
           </ul>
         </nav>
       </div>
@@ -143,25 +155,83 @@ const MainContent = () => {
       <br /><br /><br /><br /><br /><br /><br /><br />
 
      {/* Article Cards */}
+     {/* Article Cards */}
      <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <div className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column' }}>
-              <h2 className="col-heading">Explore our services</h2>
-              <Link to="/services" className="col-button">Our Services</Link>
-            </div>
-          </div>
-
-          <ArticleCard date={currentDate} to="/Page1" />
-          <ArticleCard date={currentDate} to="/Page2" />
-        </div>
-        <br /><br />
-        <div className="row">
-        <ArticleCard date={currentDate} to="/Page3" />
-        <ArticleCard date={currentDate} to="/Page4" />
-        <ArticleCard date={currentDate} to="/Page5" />
-        </div>
+  <div className="row">
+    {/* Sample Column 1 */}
+    <div className="col-md-4">
+      <div className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column' }}>
+        <h2 className="col-heading">Explore our services</h2>
+        <Link to="/services" className="col-button">Our Services</Link>
       </div>
+    </div>
+
+    {/* Sample Column 2 */}
+
+    
+       {/* Sample Column 2 */}
+       <div className="col-md-4 custom-div ">
+        <CustomArticleCard 
+          title={articles[2].title}
+          content={articles[2].content}
+          to="/Page2"
+          image="/Rectangl.png"
+          smallImage={articles[2].smallImage}
+          smallImageText={articles[2].smallImageText}
+        />
+      </div>
+   
+      {/* Sample Column 3 */}
+      <div className="col-md-4 custom-div ">
+           <CustomArticleCard
+              title={articles[1].title}
+              content={articles[1].content}
+              to="/contact"
+              image="/second.jpg"
+              smallImage={articles[1].smallImage}
+              smallImageText={articles[1].smallImageText}
+            />
+      </div>
+    </div>
+
+  <br></br><br></br><br></br><br></br><br></br>
+    <div className="row">
+      {/* Sample Column 4 */}
+      <div className="col-md-4 custom-div ">
+        <CustomArticleCard
+          title={articles[3].title}
+          content={articles[3].content}
+          to="/Page4"
+          image="/third.jpg"
+          smallImage={articles[3].smallImage}
+          smallImageText={articles[3].smallImageText}
+        />
+      </div>
+
+      <div className="col-md-4 custom-div ">
+        <CustomArticleCard
+          title={articles[4].title}
+          content={articles[4].content}
+          to="/Page5"
+          image="/forth.png"
+          smallImage={articles[4].smallImage}
+          smallImageText={articles[4].smallImageText}
+        />
+      </div>
+
+      <div className="col-md-4 custom-div ">
+        <CustomArticleCard  
+          title={articles[5].title}
+          content={articles[5].content}
+          to="/Page6"
+          image="/fifth.png"
+          smallImage={articles[5].smallImage}
+          smallImageText={articles[5].smallImageText}
+        />
+      </div>
+    </div>
+</div>
+
       
       <section className="subscribe-area" style={{ maxHeight: '600px', overflow: 'hidden' }}>
   <div className="container">

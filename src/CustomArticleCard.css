@@ -1,0 +1,90 @@
+/* CustomArticleCard.css */
+.custom-col-md-4 {
+  flex-basis: 33.3333%; /* Adjust the width based on your preference */
+}
+.custom-card-title{
+  font-size: 20px;
+  color: black;
+  margin-left: 20px;
+}
+.custom-card-text{
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  margin-top: 49px;
+  padding: 17px;
+
+
+}
+.custom-link{
+  text-decoration: none;
+}
+.small-image{
+  margin-right: 20px;
+}
+.small-image-text{
+  margin-right: 24px;
+  font-family: Roboto;
+  font-size: 20px !important;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+
+
+}
+
+@media (max-width: 767px) {
+  .custom-col-md-4 {
+    flex-basis: 100%;
+  }
+}
+
+/* Additional adjustments for original columns */
+.col-md-4 {
+  flex-basis: 33.3333%; /* Adjust the width based on your preference */
+}
+
+@media (max-width: 767px) {
+  .col-md-4 {
+    flex-basis: 100%;
+  }
+}
+
+/* Added styles for image size */
+.custom-card-img-top {
+  max-width: 101%;
+  height: 203px;
+  width: 377px;
+}
+
+/* CustomArticleCard.css */
+.small-image {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-left: 10px; /* Adjust the margin as needed */
+  border-radius: 50%; /* Make it a circle */
+}
+
+.small-image-text {
+  margin-left: 5px; /* Adjust the margin as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align to the right */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

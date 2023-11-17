@@ -16,7 +16,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div className="search-bar">
-      <input
+      <input className='fdsdasd'
         type="text"
         placeholder="Search Blog.."
         value={query}

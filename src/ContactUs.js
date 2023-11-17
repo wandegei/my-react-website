@@ -3,19 +3,14 @@ import { Link } from 'react-router-dom';
 import './Blog.css';
 import StickyHeader from './StickyHeader';
 import './App.css';
-import nex from './nex.png';
+import tallen from './tallen.png';
 import Rectangl from './Rectangl.png';
-import FacebookIcon from './images/Facebook.png';
-import TwitterIcon from './images/Twitter.png';
-import VectorIcon from './images/Vector .png';
-import FlatIcon from './images/Flat.png';
+import StickySocialIcons from './StickySocialIcons';
 import ram from './images/ram.png';
 import Rect from './images/Rect.png';
 import angle from './images/angle.png';
 import Frame from './images/Frame.png';
 import Re from './images/Re.png';
-
-import { debounce } from 'lodash';
 import backgroundImage from './backgroundImage.png';
 
 const AboutUs = () => {
@@ -66,8 +61,8 @@ const AboutUs = () => {
         <p className="dat">May 20, 2023</p>
         {/* Add your about us page content here */}
         <div className="max">
-          <img src={nex} alt="Mark Matovu" className="emma-image" />
-          <p className="js">Mark Matovu</p>
+          <img src={tallen} alt="Tallen" className="emma-image" />
+          <p className="js">TALLEN</p>
         </div>
       </div>
       <div>
@@ -75,20 +70,7 @@ const AboutUs = () => {
       </div>
     </div>
       <div className="conine">
-      <div className="parent-container">
-  <div className="cosex">
-    <div className="sociolumn">
-      <div className="icons-container">
-        <a href="https://www.facebook.com"><img className="socion" src={FacebookIcon} alt="Facebook" /></a>
-        <a href="https://www.twitter.com"><img className="socian" src={TwitterIcon} alt="Twitter" /></a>
-        <a href="https://www.instagram.com"><img className="sicon" src={VectorIcon} alt="Whatsup" /></a>
-        <a href="https://www.linkedin.com"><img className="sodn" src={FlatIcon} alt="linkedin" /></a>
-        {/* Add more social media icons here */}
-      </div>
-    </div>
-  </div>
-</div>
-  
+  <StickySocialIcons/>
   <StickyHeader />
   {/* Additional HTML snippet */}
       <div class="blog-content">
@@ -328,21 +310,22 @@ to our newsletter</h2>
   );
 
   return (
-    <div>
-      <div className="ner">
-      <h1 style={{
-      textIndent: '10px',
-      lineHeight: 1.1,
-      marginTop: '102px',
-      fontFamily: 'Font Suisse Works',
-      fontWeight: 700,
-      fontSize: '50px'
-    }}>
-      The Future of UI/UX Design: The<br />
-      <span>Top 10 Trends and Predictions for</span><br />
-      <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>
+  <div>
+      <div className="ner" style={{ position: 'sticky', top: '0' }}>
+      <h1 className='Trends' style={{
+        textIndent: '10px',
+        lineHeight: 1.1,
+        marginTop: '102px',
+        fontFamily: 'Font Suisse Works',
+        fontWeight: 700,
+        fontSize: '50px'
+      }}>
+        The Future of UI/UX Design: The<br />
+        <span>Top 10 Trends and Predictions for</span><br />
+        <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>
       </h1>
     </div>
+
     {aboutContent}
     </div>
   );

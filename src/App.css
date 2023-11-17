@@ -424,6 +424,10 @@ main {
   color: #333333;
   text-decoration: none;
 }
+.headers a:hover {
+  color: #f7901f; /* Change the color to your desired hover color */
+  text-decoration: underline; /* Underline on hover */
+}
 
 .search-button button {
   height: 40px;
@@ -445,6 +449,7 @@ main {
   margin-right: 14px;
   margin-top: -42px;
 }
+
 
 .Icon-but {
   width: 20px; /* Reduce icon size for smaller screens */
@@ -635,7 +640,15 @@ main {
   }
   .logo{
     width: 120px;
+    margin-bottom: 5px;
   }
+}
+/* styles.css */
+.custom-div {
+  padding: 2px !important;
+  background: rgb(234, 230, 230);
+  border: 1px solid rgb(139, 137, 137);
+  
 }
 
 
@@ -647,7 +660,6 @@ main {
 /* End of navigation scroll lists */
 
 
-/* START OF COLUMNS */
 /* styles.css */
 .container {
   padding: 20px;
@@ -657,32 +669,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin: -10px; /* Adjust as needed */
-  
-}
-.custom-link {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit the color from the parent element */
-  transition: color 0.2s ease; /* Smooth transition for color change */
 }
 
-.custom-link:hover {
-  color: #007bff; /* Change the text color to blue when hovered */
-}
-
-
-/* .col-sm-4 {
-  flex: 0 0 calc(33.33% - 20px); 
-  margin: 10px; 
-  background-color: rgba(246, 143, 30, 1);
-  padding: 20px;
-  color: white;
-  border-radius: 5px;
-} */
 .col-heading {
-  /* width: 361px; */
   color: #FFFDFD;
   text-align: center;
-  
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -702,168 +693,22 @@ main {
   line-height: 1.17;
   letter-spacing: 0;
   text-align: center;
-  /* width: 272px; */
   height: 60px;
   border-radius: 5px;
-  margin: 160px auto 30px; /* Adjust the margin-top value as needed */
+  margin: 160px auto 30px;
   text-decoration: none;
   margin-top: 170px;
   color: #F68F1E;
   padding: 29px;
 }
 
-.col-button:hover {
-  background-color: rgb(224, 224, 224);
-  cursor: pointer;
-}
-.col-image {
-  width: 100%;
-  height: auto;
-}
-.content {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 1);
-  border: 2px solid #ccc; /* Add a 1px solid border with a light gray color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  margin: 3px;
-}
-
-
-.date {
-  color: #000;
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  width: 156px;
-  height: 21px;
-  flex-shrink: 0;
-
-}
-
-.image-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 0px;
-}
-
-.author-info {
-  display: flex;
-  align-items: center;
-  margin-top: -30px;
-}
-
-.author-name {
-  color: #000;
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  width: 134px;
-  height: 21px;
-  flex-shrink: 0;
-  margin-right: -30px;
-  margin-left: 20px;
-
-}
-
-.author-image {
-  margin-bottom: 14px;
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 30px;
- 
-}
-.emma-image {
-  margin-bottom: 14px;
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-  border-radius: 30px;
-  margin-top: -64px;
- 
-}
-.col-content{
-  
-  height: 454px;
-   
-}
-
-.title {
-  max-width: 100%; /* Set maximum width to cover available space */
-  font-weight: 700;
-  margin-top: 20px; /* Adjusted margin for spacing */
-  font-family: Roboto;
-  font-size: 25px;
-  line-height: 29px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-top: 70px;
-}
-
-
 /* Media queries */
-@media screen and (max-width: 768px) {
-  .col-heading {
-   
-    margin-top: 20px; /* Further adjust margin for small screens */
-    margin-bottom: -5px; /* Further adjust margin for small screens */
-  }
-  .submitButtonStyle {
-    cursor: pointer;
-    background-color: rgba(247, 144, 31, 1);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    border: none;
-    margin-top: -40px;
-}
-
-  .col-content {
-    height: 454px;
-    margin-bottom: 23px;
-  }
-
-  .col-button {
-    
-    height: 35px; /* Further reduce height for small screens */
-    margin: 202px auto 5px; /* Further adjust margin for small screens */
-    
-  }
-  .title{
-    font-size: 20px;
-  }
-  
-  /* .author-name{
-    font-size: 16px;
-  } */
-  .author-image {
-    margin-bottom: 20px;
-    width: 21px;
-    height: 21px;
-    border-radius: 20px;
-  }
-  .date {
-    color: #000;
-    font-family: Roboto;
-    
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    width: 126px;
-    height: 21px;
-    flex-shrink: 0;
-  
+@media screen and (max-width: 991px) {
+  .col-lg-4 {
+    flex-basis: 100%;
   }
 }
+
 
 @media screen and (max-width: 480px) {
   .col-heading {
@@ -1117,8 +962,7 @@ main {
   z-index: 999;
   position: relative; 
   margin-bottom: -30px;
-  margin-top: 206px;
- 
+  margin-top: 45px;
 }
 
 .dexx {
@@ -1181,3 +1025,4 @@ main {
 }
 
 /*  END  OF subscribe-area */
+

@@ -1,102 +1,270 @@
 /* External CSS styles go here */
 
-.page-containemnr {
-    max-width: 1268px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    cursor:pointer;
-  }
+.page-container {
   
-  .page-heading {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 41px;
-    margin-top: 101px;
-    font-weight: 700;
-    color: brown;
-    cursor:pointer;
-  }
-  .conclu{
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600px;
-    cursor: zoom-in;
-    color: blue;
-  }
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.page-heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 41px;
+  margin-top: 7px;
+  font-weight: 700;
+  color: brown;
+  cursor: pointer;
+}
+
+.conclu {
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  cursor: zoom-in;
+  color: blue;
+}
+
+.article-heading {
+  font-size: 38px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: justify;
+  color: rgb(72, 211, 125);
+  cursor: pointer;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.article {
+  margin-bottom: 56px;
+  font-family: Roboto;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  width: 1418px;
   
-  .article-heading {
-    font-size: 38px;
-    margin-bottom: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700px;
-    text-decoration: underline;
-    text-align: justify;
-    color: rgb(72, 211, 125);
-    cursor:pointer;
-  }
-  
-  .article-meta {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 20px;
-    cursor:pointer;
-  }
-  
-  .article {
-    margin-bottom: 56px;
-    font-family: Roboto;
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0em;
-    cursor:pointer;
-  }
- 
+}
+
+.columns-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+}
+
+.column-image {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Improved Mobile responsiveness */
 @media (max-width: 768px) {
-    .page-containemnr {
-        padding: 10px;
-    }
+  .page-container {
+      padding: 10px;
+  }
 
-    .page-heading {
-        font-size: 24px;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
+  .page-heading {
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+  }
 
-    .conclu {
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
+  .conclu {
+      font-size: 18px;
+      margin-bottom: 15px;
+  }
 
-    .article-heading {
-        font-size: 22px;
-        margin-bottom: 10px;
-        text-decoration: none; /* Remove underline for better readability */
-        text-align: left; /* Align heading to the left for better readability */
-    }
+  .article-heading {
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      text-align: left;
+  }
 
-    .article-meta {
-        font-size: 12px;
-        color: #777; /* Slightly darker gray for better contrast */
-        margin-bottom: 10px;
-    }
+  .article-meta {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 10px;
+  }
 
-    .article {
-        font-size: 16px;
-        line-height: 1.5; /* Improved line height for better readability */
-        margin-bottom: 20px;
-        text-align: justify; /* Justify text for better alignment */
-    }
-    
-    /* Increase spacing between elements for better touch interactions */
-    .page-heading, .conclu, .article-heading, .article-meta, .article {
-        padding: 10px;
-    }
-    
-    /* Adjust padding for better touch interactions on clickable elements */
-    .page-heading, .conclu, .article-heading, .article-meta, .article, .cursor-pointer {
-        cursor: pointer;
-    }
+  .article {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: justify;
+  }
+
+  .columns-container {
+      flex-direction: column; /* Arrange columns vertically on small screens */
+  }
+
+  .column {
+      width: 100%;
+  }
+
+  .page-heading,
+  .conclu,
+  .article-heading,
+  .article-meta,
+  .article {
+      padding: 10px;
+  }
+
+  .page-heading,
+  .conclu,
+  .article-heading,
+  .article-meta,
+  .article,
+  .cursor-pointer {
+      cursor: pointer;
+  }
+}
+.headaxxrs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  padding-left: 0px;
+  margin: 0;
+  margin-top: 0px;
+  margin-top: 64px !important;
+  width: 1235px;
+  max-width: 1245px;
+  margin-left: -48px;
+}
+
+.headaxxrs li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.headaxxrs a:hover {
+  color: #f7901f;
+  text-decoration: underline;
+}
+
+.headaxxrs a {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 900;
+  color: #333333;
+  text-decoration: none;
+}
+.headaxxrs .active a {
+  color: #f7901f;
+  text-decoration: underline;
+}
+.con{
+  padding-top: 91px;
+}
+
+@media (max-width: 760px) {
+  .headaxxrs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-left: 0;
+    z-index: 3;
+    position: absolute;
+    top: -80px;
+  }
+
+  .headaxxrs li {
+    white-space: nowrap;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.column-paragraph {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  cursor: pointer;
+}
+
+.highlight {
+  color: #007bff; /* or any other color you prefer */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Media Query for Small Devices (up to 767px wide) */
+@media (max-width: 767px) {
+  .column-paragraph {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .highlight {
+    font-weight: normal !important;
+    font-size: 13px !important;
+    margin-top: -23px;
+  }
+}
+
+
+.social-media-link {
+  margin-right: 15px; /* Adjust the margin as needed */
+}
+
+.social-media-link a {
+  text-decoration: none;
+  color: #333; /* Change the color to your preference */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Add a smooth color transition on hover */
+
+}
+
+.social-media-link a:hover {
+  color: #00acee; /* Change the color to your preference */
+}
+
+/* Add this to your CSS file or include it directly in your components */
+
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 8px 15px;
+  margin-bottom: 0;
+  list-style: none;
+  border-radius: 3px;
+  margin-top: 57px;
+  
+}
+
+
+.breadcrumb-item {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.breadcrumb-item:not(.active)::before {
+  content: '/';
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #6c757d;
+}
+
+.breadcrumb-item.active {
+  color: #000;
+}
+.software-development-matters{
+  margin-top :20px;
 }

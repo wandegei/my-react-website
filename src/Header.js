@@ -20,23 +20,23 @@ const Header = () => {
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo-container">
             <div className="logo-content">
-            <Link to="/Terms" className="blog-title">
+            <Link to="https://tallen.tech/blog/" className="blog-title">
               <img src={logo} alt="Logo" className="logo" />
             </Link> 
 
-              <Link to="/Terms" className="blog-title">
+              <Link to="https://tallen.tech/blog" className="blog-title">
                 Blog
               </Link> 
             </div>
             <div className="logo-conten">
-  <Link to="/" className="blog-title">
+  <Link to="https://tallen.tech/" className="blog-title">
     Home
   </Link>
-  <Link to="/contact" className="blog-title">
+  <Link to="https://tallen.tech/contact" className="blog-title">
     Contact Us
   </Link>
   <button className="service-button">
-    <Link to="/Terms" className="blog-tle">
+    <Link to="https://tallen.tech/service" className="blog-tle">
       Our Services
     </Link>
   </button>

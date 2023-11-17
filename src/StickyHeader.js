@@ -6,8 +6,8 @@ const StickyHeader = () => {
   const headerRef = useRef(null);
 
   const handleScroll = () => {
-    const offset = 90; // Adjust this value as needed
-    setIsSticky(window.scrollY > offset);
+    const scrollPosition = window.scrollY;
+    setIsSticky(scrollPosition >= headerRef.current.offsetTop);
   };
 
   const scrollToTop = () => {
@@ -24,11 +24,28 @@ const StickyHeader = () => {
     };
   }, []);
 
-  const colexClass = isSticky ? 'colex sticky' : 'colex';
+  const headerStyle = {
+    position: isSticky ? 'fixed' : 'static',
+    top: '82px',
+    backgroundColor: 'white',
+    lineHeight: ' 25px',
+    fontWeight: '400',
+    fontSize: '20px',
+    fontFamily: 'Roboto',
+    width: '320px',
+    marginLeft: '58px',
+    marginTop: isSticky ? '39px' : '0',
+    height: '490px',
+    zIndex: 100,
+    left: 0,
+    padding: '10px 5px',
+    
+    
+  };
 
   return (
-    <div>
-     <div className={colexClass} ref={headerRef}>
+    <div className='htjsla'>
+      <div style={headerStyle} ref={headerRef}>
         <ol>
           <h4 style={{
             color: 'rgba(246, 143, 30, 1)',
@@ -93,7 +110,20 @@ const StickyHeader = () => {
         </li>
           
           {/* Add other list items here */}
-          <button id="backToTop" style={{ marginTop: '10px', backgroundColor:'rgba(246, 143, 30, 1)', marginLeft: 'auto', marginRight: 'auto', borderRadius: '3px',width: '159px',border: 'none' }} onClick={scrollToTop}>
+          <button
+          id="backToTop"
+          style={{
+            display: isSticky ? 'block' : 'none',
+            margin: '10px auto',
+            backgroundColor: 'rgba(246, 143, 30, 1)',
+            borderRadius: '3px',
+            width: '159px',
+            border: 'none',
+            padding: '10px 20px',
+            cursor: 'pointer'
+          }}
+          onClick={scrollToTop}
+        >
             Back to top
           </button>
         </ol>

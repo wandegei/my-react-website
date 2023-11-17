@@ -9,19 +9,26 @@
 /* CSS for small devices (e.g., smartphones) */
 @media screen and (max-width: 767px) {
   .ner {
-    background-color: lightblue;
-    padding: 20px;
+    
+    padding: 36px;
     text-align: center;
     margin: 20px;
+    padding-top: -15px;
   }
+  
   h1 {
-    font-size: 24px;
+    font-size: 23px !important;
     line-height: 1.2;
     margin-bottom: 10px;
+    font-weight: 600 !important;
   }
   span {
     display: block;
     padding-left: 0;
+    font-size: 23px !important;
+    font-weight: 600 !important;
+    line-height: 55px;
+    margin-bottom: -27px;
   }
 }
 
@@ -37,6 +44,12 @@
     font-size: 32px;
     line-height: 1.4;
     margin-bottom: 20px;
+  }
+  .Trends{
+    font-size: 25px ;
+  }
+  .ner{
+    font-size: 25px ;
   }
   span {
     display: inline;
@@ -127,6 +140,7 @@ margin-top: -40px;
   flex-shrink: 0;
   border-radius: 10px;
   margin-top: 48px;
+  
 }
 .author-image {
   margin-bottom: 14px;
@@ -219,6 +233,9 @@ align-items: center;
   left: 20px;
   width: 400px;
   z-index: 100;
+}
+.emma-image{
+  margin-top: -77px;
 }
 
 @media (max-width: 767px) {
@@ -386,8 +403,35 @@ margin-right: 50px;
   border: none;
   margin-bottom: 49px;
 }
+/* Media queries for smaller screens (phones and iPads) */
+@media screen and (max-width: 768px) {
+  .blakbn {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  .fasdfcc {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .styled-button  {
+    width: 44%;
+    height: 42px;
+    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    margin-top: 92px;
+    margin-bottom: 9px;
+  }
+
+  .lumn {
+    background-size: cover; /* Set background image size to cover */
+  }
+}
 .lu {
-  background-size: cover;
+  background-size: contain; /* Set background image size to contain */
   background-position: center;
   display: flex;
   align-items: center;
@@ -439,6 +483,41 @@ margin-right: 50px;
   
 
 }
+/* Media queries for smaller screens (phones and iPads) */
+@media screen and (max-width: 768px) {
+  .lu {
+    background-size: cover; /* Set background image size to cover on small devices */
+    height: 28vh;
+  }
+
+  .lu img {
+    display: none; /* Hide the image on small devices */
+  }
+
+  .lu h2 {
+    display: none; /*  dont Show the heading on small devices */
+  }
+
+  .lu button {
+    width: 100%; /* Set button width to 100% of the parent container */
+    margin: 20px 0; /* Adjust margin for smaller screens */
+    height: 47px;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 2px;
+    width: 163px;
+    margin-left: 197px;
+    margin-top: 79px;
+  }
+  .cosex{
+    display: none;
+  }
+
+  .contenx {
+    margin: 20px; /* Adjust margin for smaller screens */
+    text-align: center; /* Center align the content */
+  }
+}
 
 
 
@@ -470,9 +549,7 @@ margin-right: 50px;
 }
 
 .sticky {
-  position: -webkit-sticky;
-  position: sticky !important;
-  top: 0;
+ 
   background-color: white;
   line-height: 30.44px;
   font-weight: 400;
@@ -514,6 +591,9 @@ width: 100%; /* Full width on small screens */
 .sociolumn {
 display: none; 
 }
+.htjsla {
+  display: none; 
+  }
 
 .colex {
 padding: 10px; /* Adjust padding for smaller screens */
@@ -576,8 +656,9 @@ margin: 10px auto; /* Center the "Back to top" button */
 
 }
 .blog-content{
-padding-right: 160px;
-margin-left: -640px;
+  padding-right: -50px !important;
+  margin-left: -639px;
+  margin-right: -182px;
 }
 @media (max-width: 767px) {
 .blog-content{
@@ -878,8 +959,8 @@ padding: 0 20px;
 position: relative; /* Change to relative or remove this line */
 z-index: 777;
 background-color: white;
-margin-bottom: -173px;
-height: 1557px;
+margin-bottom: -190px;
+height: 1993px;
 }
 
 /* BurgerMenu.css */

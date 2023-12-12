@@ -12,22 +12,18 @@ import CollaborationSection from './CollaborationSection';
 import UpdatedSocialIconsStyles from './UpdatedSocialIconsStyles';
 
 import './page.css';
+import EnhancedContent from './EnhancedContent';
 
 
-const AboutUs = () => {
+const UIUXTrends = () => {
   const [] = useState(false);
-
-
- 
- 
-
 
   const aboutContent = (
     <div>
       <div className="ain">
      
       <div className="eres">
-        <p className="dat">May 20, 2023</p>
+        <p className="dat">May 20, 2024</p>
         {/* Add your about us page content here */}
         <div className="max">
           <img src={tallen} alt="Tallen" className="emma-image" />
@@ -35,7 +31,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div>
-        <img src={Rectangl} alt="Mark Matovu" className="lex" />
+        <img src="https://www.msystechnologies.com/wp-content/uploads/2023/11/ui-ux-representations-with-laptop-1-1.jpg" alt="Mark Matovu" className="lex" />
       </div>
     </div>
     <div className="containerTopInner">
@@ -49,7 +45,7 @@ const AboutUs = () => {
   </div>
   <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
   <div className="post-content">
-      <UpdatedContent />
+      <EnhancedContent/>
     </div>
     </div>
       {/* Additional HTML snippet */}
@@ -124,7 +120,7 @@ to our newsletter</h2>
 
   return (
   <div>
-     <Breadcrumbs path="/your-path" heading="  The Impact of..." />
+     <Breadcrumbs path="/your-path" heading="  The Future of..." />
       <div className="ner" style={{ position: 'sticky', top: '0' }}>
       <h1 id="software-development-heading" className='Trends' style={{
         textIndent: '10px',
@@ -135,10 +131,11 @@ to our newsletter</h2>
         fontSize: '30px',
         paddingLeft: '206px'
       }}>
-        The Impact of Artificial Intelligence on UI/UX Design: The<br />
+        The Future of UI/UX Design: The<br />
         <span>Top 10 Trends and Predictions for</span><br />
-        <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>
+        <span style={{ paddingLeft: '50px' }}>2024 and Beyond</span>
       </h1>
+      
     </div>
    
 
@@ -148,6 +145,7 @@ to our newsletter</h2>
 };
 
 
-export default AboutUs;
+export default UIUXTrends;
+
 
 

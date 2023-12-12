@@ -1,0 +1,91 @@
+/* pagination.css */
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-numbers {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .page-numbers.current {
+    background-color: #0073e6;
+    color: #fff;
+  }
+  
+  .prev,
+  .next {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .prev:hover,
+  .next:hover,
+  .page-numbers:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  /* pagination.css */
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-numbers {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff; /* Background for numbers */
+  }
+  
+  .page-numbers.current {
+    background-color: #0073e6;
+    color: #fff;
+  }
+  
+  .prev,
+  .next {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 28px !important;
+    text-decoration: none;
+    border: 1px solid #2e3e9b !important;
+  }
+  
+  .prev:hover,
+  .next:hover,
+  .page-numbers:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  .page-numbers.dots {
+    background-color: white; /* Remove background for dots */
+    color: black;
+  }
+  
+  .page-numbers:not(.dots) {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+  }
+  
+  .page-numbers:not(.dots) {
+    border-radius: 50%;
+    border: 1px solid #9b2e2e;
+    
+  }
+  

@@ -1,8 +1,8 @@
-// Breadcrumbs.js
+// GeneralBreadcrumbs.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Breadcrumbs = ({ path, heading }) => {
+const GeneralBreadcrumbs = ({ path, heading }) => {
   const pathSegments = path.split('>').filter((segment) => segment !== '');
 
   return (
@@ -12,7 +12,7 @@ const Breadcrumbs = ({ path, heading }) => {
           <Link to="/">Home</Link>
         </li>
         <li className="breadcrumb-item">
-          <Link to="/Home">softwaredevelopment</Link>
+          <Link to="/General">General</Link>
         </li>
         {pathSegments.map((segment, index) => (
           <React.Fragment key={segment}>
@@ -34,4 +34,4 @@ const Breadcrumbs = ({ path, heading }) => {
   );
 };
 
-export default Breadcrumbs;
+export default GeneralBreadcrumbs;

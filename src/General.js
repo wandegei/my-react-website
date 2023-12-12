@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import mainImage from './mainImage.png';
 import { Link, useLocation  } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import CustomArticleCard from './CustomArticleCard'; // Adjust the path accordingly
@@ -26,45 +25,43 @@ const generateRandomArticles = (count) => {
       id: 3,
       title: 'July 20, 2024',
       
-      content: "The Impact of Artificial Intelligence on UI/UX Design: Creating Seamless Experiences",
+      content: "Code to Click: The Art and Science of Modern Website Development",
       smallImage: 'talen.png',
-      smallImageText: 'Software Development ',
+      smallImageText: 'General ',
     },
      {
       id: 2,
       title: 'July 20, 2024',
-      content: 'Revolutionize Your Business: ' +
-        'How to Create a Winning Digital ' +
-        'Transformation Strategy That Works',
-      smallImageText: 'Software Develop ',
+      content: 'Responsive Design and Beyond: Navigating the Evolution of Website',
+      smallImageText: 'General ',
     },
     {
       id: 4,
       title: 'July 20, 2024',
-      content: "The Future of UI/UX Design: The Top 10 Trends and Predictions for 2024 and Beyond",
+      content: "User-Centric Web Development: Building Interfaces with Purpose",
       smallImage: 'talen.png',
-      smallImageText: ' Software Development',
+      smallImageText: ' General',
     },
     {
       id: 5,
       title: 'July 20, 2024',
-      content: "Building an Effective Landing Page: Best Practices for Design and Optimization",
+      content: "Mastering the Web: Key Trends and Technologies in Website Development",
       smallImage: 'talen.png',
-      smallImageText: ' Software Develop',
+      smallImageText: ' General',
     },
     {
       id: 6,
       title: 'July 20, 2024',
-      content: "Best Practices for Responsive Web Development in 2024: Tips and Tricks for Success",
+      content: "Web Development Best Practices: From Concept to Code",
       smallImage: 'talen.png',
-      smallImageText: 'Software Develop',
+      smallImageText: 'General',
     },
   ];
   
   return articles.slice(0, count); // Limit the number of articles to the specified count
 };
 
-const MainContent = () => {
+const General = () => {
    
   const [fixedNav, setFixedNav] = useState(false); // Keep this line
   const [name, setName] = useState('');
@@ -121,7 +118,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <img src={mainImage} alt="Main" className="main-image" />
+            <img src="https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg" alt="Main" style={{maxWidth: '88%'}} className="main-image" />
           </div>
         </div>
       </div>
@@ -178,7 +175,7 @@ const MainContent = () => {
           title={articles[2].title}
           content={articles[2].content}
           to="/Page2"
-          image="/Rectangl.png"
+          image="https://media.licdn.com/dms/image/D4D12AQFEV8BlzL_Fig/article-cover_image-shrink_720_1280/0/1691834134213?e=2147483647&v=beta&t=uGxIAN7x6qsVp8jxJSX03a8ZobsQ3G_ta86P94v73lw"
           smallImage={articles[2].smallImage}
           smallImageText={articles[2].smallImageText}
         />
@@ -190,7 +187,7 @@ const MainContent = () => {
               title={articles[1].title}
               content={articles[1].content}
               to="/contact"
-              image="/second.jpg"
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xynOgHMddp8MS8Jh_trLfy-IVTnRWcmqvtz165YR63kjls-G5-wFKl7ujPf4kKLrjso&usqp=CAU"
               smallImage={articles[1].smallImage}
               smallImageText={articles[1].smallImageText}
             />
@@ -205,7 +202,7 @@ const MainContent = () => {
           title={articles[3].title}
           content={articles[3].content}
           to="/UIUXDesignTrends"
-          image="/third.jpg"
+          image="https://www.sfwpexperts.com/wp-content/uploads/2021/03/sfwpexperts.com-How-To-Create-A-Website-Design-That-Relates-With-Target-Audience1-556x264.png"
           smallImage={articles[3].smallImage}
           smallImageText={articles[3].smallImageText}
         />
@@ -216,7 +213,7 @@ const MainContent = () => {
           title={articles[4].title}
           content={articles[4].content}
           to="/LandingPage"
-          image="/forth.png"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojOGJGfSOLw2xvxqMDQ5UdzVQpAlPH7TRglmEyD2QR5VnKrxh1_KcEAs4SilDyJpq7Yg&usqp=CAU"
           smallImage={articles[4].smallImage}
           smallImageText={articles[4].smallImageText}
         />
@@ -227,7 +224,7 @@ const MainContent = () => {
           title={articles[5].title}
           content={articles[5].content}
           to="/Page6"
-          image="/fifth.png"
+          image="https://kinsta.com/wp-content/uploads/2020/02/web-design-best-practices.jpg"
           smallImage={articles[5].smallImage}
           smallImageText={articles[5].smallImageText}
         />
@@ -314,4 +311,4 @@ const submitButtonStyle = {
   border:'none',
 };
 
-export default MainContent;
+export default General;

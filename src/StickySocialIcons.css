@@ -1,0 +1,87 @@
+/* StickySocialIcons.css */
+
+.sticky-social-icons-container {
+    position: static;
+    width: 50px;
+    padding-left: 42px;
+    margin-top: auto;
+    transition: position 0.3s ease-in-out;
+  }
+  
+  .sticky-social-icons-container.sticky {
+    position: fixed;
+    top: 0;
+  }
+  
+  .social-column {
+    width: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: -2px 1px 4px 4px rgba(9, 7, 7, 0.1);
+  }
+  @media screen and (max-width: 768px){
+    .social-column{
+        width: 403% !important;
+        background-color: #ffff;
+        display: flex;
+        justify-content: center;
+        top: 50%;
+        left: -42px;
+        transform: translateY(-50%);
+        margin-left: -99px;
+        height: 195px;
+        line-height: 2.5;
+        box-shadow: rgb(9, 7, 7) -2px 1px 4px 4px;
+    }
+
+    .shared {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 31px !important;
+        font-size: 12px !important;
+    }
+  }
+  
+  .shared {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 35px;
+  }
+  
+  .icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  /* CustomStickySocialIconsStyles.css */
+
+.social-column {
+    width: 615%;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left: -38px;
+    transform: translateY(-50%);
+    margin-left: -98px;
+    height: 195px;
+    line-height: 2.5;
+    box-shadow: rgb(9, 7, 7) -2px 1px 4px 4px;
+  }
+  

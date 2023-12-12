@@ -18,7 +18,7 @@ const generateRandomArticles = (count) => {
       content: 'Best Practices for Responsive Web Development ' +
         'in 2023 Tips ' +
         'and Tricks for Success',
-      smallImageText: 'Softwareddddd Development',
+      smallImageText: 'DigitalBusiness',
     },  
    
     
@@ -26,45 +26,43 @@ const generateRandomArticles = (count) => {
       id: 3,
       title: 'July 20, 2024',
       
-      content: "The Impact of Artificial Intelligence on UI/UX Design: Creating Seamless Experiences",
+      content: "Redefining Commerce: The Impact of Digital Business on Industries",
       smallImage: 'talen.png',
-      smallImageText: 'Software Development ',
+      smallImageText: 'DigitalBusinessg ',
     },
      {
       id: 2,
       title: 'July 20, 2024',
-      content: 'Revolutionize Your Business: ' +
-        'How to Create a Winning Digital ' +
-        'Transformation Strategy That Works',
-      smallImageText: 'Software Develop ',
+      content: 'Innovation in the Digital Age: The Rise of Digital Business Models',
+      smallImageText: 'DigitalBusiness ',
     },
     {
       id: 4,
       title: 'July 20, 2024',
-      content: "The Future of UI/UX Design: The Top 10 Trends and Predictions for 2024 and Beyond",
+      content: "The Tech-Driven Evolution: Adapting Your Business to the Digital Frontier",
       smallImage: 'talen.png',
-      smallImageText: ' Software Development',
+      smallImageText: ' DigitalBusiness',
     },
     {
       id: 5,
       title: 'July 20, 2024',
-      content: "Building an Effective Landing Page: Best Practices for Design and Optimization",
+      content: "Elevating Customer Experience: The Role of Digital Business in the Marketplace",
       smallImage: 'talen.png',
-      smallImageText: ' Software Develop',
+      smallImageText: ' DigitalBusiness',
     },
     {
       id: 6,
       title: 'July 20, 2024',
-      content: "Best Practices for Responsive Web Development in 2024: Tips and Tricks for Success",
+      content: "Data-Driven Success: Unleashing the Potential of Digital Business Analytics",
       smallImage: 'talen.png',
-      smallImageText: 'Software Develop',
+      smallImageText: 'DigitalBusiness',
     },
   ];
   
   return articles.slice(0, count); // Limit the number of articles to the specified count
 };
 
-const MainContent = () => {
+const DigitalBusiness = () => {
    
   const [fixedNav, setFixedNav] = useState(false); // Keep this line
   const [name, setName] = useState('');
@@ -121,7 +119,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <img src={mainImage} alt="Main" className="main-image" />
+            <img src="https://www.fujitsu.com/global/imagesgig5/report_600x360_tcm100-4454519_tcm100-2750236-32.jpg" alt="Main" className="main-image" />
           </div>
         </div>
       </div>
@@ -178,7 +176,7 @@ const MainContent = () => {
           title={articles[2].title}
           content={articles[2].content}
           to="/Page2"
-          image="/Rectangl.png"
+          image="https://d3lcr32v2pp4l1.cloudfront.net/Pictures/480x270/9/0/6/96906_digitaltravelcmycreative_shutterstock_705398.jpg"
           smallImage={articles[2].smallImage}
           smallImageText={articles[2].smallImageText}
         />
@@ -190,7 +188,7 @@ const MainContent = () => {
               title={articles[1].title}
               content={articles[1].content}
               to="/contact"
-              image="/second.jpg"
+              image="https://airlines.iata.org/sites/default/files/styles/uncropped_small/public/images/analysis-digital-identity-to-redefine-di--web-digital-transformation-credit-metamo.png?itok=Ze5im88N"
               smallImage={articles[1].smallImage}
               smallImageText={articles[1].smallImageText}
             />
@@ -205,7 +203,7 @@ const MainContent = () => {
           title={articles[3].title}
           content={articles[3].content}
           to="/UIUXDesignTrends"
-          image="/third.jpg"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4VrsnTG0jRy46aKI4ycNvJCVwZm2gxERy1oE5hqc92U_3bTA2As4i5kwACnzRy7cE_-g&usqp=CAU"
           smallImage={articles[3].smallImage}
           smallImageText={articles[3].smallImageText}
         />
@@ -216,7 +214,7 @@ const MainContent = () => {
           title={articles[4].title}
           content={articles[4].content}
           to="/LandingPage"
-          image="/forth.png"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWodWRvWe-q5Zs6fDmPSEpT2XELtlzuuhhsA&usqp=CAU"
           smallImage={articles[4].smallImage}
           smallImageText={articles[4].smallImageText}
         />
@@ -227,7 +225,7 @@ const MainContent = () => {
           title={articles[5].title}
           content={articles[5].content}
           to="/Page6"
-          image="/fifth.png"
+          image="https://www.simplilearn.com/ice9/free_resources_article_thumb/Business_Analytics_vs_Data_Analytics.jpg"
           smallImage={articles[5].smallImage}
           smallImageText={articles[5].smallImageText}
         />
@@ -314,4 +312,4 @@ const submitButtonStyle = {
   border:'none',
 };
 
-export default MainContent;
+export default DigitalBusiness;

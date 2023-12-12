@@ -5,6 +5,8 @@ import MainContent from './MainContent';
 import Footer from './Footer';
 import Home from './Home';
 import ContactUs from './ContactUs';
+import ArtificialIntelligence from './ArtificialIntelligence';
+import HowToBuild from './HowToBuild';
 import Terms from './Terms';
 import BurgerMenu from './BurgerMenu';
 import Page1 from './Page1';
@@ -16,10 +18,17 @@ import Page6 from './Page6';
 import Page7 from './Page7';
 import Page8 from './Page8';
 import Page9 from './Page9';
+import UIUXDesignTrends from './UIUXDesignTrends';
+import LandingPage from './LandingPage';
 import TodoList from './TodoList';
 import SoftwareDevelopmentDescription from './SoftwareDevelopmentDescription';
 import SoftwareDevelopmentIntro from './SoftwareDevelopmentIntro';
 import SoftwareEngineeringPotential from './SoftwareEngineeringPotential';
+import CloudComputing from './CloudComputing';
+import DigitalBusiness from './DigitalBusiness';
+import General from './General';
+
+
 const App = () => {
   return (
     <Router>
@@ -56,6 +65,11 @@ const App = () => {
           <Route path="/Page6" element={<Page6 />} />
           <Route path="/Page7" element={<Page7 />} />
           <Route path="/Page8" element={<Page8 />} />
+          <Route path="/DigitalBusiness" element={<DigitalBusiness />} />
+          <Route path="/ArtificialIntelligence" element={<ArtificialIntelligence />} />
+          <Route path="/CloudComputing" element={<CloudComputing />} />
+          <Route path="/LandingPage" element={<LandingPage />} />
+          <Route path="/UIUXDesignTrends" element={<UIUXDesignTrends />} />
           <Route path="/Page9" element={<Page9 />} />
           <Route path="/TodoList" element={<TodoList />} />
          <Route path="/SoftwareDevelopmentIntro" element={<SoftwareDevelopmentIntro />} />
@@ -63,6 +77,9 @@ const App = () => {
           <Route path="/SoftwareDevelopmentDescription" element={<SoftwareDevelopmentDescription />} />
           <Route path="/softwaredevelopment/page2" element={<Page2 />} />
           <Route path="/SoftwareEngineeringPotential" element={<SoftwareEngineeringPotential />} />
+          <Route path="/General" element={<General/>} />
+          <Route path="/HowToBuild" element={<HowToBuild/>} />
+          
       </Routes>
       
         <Footer />

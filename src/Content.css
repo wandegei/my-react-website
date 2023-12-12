@@ -1,0 +1,294 @@
+/* Content.css */
+.contenttg-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 130px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+
+  
+  /* Add more styling as needed */
+  @media (max-width:767px) {
+    .contenttg-container {
+      max-width: 764px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-left: -84px;
+  }
+  h2{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
+    width: 404px;
+}
+  }
+    /* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .page-heading {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+  }
+
+  .page-heading {
+      width: 100%; /* Adjust as needed */
+      margin-left: 0;
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .page-heading {
+      font-size: 20px;
+      margin-top: 18px;
+      margin-bottom: 12px;
+  }
+
+  .page-heading {
+      width: 100%; /* Adjust as needed */
+      margin-left: 0;
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page-heading {
+      font-size: 22px;
+      margin-top: 22px;
+      margin-bottom: 14px;
+  }
+
+  .page-heading {
+      width: 100%; /* Adjust as needed */
+      margin-left: 0;
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .page-heading {
+      font-size: 23px;
+      margin-top: 25px;
+      margin-bottom: 16px;
+  }
+
+  .page-heading {
+      width: 100%; /* Adjust as needed */
+      margin-left: 0;
+  }
+}
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .enthusiasts {
+      font-size: 18px;
+      width: 90%;
+      margin-top: 20px; /* Adjust as needed */
+      line-height: 1;
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .enthusiasts {
+      font-size: 19px;
+      width: 100%; /* Adjust as needed */
+      margin-top: 25px; /* Adjust as needed */
+      line-height: 1;
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .enthusiasts {
+      font-size: 20px;
+      width: 100%; /* Adjust as needed */
+      margin-top: 28px; /* Adjust as needed */
+      line-height: 1;
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .enthusiasts {
+      font-size: 21px;
+      width: 100%; /* Adjust as needed */
+      margin-top: 30px; /* Adjust as needed */
+      line-height: 1;
+  }
+}
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .article-heading {
+      margin-top: -35px; /* Adjust as needed */
+      width: 100%; /* Adjust as needed */
+      font-size: 15px;
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .article-heading {
+      margin-top: -38px; /* Adjust as needed */
+      width: 100%; /* Adjust as needed */
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .article-heading {
+      margin-top: -40px; /* Adjust as needed */
+      width: 100%; /* Adjust as needed */
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .article-heading {
+      margin-top: -42px; /* Adjust as needed */
+      width: 100%; /* Adjust as needed */
+  }
+}
+
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .laveging {
+      width: 100%; /* Adjust as needed */
+      padding: 2px; /* Adjust as needed */
+      max-width: 150px; /* Adjust as needed */
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .laveging {
+      width: 100%; /* Adjust as needed */
+      padding: 2.5px; /* Adjust as needed */
+      max-width: 170px; /* Adjust as needed */
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .laveging {
+      width: 100%; /* Adjust as needed */
+      padding: 3px; /* Adjust as needed */
+      max-width: 190px; /* Adjust as needed */
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .laveging {
+      width: 100%; /* Adjust as needed */
+      padding: 3px; /* Adjust as needed */
+      max-width: 194px; /* Adjust as needed */
+  }
+}
+
+
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .right-image {
+    margin: 18px !important;
+    width: 44% !important;
+    height: 419px !important;
+    margin-top: -76px !important;
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .right-image {
+      margin: 18px !important; /* Adjust as needed */
+      width: 100% !important; /* Adjust as needed */
+      height: auto !important; /* Adjust as needed */
+      margin-top: 20px !important; /* Adjust as needed */
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .right-image {
+      margin: 20px !important; /* Adjust as needed */
+      width: 100% !important; /* Adjust as needed */
+      height: auto !important; /* Adjust as needed */
+      margin-top: 22px !important; /* Adjust as needed */
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .right-image {
+      margin: 20px !important; /* Adjust as needed */
+      width: 157px !important; /* Keep original width for larger tablets */
+      height: 331px !important; /* Keep original height for larger tablets */
+      margin-top: 23px !important; /* Adjust as needed */
+  }
+}
+
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  h2 {
+      margin-top: 0;
+      margin-bottom: 0.3rem; /* Adjust as needed */
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      width: 95%; /* Adjust as needed */
+      font-size: 19px;
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  h2 {
+      margin-top: 0;
+      margin-bottom: 0.4rem; /* Adjust as needed */
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      width: 100%; /* Adjust as needed */
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      width: 100%; /* Adjust as needed */
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      width: 404px; /* Keep original width for larger tablets */
+  }
+}
+
+
+.enthusiasts {
+  margin-top: 16px;
+  width: 1089px;
+  padding-left: 61px;
+}

@@ -1,0 +1,75 @@
+/* CollaborationSection.css */
+
+.collaboration-section {
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center; /* Center align items vertically */
+    padding: 20px;
+    background: rgba(2, 162, 172, 1);
+  }
+  
+  .collaboration-section img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px; /* Add some margin between the image and text */
+  }
+  
+  .content {
+    text-align: right; /* Align text to the right */
+  }
+  
+  .collaboration-heading {
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .get-started-link {
+    text-decoration: none;
+  }
+  
+  .get-started-button {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(2, 162, 172, 1);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    height: 67px;
+    margin-right: 169px;
+    width: 207px;
+    max-width: 213px;
+    border-radius: 41px;
+  
+    /* Add any other styles you need for the button */
+  }
+  
+  /* Media Query for Small Devices */
+  @media only screen and (max-width: 767px) {
+    .collaboration-section {
+      flex-direction: column; /* Stack items vertically on small devices */
+      text-align: center; /* Center-align text on small devices */
+    }
+  
+    .collaboration-section img {
+      margin-right: 0; /* Remove margin for small devices */
+      margin-bottom: 20px; /* Add margin below the image on small devices */
+    }
+  
+    .content {
+      text-align: center; /* Center-align text on small devices */
+    }
+  
+    .get-started-button {
+      margin-right: 0; /* Remove margin for small devices */
+    }
+  }
+  

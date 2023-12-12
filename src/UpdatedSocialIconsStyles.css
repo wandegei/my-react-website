@@ -1,0 +1,70 @@
+.updated-social-icons-container {
+    position: static;
+    width: 50px;
+    padding-left: 42px;
+    margin-top: auto;
+    transition: position 0.3s ease-in-out;
+  }
+  
+  .updated-social-icons-container.sticky {
+    position: fixed;
+    top: 0;
+  }
+  
+  .new-social-column {
+    width: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: -2px 1px 4px 4px rgba(9, 7, 7, 0.1);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .new-social-column {
+      width: 403% !important;
+      background-color: #ffff;
+      display: flex;
+      justify-content: center;
+      top: 50%;
+      left: -42px;
+      transform: translateY(-50%);
+      margin-left: -99px;
+      height: 195px;
+      line-height: 2.5;
+      box-shadow: rgb(9, 7, 7) -2px 1px 4px 4px;
+    }
+  
+    .new-shared {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      width: 31px !important;
+      font-size: 12px !important;
+    }
+  }
+  
+  .new-shared {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 35px;
+  }
+  
+  .new-icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .new-social-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .new-social-icon:hover {
+    transform: scale(1.2);
+  }

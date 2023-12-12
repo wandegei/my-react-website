@@ -13,8 +13,8 @@ const SoftwareDevelopmentIntro = () => {
 
   return (
     <div className="page-container">
-      <div className="content">
-        <div className="article">
+      <div className="content" style={{padding: '100px'}}>
+        <div className="article"  style={{padding: '100px !important' }}>
         <Breadcrumbs path={path} heading="Dive into Software Development" />
 
           <h1 id="software-development-heading" className="page-heading">Dive into Software Development</h1>

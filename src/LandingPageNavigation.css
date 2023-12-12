@@ -1,0 +1,19 @@
+.postNavigation {
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 114px;
+  }
+  @media (min-width: 992px) {
+    .postNavigation {
+        width: 393px;
+        margin-left: 36px;
+    }
+  }
+  .postNavigation {
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }

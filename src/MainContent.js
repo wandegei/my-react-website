@@ -4,7 +4,8 @@ import mainImage from './mainImage.png';
 import { Link, useLocation  } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import CustomArticleCard from './CustomArticleCard'; // Adjust the path accordingly
-
+import Gination from './Gination';
+import './App.css';
 
 
 
@@ -14,48 +15,49 @@ const generateRandomArticles = (count) => {
     {
       id: 1,
       title: 'Your First Article Title',
-      content: 'Revolutionize Your Business: ' +
-        'How to Create a Winning Digital ' +
-        'Transformation Strategy That Works',
-      smallImageText: 'Software Development',
-    },
+      content: 'Best Practices for Responsive Web Development ' +
+        'in 2023 Tips ' +
+        'and Tricks for Success',
+      smallImageText: 'Softwareddddd Development',
+    },  
    
     
     {
       id: 3,
-      title: 'July 20, 2023',
-      content: "Dive into the world of Artificial Intelligence. Explore our articles for valuable insights and stay informed about the latest  in AI.",
+      title: 'July 20, 2024',
+      
+      content: "The Impact of Artificial Intelligence on UI/UX Design: Creating Seamless Experiences",
       smallImage: 'talen.png',
-      smallImageText: 'Artificial Intelligence',
+      smallImageText: 'Software Development ',
     },
      {
       id: 2,
-      title: 'July 20, 2023',
+      title: 'July 20, 2024',
       content: 'Revolutionize Your Business: ' +
         'How to Create a Winning Digital ' +
         'Transformation Strategy That Works',
-      smallImageText: 'Software Development',
+      smallImageText: 'Software Develop ',
     },
     {
       id: 4,
-      title: 'July 20, 2023',
-      content: "Discover insights into Cloud Computing. Explore our articles for valuable information and stay informed about the latest trends.",
+      title: 'July 20, 2024',
+      content: "The Future of UI/UX Design: The Top 10 Trends and Predictions for 2024 and Beyond",
       smallImage: 'talen.png',
-      smallImageText: 'Cloud Computing',
+      smallImageText: ' Software Development',
     },
     {
       id: 5,
-      title: 'July 20, 2023',
-      content: "Explore the world of Digital Business. Dive into our articles for valuable insights and stay updated on the latest developments.",
+      title: 'July 20, 2024',
+      content: "Building an Effective Landing Page: Best Practices for Design and Optimization",
       smallImage: 'talen.png',
-      smallImageText: 'Digital Business',
+      smallImageText: ' Software Develop',
     },
     {
       id: 6,
-      title: 'July 20, 2023',
-      content: "Explore diverse topics for valuable insights, entertainment. Enrich your experience with our curated articles.",
+      title: 'July 20, 2024',
+      content: "Best Practices for Responsive Web Development in 2024: Tips and Tricks for Success",
       smallImage: 'talen.png',
-      smallImageText: 'General',
+      smallImageText: 'Software Develop',
     },
   ];
   
@@ -110,7 +112,7 @@ const MainContent = () => {
   return (
     
     <main style={{ overflow: 'hidden' }}> {/* Apply overflow: hidden to the main container */}
-      <div className="content-container">
+      <div className="content-contaner">
         <div className="text-image-container">
           <div className="text-container">
             <h1 className="main-heading">Welcome to<br/> TALLEN blog</h1>
@@ -132,11 +134,11 @@ const MainContent = () => {
             <li className="all-button">
               <Link to="/Home"><button>All</button></Link>
             </li>
-            <Link to="/page2">Software Development</Link>
-            <li><Link to="/contact">Artificial Intelligence</Link></li>
-            <li><Link to="/">Cloud Computing</Link></li>
-            <li><Link to="/">Digital Business</Link></li>
-            <li><Link to="/">General</Link></li>
+            <Link to="/Home" >Software Development</Link>
+            <li><Link to="/ArtificialIntelligence">Artificial Intelligence</Link></li>
+            <li><Link to="/CloudComputing">Cloud Computing</Link></li>
+            <li><Link to="/DigitalBusiness">Digital Business</Link></li>
+            <li><Link to="/General">General</Link></li>
             <li className="search-button">
                 <SearchBar onSearch={handleSearch} />
                 {showResults && searchResults.length > 0 ? (
@@ -160,11 +162,12 @@ const MainContent = () => {
   <div className="row">
     {/* Sample Column 1 */}
     <div className="col-md-4">
-      <div className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column' }}>
-        <h2 className="col-heading">Explore our services</h2>
-        <Link to="/services" className="col-button">Our Services</Link>
-      </div>
-    </div>
+  <Link to="https://calendly.com/tallen5/free?hide_gdpr_banner=1&month=2023-11" className="col-content" style={{ backgroundColor: 'rgba(246, 143, 30, 1)', display: 'flex', flexShrink: '0', flexDirection: 'column',textDecoration: 'none' }}>
+    <h2 className="col-heading">Explore our services</h2>
+    <span className="col-button">Free Consultation</span>
+  </Link>
+</div>
+
 
     {/* Sample Column 2 */}
 
@@ -201,7 +204,7 @@ const MainContent = () => {
         <CustomArticleCard
           title={articles[3].title}
           content={articles[3].content}
-          to="/Page4"
+          to="/UIUXDesignTrends"
           image="/third.jpg"
           smallImage={articles[3].smallImage}
           smallImageText={articles[3].smallImageText}
@@ -212,7 +215,7 @@ const MainContent = () => {
         <CustomArticleCard
           title={articles[4].title}
           content={articles[4].content}
-          to="/Page5"
+          to="/LandingPage"
           image="/forth.png"
           smallImage={articles[4].smallImage}
           smallImageText={articles[4].smallImageText}
@@ -230,7 +233,9 @@ const MainContent = () => {
         />
       </div>
     </div>
-</div>
+   
+</div><br></br><br></br>
+<Gination />
 
       
       <section className="subscribe-area" style={{ maxHeight: '600px', overflow: 'hidden' }}>
@@ -242,10 +247,10 @@ const MainContent = () => {
         </div>
       </div>
       <div className="col-md-8 col-sm-4 col-xs-4 form-item-footer">
-        <div className="subscribe-wrapper subscribe2-wrapper">
+        <div className="subscribe-wrapper subscribe2-wrapper" style={{marginLeft:' 330px',marginTop:' -112px'}}>
           <div className="subscribe-form">
             <form onSubmit={handleSubmit}>
-              <div className="form-inline newsletter" style={{ display: 'flex' }}>
+              <div className="form-inline newsletter" style={{ display: 'flex'}}>
                 <div className="form-group">
                   <input
                     type="text"
@@ -254,7 +259,8 @@ const MainContent = () => {
                     onChange={(e) => setName(e.target.value)}
                     style={inputStyle}
                   />
-                </div>
+                </div> 
+  
                 <div className="form-group formgroup2" style={{ display: 'flex', alignItems: 'center' }}>
                   <input
                     type="email"

@@ -26,22 +26,20 @@ const generateRandomArticles = (count) => {
       id: 3,
       title: 'July 20, 2024',
       
-      content: "The Impact of Artificial Intelligence on UI/UX Design: Creating Seamless Experiences",
+      content: "The Rise of No-Code Platforms: How They're Changing the Game for Mobile App Development ",
       smallImage: 'talen.png',
-      smallImageText: 'Software Development ',
+      smallImageText: 'Artificial Intelligence ',
     },
      {
       id: 2,
       title: 'July 20, 2024',
-      content: 'Revolutionize Your Business: ' +
-        'How to Create a Winning Digital ' +
-        'Transformation Strategy That Works',
-      smallImageText: 'Software Develop ',
+      content: 'How to Build a Successful Mobile App: From Idea to Launch and Beyond',
+      smallImageText: 'Artificial Intelligence ',
     },
     {
       id: 4,
       title: 'July 20, 2024',
-      content: "The Future of UI/UX Design: The Top 10 Trends and Predictions for 2024 and Beyond",
+      content: "Top 10 Emerging Technologies Shaping Digital Transformation in 2024 and Beyond",
       smallImage: 'talen.png',
       smallImageText: ' Software Development',
     },
@@ -50,21 +48,21 @@ const generateRandomArticles = (count) => {
       title: 'July 20, 2024',
       content: "Building an Effective Landing Page: Best Practices for Design and Optimization",
       smallImage: 'talen.png',
-      smallImageText: ' Software Develop',
+      smallImageText: ' Development',
     },
     {
       id: 6,
       title: 'July 20, 2024',
       content: "Best Practices for Responsive Web Development in 2024: Tips and Tricks for Success",
       smallImage: 'talen.png',
-      smallImageText: 'Software Develop',
+      smallImageText: 'General',
     },
   ];
   
   return articles.slice(0, count); // Limit the number of articles to the specified count
 };
 
-const MainContent = () => {
+const ArtificialIntelligence = () => {
    
   const [fixedNav, setFixedNav] = useState(false); // Keep this line
   const [name, setName] = useState('');
@@ -121,7 +119,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <img src={mainImage} alt="Main" className="main-image" />
+            <img src="https://static.weblinkindia.net/dy/blog_images/ecommece-process-818x300.jpg" alt="Main" style={{maxWidth: '80%'}}  className="main-image" />
           </div>
         </div>
       </div>
@@ -177,8 +175,8 @@ const MainContent = () => {
         <CustomArticleCard 
           title={articles[2].title}
           content={articles[2].content}
-          to="/Page2"
-          image="/Rectangl.png"
+          to="/HowToBuild"
+          image="https://www.openxcell.com/wp-content/uploads/2020/11/mobile-app-ideas.png"
           smallImage={articles[2].smallImage}
           smallImageText={articles[2].smallImageText}
         />
@@ -190,7 +188,7 @@ const MainContent = () => {
               title={articles[1].title}
               content={articles[1].content}
               to="/contact"
-              image="/second.jpg"
+              image="https://www.cio.com/wp-content/uploads/2023/07/shutterstock_2230902901-8.jpg?quality=50&strip=all"
               smallImage={articles[1].smallImage}
               smallImageText={articles[1].smallImageText}
             />
@@ -205,7 +203,7 @@ const MainContent = () => {
           title={articles[3].title}
           content={articles[3].content}
           to="/UIUXDesignTrends"
-          image="/third.jpg"
+          image="https://onpassive.com/blog/wp-content/uploads/2021/02/No-Code-Development-GoFounders-14thFeb.jpg"
           smallImage={articles[3].smallImage}
           smallImageText={articles[3].smallImageText}
         />
@@ -216,7 +214,7 @@ const MainContent = () => {
           title={articles[4].title}
           content={articles[4].content}
           to="/LandingPage"
-          image="/forth.png"
+          image="https://www.indiumsoftware.com/wp-content/uploads/2022/08/56-Low-Code-vs-No-Code-A-Guide-to-a-New-Age-of-App-Development.jpg"
           smallImage={articles[4].smallImage}
           smallImageText={articles[4].smallImageText}
         />
@@ -227,7 +225,7 @@ const MainContent = () => {
           title={articles[5].title}
           content={articles[5].content}
           to="/Page6"
-          image="/fifth.png"
+          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWIslqWJSB6kupMmrV21alLluacwPZ2kwC-gIEF3i9aJQ4ShPNHcBuf9gZd-NIRd1gAMY&usqp=CAU"
           smallImage={articles[5].smallImage}
           smallImageText={articles[5].smallImageText}
         />
@@ -314,4 +312,4 @@ const submitButtonStyle = {
   border:'none',
 };
 
-export default MainContent;
+export default ArtificialIntelligence;

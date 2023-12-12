@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './page.css'; 
-function Page4() {
+import { useLocation, Link } from 'react-router-dom';
+import Breadcrumbs from './Breadcrumbs';
+
+const Page4 = () => {
+  const location = useLocation();
+  const path = location.pathname;
+
+  useEffect(() => {
+    // Set the document title
+    document.title = 'Top 10 Emerging Technologies';
+  }, []); 
+
+  
   return (
-    <div className="page-containemnr">
-    <div className="contenmvt">
+    <div className="container">
+      <div className="row">
       <div className="article">
+      <Breadcrumbs path={path} heading="Top 10 Emerging Technologies" />   
       <h2 className="page-heading">Category: Digital Business</h2>
       <h2 className="article-heading">Dates: February 19, 2023</h2>
       <h2 className="article-heading">Author: TALLEN</h2>
-      <h1 className="article-heading">Top 10 Emerging Technologies Shaping Digital Transformation in 2023 and Beyond</h1>
+      <h1 id="software-development-heading" className="article-heading">Top 10 Emerging Technologies Shaping Digital Transformation in 2023 and Beyond</h1>
       <p>Hey there, tech enthusiasts! Today, we want to dive into the exciting world of emerging technologies shaping the digital landscape in 2023 and beyond. It's mind-boggling how quickly technology advances, and with each passing year, we witness new breakthroughs that revolutionize how we live, work, and play. So, fasten the seatbelts and explore the cutting-edge innovations driving digital transformation in the present and future.</p>
-
       <ol>
         <li>
           <h2 className="article-heading">Artificial Intelligence (AI) and Machine Learning (ML)</h2>

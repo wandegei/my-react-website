@@ -26,21 +26,20 @@ const StickyHeader = () => {
 
   const headerStyle = {
     position: isSticky ? 'fixed' : 'static',
-    top: '82px',
+    top: '101px',
     backgroundColor: 'white',
     lineHeight: ' 25px',
     fontWeight: '400',
     fontSize: '20px',
     fontFamily: 'Roboto',
-    width: '320px',
-    marginLeft: '58px',
-    marginTop: isSticky ? '39px' : '0',
-    height: '490px',
+    width: '314px',
+    marginLeft: '39px',
+    marginTop: isSticky ? '-57px' : '0',
+    height: '491px',
     zIndex: 100,
     left: 0,
-    padding: '10px 5px',
-    
-    
+    padding: '47px 2px',
+    marginLeft: '70px',
   };
 
   return (
@@ -48,7 +47,7 @@ const StickyHeader = () => {
       <div style={headerStyle} ref={headerRef}>
         <ol>
           <h4 style={{
-            color: 'rgba(246, 143, 30, 1)',
+            color: '#ffff',
             fontFamily: 'Roboto',
             fontWeight: 700,
             fontSize: '20px',
@@ -59,7 +58,7 @@ const StickyHeader = () => {
           </h4>
           <li>
             <a href="#personalized-user-experiences" className="smooth-scroll" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <span className="column-heading">Share</span> User Experiences <br />
+              <span className="column-heading"></span>Personalized User Experiences <br />
               <span style={{ marginLeft: '20px' }}> (UX)</span>
             </a>
           </li>

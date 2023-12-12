@@ -1,0 +1,181 @@
+/* UpdatedContent.css */
+.updated-content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 204px; 
+ }
+  
+  .updated-section {
+    margin-bottom: 40px;
+  }
+  
+  .updated-h2 {
+    color: #333;
+  }
+  
+  /* Add more styling as needed */
+  
+  @media (max-width:767px) {
+    .updated-content-container {
+      max-width: 764px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-left: -84px;
+    }
+  
+    .updated-h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      width: 404px;
+    }
+  }
+  
+  /* Styles for small smartphones (e.g., iPhone 5/SE) */
+  @media (max-width: 480px) {
+    .updated-enthusiasts {
+      font-size: 18px;
+      width: 90%;
+      margin-top: 20px;
+      line-height: 1;
+    }
+  
+    .updated-article-heading {
+      margin-top: -35px;
+      width: 100%;
+      font-size: 15px;
+    }
+  
+    .updated-laveging {
+      width: 100%;
+      padding: 2px;
+      max-width: 150px;
+    }
+  
+    .updated-right-image {
+      margin: 18px !important;
+      width: 44% !important;
+      height: 419px !important;
+      margin-top: -76px !important;
+    }
+  }
+  
+  /* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .updated-enthusiasts {
+      font-size: 19px;
+      width: 100%;
+      margin-top: 25px;
+      line-height: 1;
+    }
+  
+    .updated-article-heading {
+      margin-top: -38px;
+      width: 100%;
+    }
+  
+    .updated-laveging {
+      width: 100%;
+      padding: 2.5px;
+      max-width: 170px;
+    }
+  
+    .updated-right-image {
+      margin: 18px !important;
+      width: 100% !important;
+      height: auto !important;
+      margin-top: 20px !important;
+    }
+  }
+  
+  /* Styles for small tablets (e.g., iPad Mini) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .updated-enthusiasts {
+      font-size: 20px;
+      width: 100%;
+      margin-top: 28px;
+      line-height: 1;
+    }
+  
+    .updated-article-heading {
+      margin-top: -40px;
+      width: 100%;
+    }
+  
+    .updated-laveging {
+      width: 100%;
+      padding: 3px;
+      max-width: 190px;
+    }
+  
+    .updated-right-image {
+      margin: 20px !important;
+      width: 100% !important;
+      height: auto !important;
+      margin-top: 22px !important;
+    }
+  }
+  
+  /* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+  @media (min-width: 1025px) and (max-width: 1199px) {
+    .updated-enthusiasts {
+      font-size: 21px;
+      width: 100%;
+      margin-top: 30px;
+      line-height: 1;
+    }
+  
+    .updated-article-heading {
+      margin-top: -42px;
+      width: 100%;
+    }
+  
+    .updated-laveging {
+      width: 100%;
+      padding: 3px;
+      max-width: 194px;
+    }
+  
+    .updated-right-image {
+      margin: 20px !important;
+      width: 157px !important;
+      height: 331px !important;
+      margin-top: 23px !important;
+    }
+  }
+
+  .updated-aiming{
+    width: 723px;
+    height: 327px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-top: -3px;
+    margin-left: 1px;
+  }
+  
+
+  .updated-custom-button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: rgba(0, 162, 173, 1);
+    background-color: white;
+    width: 293px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 0em;
+    font-family: Roboto;
+    height: 67px;
+    top: 7204px;
+    left: 674px;
+    text-decoration: none;
+    border: 1px solid rgba(0, 162, 173, 1);
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  /* ... (other media queries) ... */
+  

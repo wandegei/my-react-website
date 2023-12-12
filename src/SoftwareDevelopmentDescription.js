@@ -1,6 +1,6 @@
 // SoftwareDevelopmentDescription.js
 import React, { useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './page.css';
 import Breadcrumbs from './Breadcrumbs';
 
@@ -10,13 +10,13 @@ const SoftwareDevelopmentDescription = () => {
 
   useEffect(() => {
     // Set the document title
-    document.title = 'Your Document Title';
+    document.title = 'In the Realm of Software Creation';
   }, []); // <-- Ensure that the dependency array is present even if it's empty
 
   return (
     <div className="page-container">
       <div className="content">
-        <div className="article">
+      <div className="article"  style={{padding: '100px !important' }}>
          
         <Breadcrumbs path={path} heading="In the Realm of Software Creation" />
           

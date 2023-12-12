@@ -10,13 +10,23 @@
 
 .page-heading {
   font-size: 36px;
-  text-align: center;
-  margin-bottom: 41px;
-  margin-top: 7px;
-  font-weight: 700;
-  color: brown;
-  cursor: pointer;
+    text-align: center;
+    margin-bottom: 41px;
+    margin-top: 15px;
+    font-weight: 700;
+    color: brown;
+    cursor: pointer;
+    width: 773px;
+    margin-left: 118px;
+    line-height: 1;
 }
+@media (max-width: 768px){
+  .page-heading{
+    width: 308px;
+    margin-left: 20px;
+  }
+}
+
 
 .conclu {
   font-size: 28px;
@@ -32,8 +42,9 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-align: justify;
-  color: rgb(72, 211, 125);
+  color: black;
   cursor: pointer;
+  width: 1140px;
 }
 
 .article-meta {
@@ -51,7 +62,8 @@
   line-height: 29px;
   letter-spacing: 0em;
   cursor: pointer;
-  width: 1418px;
+  width: 1259px;
+  
   
 }
 
@@ -201,10 +213,66 @@
 }
 
 .highlight {
-  color: #007bff; /* or any other color you prefer */
+  position: relative;
+  display: inline-block;
+  font-size: 16px; /* Set your desired font size */
+  color: var(--text-color, #007bff); /* Initial text color */
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none; /* Remove default underline */
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
+.highlight::before,
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleY(var(--underline-scale, 0));
+  width: 100%;
+  height: 2px; /* Height of the underline */
+  background-color: var(--underline-color, #007bff); /* Initial underline color */
+  transform-origin: bottom center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.highlight::before {
+  transform-origin: bottom left;
+}
+
+.highlight::after {
+  transform-origin: bottom right;
+  background-color: var(--hover-color, #004080); /* Change underline color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+.highlight:hover {
+  color: var(--hover-text-color, #004080); /* Change color on hover */
+  transform: scale(var(--hover-scale, 1.05)); /* Scale the text on hover */
+}
+
+.highlight:hover::before,
+.highlight:hover::after {
+  transform: translateX(-50%) scaleY(var(--hover-underline-scale, 1)); /* Expand and pulsate the underline on hover */
+}
+
+.highlight:hover::before {
+  transform-origin: bottom right;
+}
+
+.highlight:hover::after {
+  transform-origin: bottom left;
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 768px) {
+  .highlight {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
 
 /* Media Query for Small Devices (up to 767px wide) */
 @media (max-width: 767px) {
@@ -245,8 +313,11 @@
   margin-bottom: 0;
   list-style: none;
   border-radius: 3px;
-  margin-top: 57px;
+  margin-top: 77px;
   
+}
+.easdsd{
+  text-decoration: none;
 }
 
 
@@ -256,7 +327,7 @@
 }
 
 .breadcrumb-item:not(.active)::before {
-  content: '/';
+  
   margin-left: 4px;
   margin-right: 4px;
   color: #6c757d;
@@ -267,4 +338,285 @@
 }
 .software-development-matters{
   margin-top :20px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+  content: var(--bs-breadcrumb-divider, ">");
+}
+
+
+.lexkld{
+  width: 1014px;
+    height: 458px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin-top: -28px;
+    margin-left: 70px;
+
+}
+@media screen and (max-width: 768px){
+  .lexkld{
+    width: 100%;
+    max-width: 728px;
+    margin: -19px;
+    height: 187px;
+
+  }
+  .enthusiasts{
+    font-size: 20px;
+    width: 378px;
+    margin-top: 33px;
+    line-height: 1;
+  }
+  .article-heading{
+    margin-top: -42px;
+    width: 434px;
+  }
+  .right-image {
+    margin: 20px !important;
+    width: 157px !important;
+    height: 331px !important;
+    margin-top: 23px !important;
+}
+.laveging {
+  width: 381px;
+  /* padding: 3px; */
+  max-width: 200px;
+}
+}
+
+.contecontainer {
+  display: flex;
+  align-items: center;
+  
+}
+
+.right-image {
+  margin: 20px;
+  width: 705px;
+  height: 343px;
+  margin-top: 23px;
+}
+.laveging{
+  width: 392px;
+  padding: 3px;
+}
+#contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 444px; /* Keep the original padding for content */
+  background-color: #007bff;
+  margin-left: 477px;
+
+  transition: padding-left 0.3s ease; /* Add a smooth transition for a better visual effect */
+}
+
+.content-container {
+  margin-left: 200px; /* Adjust the margin to accommodate the navigation bar */
+}
+
+/* ... rest of the styles ... */
+
+#contentWrapper h2 {
+  margin-bottom: 10px;
+}
+
+#contentWrapper p {
+  margin-bottom: 20px;
+}
+
+.navigation-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  width: 408px;
+}
+
+.navigation-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-bar li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.navigation-bar li.active {
+  color: #ff5722;
+}
+
+.row>* {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * 3.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+@media (max-width:767px) {
+  .discovered{
+    font-size: 20px;
+    width: 303px;
+  }
+}
+
+
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  span {
+      display: block;
+      padding-left: 0;
+      font-size: 20px !important; /* Adjust as needed */
+      font-weight: 600 !important;
+      line-height: 24px; /* Adjust as needed */
+      margin-bottom: -1px;
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  span {
+      display: block;
+      padding-left: 0;
+      font-size: 21px !important; /* Adjust as needed */
+      font-weight: 600 !important;
+      line-height: 25px; /* Adjust as needed */
+      margin-bottom: -1px;
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  span {
+      display: block;
+      padding-left: 0;
+      font-size: 23px !important;
+      font-weight: 600 !important;
+      line-height: 26px; /* Adjust as needed */
+      margin-bottom: -1px;
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  span {
+      display: block;
+      padding-left: 0;
+      font-size: 23px !important;
+      font-weight: 600 !important;
+      line-height: 26px; /* Adjust as needed */
+      margin-bottom: -1px;
+  }
+  
+}
+
+@media (max-width:767px) {
+  .specializ,.effective,.platforms{
+    font-size: 15px;
+    padding-right: 20px;
+  }
+  
+}
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .effective,.specializ,.platforms {
+      font-size: 14px; /* Adjust as needed */
+      padding-right: 15px; /* Adjust as needed */
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .effective,.specializ,.platforms {
+      font-size: 14.5px; /* Adjust as needed */
+      padding-right: 18px; /* Adjust as needed */
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .effective,.specializ,.platforms {
+      font-size: 15px;
+      padding-right: 20px; /* Adjust as needed */
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .effective,.specializ,.platforms {
+      font-size: 15px;
+      padding-right: 20px; /* Adjust as needed */
+  }
+}
+
+
+.aiming {
+  width: 723px;
+  height: 327px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-top: -3px;
+  margin-left: 1px;
+}
+
+@media screen and (max-width: 768px){
+.aiming {
+    width: 100%;
+    max-width: 728px;
+    margin: -19px;
+    height: 187px;
+}
+}
+
+/* Styles for small smartphones (e.g., iPhone 5/SE) */
+@media (max-width: 480px) {
+  .aiming {
+      width: 100%;
+      max-width: 100%; /* Adjust as needed */
+      margin: -15px; /* Adjust as needed */
+      height: auto; /* Adjust as needed */
+  }
+}
+
+/* Styles for larger smartphones (e.g., iPhone 6/7/8, Galaxy S series) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .aiming {
+      width: 100%;
+      max-width: 100%; /* Adjust as needed */
+      margin: -17px; /* Adjust as needed */
+      height: auto; /* Adjust as needed */
+  }
+}
+
+/* Styles for small tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aiming {
+      width: 100%;
+      max-width: 728px; /* Keep original max-width for small tablets */
+      margin: -19px; /* Keep original margin for small tablets */
+      height: 187px; /* Keep original height for small tablets */
+  }
+}
+
+/* Styles for medium-sized tablets (e.g., iPad, iPad Air) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .aiming {
+      width: 100%;
+      max-width: 728px; /* Keep original max-width for medium-sized tablets */
+      margin: -19px; /* Keep original margin for medium-sized tablets */
+      height: 187px; /* Keep original height for medium-sized tablets */
+  }
 }

@@ -1,20 +1,18 @@
 
 import React, { useState } from 'react';
 import './Blog.css';
-import UpdatedContent from './UpdatedContent';
 import './App.css';
-import tallen from './tallen.png';
-import Rectangl from './Rectangl.png';
-import UpdatedPostNavigation from './UpdatedPostNavigation';
 import Breadcrumbs from './Breadcrumbs';
 import YourComponent from './YourComponent';
 import CollaborationSection from './CollaborationSection';
 import UpdatedSocialIconsStyles from './UpdatedSocialIconsStyles';
 
 import './page.css';
+import LandingPageTips from './LandingPageTips';
+import LandingPageNavigation from './LandingPageNavigation';
 
 
-const AboutUs = () => {
+const LandingPage = () => {
   const [] = useState(false);
 
 
@@ -26,16 +24,16 @@ const AboutUs = () => {
     <div>
       <div className="ain">
      
-      <div className="eres">
+      {/* <div className="eres">
         <p className="dat">May 20, 2023</p>
-        {/* Add your about us page content here */}
+        
         <div className="max">
-          <img src={tallen} alt="Tallen" className="emma-image" />
+          <img src="{tallen}" alt="Tallen" className="emma-image" />
           <p className="js">TALLEN</p>
         </div>
-      </div>
+      </div> */}
       <div>
-        <img src={Rectangl} alt="Mark Matovu" className="lex" />
+        <img src="https://athemes.com/wp-content/uploads/thegem-landing-page-wordpress-theme-768x589.jpg" alt="Mark Matovu" className="lex" />
       </div>
     </div>
     <div className="containerTopInner">
@@ -44,12 +42,12 @@ const AboutUs = () => {
     <UpdatedSocialIconsStyles/>
   <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
   
-      <UpdatedPostNavigation/>
+      <LandingPageNavigation/>
   
   </div>
   <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
   <div className="post-content">
-      <UpdatedContent />
+      <LandingPageTips />
     </div>
     </div>
       {/* Additional HTML snippet */}
@@ -124,7 +122,7 @@ to our newsletter</h2>
 
   return (
   <div>
-     <Breadcrumbs path="/your-path" heading="  The Impact of..." />
+     <Breadcrumbs path="/your-path" heading="  Building an Eff..." />
       <div className="ner" style={{ position: 'sticky', top: '0' }}>
       <h1 id="software-development-heading" className='Trends' style={{
         textIndent: '10px',
@@ -135,10 +133,11 @@ to our newsletter</h2>
         fontSize: '30px',
         paddingLeft: '206px'
       }}>
-        The Impact of Artificial Intelligence on UI/UX Design: The<br />
-        <span>Top 10 Trends and Predictions for</span><br />
-        <span style={{ paddingLeft: '50px' }}>2023 and Beyond</span>
+        Building an Effective Landing Page:  Best <br />
+        <span>Top Practices for Design</span><br />
+        <span style={{ paddingLeft: '50px' }}>and Optimization</span>
       </h1>
+       
     </div>
    
 
@@ -148,6 +147,6 @@ to our newsletter</h2>
 };
 
 
-export default AboutUs;
+export default LandingPage;
 
 

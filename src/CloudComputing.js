@@ -26,45 +26,43 @@ const generateRandomArticles = (count) => {
       id: 3,
       title: 'July 20, 2024',
       
-      content: "The Impact of Artificial Intelligence on UI/UX Design: Creating Seamless Experiences",
+      content: "Revolutionizing IT Infrastructure: Exploring the Depths of Cloud Computing",
       smallImage: 'talen.png',
-      smallImageText: 'Software Development ',
+      smallImageText: 'Cloud Computing ',
     },
      {
       id: 2,
       title: 'July 20, 2024',
-      content: 'Revolutionize Your Business: ' +
-        'How to Create a Winning Digital ' +
-        'Transformation Strategy That Works',
-      smallImageText: 'Software Develop ',
+      content: 'Unveiling the Power of Cloud Computing: A Comprehensive Overview',
+      smallImageText: 'Cloud Computing ',
     },
     {
       id: 4,
       title: 'July 20, 2024',
-      content: "The Future of UI/UX Design: The Top 10 Trends and Predictions for 2024 and Beyond",
+      content: "Navigating the Cloud: A Guide to Harnessing the Benefits of Cloud Computing",
       smallImage: 'talen.png',
-      smallImageText: ' Software Development',
+      smallImageText: ' Cloud Computing',
     },
     {
       id: 5,
       title: 'July 20, 2024',
-      content: "Building an Effective Landing Page: Best Practices for Design and Optimization",
+      content: "Security in the Cloud: Safeguarding Your Data in the Digital Sky",
       smallImage: 'talen.png',
-      smallImageText: ' Software Develop',
+      smallImageText: ' Cloud Computing',
     },
     {
       id: 6,
       title: 'July 20, 2024',
-      content: "Best Practices for Responsive Web Development in 2024: Tips and Tricks for Success",
+      content: "The Future of Business: How Cloud Computing is Shaping Tomorrow's Landscape",
       smallImage: 'talen.png',
-      smallImageText: 'Software Develop',
+      smallImageText: 'Cloud Computing',
     },
   ];
   
   return articles.slice(0, count); // Limit the number of articles to the specified count
 };
 
-const MainContent = () => {
+const CloudComputing = () => {
    
   const [fixedNav, setFixedNav] = useState(false); // Keep this line
   const [name, setName] = useState('');
@@ -121,7 +119,7 @@ const MainContent = () => {
             </p>
           </div>
           <div className="image-container">
-            <img src={mainImage} alt="Main" className="main-image" />
+            <img src="https://img.freepik.com/premium-photo/cloud-computer-online-data-storage-with-tacit-intelligent-sharing-software_31965-39440.jpg?size=626&ext=jpg" alt="Main" className="main-image" />
           </div>
         </div>
       </div>
@@ -178,7 +176,7 @@ const MainContent = () => {
           title={articles[2].title}
           content={articles[2].content}
           to="/Page2"
-          image="/Rectangl.png"
+          image="https://stl.tech/wp-content/uploads/2021/11/cloud-computing.jpg"
           smallImage={articles[2].smallImage}
           smallImageText={articles[2].smallImageText}
         />
@@ -190,7 +188,7 @@ const MainContent = () => {
               title={articles[1].title}
               content={articles[1].content}
               to="/contact"
-              image="/second.jpg"
+              image="https://images.idgesg.net/images/idge/imported/imageapi/2022/06/21/16/cso_nw_cloud_computing_cloud_network_circuits_by_denis_isakov_gettyimages-966932508_2400x1600-100814451-large-100929305-large.jpg?auto=webp&quality=85,70"
               smallImage={articles[1].smallImage}
               smallImageText={articles[1].smallImageText}
             />
@@ -205,7 +203,7 @@ const MainContent = () => {
           title={articles[3].title}
           content={articles[3].content}
           to="/UIUXDesignTrends"
-          image="/third.jpg"
+          image="https://www.leapit.co.uk/wp-content/uploads/2021/11/Cloud-Computing-1080x675-1-1024x640.jpg"
           smallImage={articles[3].smallImage}
           smallImageText={articles[3].smallImageText}
         />
@@ -216,7 +214,7 @@ const MainContent = () => {
           title={articles[4].title}
           content={articles[4].content}
           to="/LandingPage"
-          image="/forth.png"
+          image="https://timestech.in/wp-content/uploads/2023/11/Untitled-design-10_0.png"
           smallImage={articles[4].smallImage}
           smallImageText={articles[4].smallImageText}
         />
@@ -227,7 +225,7 @@ const MainContent = () => {
           title={articles[5].title}
           content={articles[5].content}
           to="/Page6"
-          image="/fifth.png"
+          image="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1675427326/1675427324.jpg"
           smallImage={articles[5].smallImage}
           smallImageText={articles[5].smallImageText}
         />
@@ -314,4 +312,4 @@ const submitButtonStyle = {
   border:'none',
 };
 
-export default MainContent;
+export default CloudComputing;

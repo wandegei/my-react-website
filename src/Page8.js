@@ -1,12 +1,23 @@
-import React from "react";
-import './page.css';
+import React, { useEffect } from 'react';
+import './page.css'; 
+import { useLocation, Link } from 'react-router-dom';
+import Breadcrumbs from './Breadcrumbs';
 
 const Page8 = () => {
+  const location = useLocation();
+  const path = location.pathname;
+
+  useEffect(() => {
+    // Set the document title
+    document.title = 'Understanding Cloud Computing';
+  }, []); 
+
   return (
-    <div className="page-container">
-      <div className="content">
+    <div className="container">
+      <div className="row">
         <div className="article">
-          <h2 className="page-heading">Understanding Cloud Computing</h2>
+        <Breadcrumbs path={path} heading="Understanding Cloud Computing" /> 
+          <h1 id="software-development-heading" className="page-heading">Understanding Cloud Computing</h1>
           <p>
             Cloud Computing is a revolutionary technology that allows individuals, businesses, and organizations to access and utilize a vast array of computing resources over the internet. These resources include servers, storage, databases, networking, software, and analytics. Unlike traditional computing, where software and data are stored on physical devices, cloud computing enables users to store, manage, and process data on remote servers, often hosted by third-party service providers.
           </p>

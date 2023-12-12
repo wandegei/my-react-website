@@ -20,7 +20,7 @@ const Header = () => {
         <div className="container d-flex justify-content-between align-items-center">
           <div className="logo-container">
             <div className="logo-content">
-            <Link to="https://tallen.tech/blog/" className="blog-title">
+            <Link to="https://tallen.tech/blog" className="blog-title">
               <img src={logo} alt="Logo" className="logo" />
             </Link> 
 
@@ -36,8 +36,8 @@ const Header = () => {
     Contact Us
   </Link>
   <button className="service-button">
-    <Link to="https://tallen.tech/service" className="blog-tle">
-      Our Services
+    <Link to="https://calendly.com/tallen5/free?hide_gdpr_banner=1&month=2023-11" className="blog-tle">
+    Free Consultation
     </Link>
   </button>
 </div>

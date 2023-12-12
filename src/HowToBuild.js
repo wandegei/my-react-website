@@ -1,21 +1,20 @@
-
 import React, { useEffect } from "react";
 import './page.css';
-import BestPractices from "./BestPractices"
-import PostNavigation from "./PostNavigation"
+import HowToBuildContent from "./HowToBuildContent"
+import HowToBuildPostNavigation from "./HowToBuildPostNavigation"
 import CustomStickySocialIcons from './CustomStickySocialIcons';
 import YourComponent from './YourComponent';
 import CollaborationSection from './CollaborationSection';
-import Breadcrumbs from './Breadcrumbs';
+import ArtificialIntelligenceBreadcrumbs from './ArtificialIntelligenceBreadcrumbs';
 import { useLocation } from 'react-router-dom';
 
-const Page6 = () => {
+const HowToBuild = () => {
   const location = useLocation();
   const path = location.pathname;
 
   useEffect(() => {
     // Set the document title
-    document.title = 'Best Practices for Res...';
+    document.title = 'Revolutionize Your Busi...';
   }, []); 
 
   return (
@@ -24,38 +23,33 @@ const Page6 = () => {
       
       <div className="row">
       <div className="article">
-      <Breadcrumbs path={path} heading="Best Practices for Res..." /> 
-        <h1 id="software-development-heading" className="page-heading">Best Practices for Responsive Web Development in 2024: Tips and Tricks for Success</h1>
+      <ArtificialIntelligenceBreadcrumbs path={path} heading="How to Build a Succe..." /> 
+        <h1 id="software-development-heading" className="page-heading">How to Build a Successful Mobile App: From Idea to Launch and Beyond</h1>
        
         <div>
-        <img src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_52683-86916.jpg" alt="revolutionizeYourBusinessImage" className="lexkld" />
+        <img src="https://media.licdn.com/dms/image/D4E12AQGISBKDlxZMeA/article-cover_image-shrink_720_1280/0/1693289088819?e=2147483647&v=beta&t=bAAJxde4Lz5-kdjckexw5r4Fz_iQq4IWyd_iPUtEQUk" alt="revolutionizeYourBusinessImage" className="lexkld" />
         </div>
 
-        <p className="enthusiasts">As we go further into this year, 2024, responsive web development is becoming increasingly important for businesses of all sizes. It's no secret that consumers have moved from desktops to mobile devices for online browsing. In fact, mobile devices account for over half of all internet traffic. This means businesses that want to stay relevant and reach their target audience must have a responsive website. With most internet users accessing websites on their mobile devices, having a website optimized for different screen sizes and resolutions is not a luxury but a necessity</p><br></br>
-        <p className="enthusiasts">It is not enough to have a website that looks great on desktops but fails to meet the needs of mobile users. The world has gone mobile, and businesses that will stay ahead of the curve must ensure their websites are optimized for all devices of all different sizes. This is where responsive web development plays a vital role in this sphere. We understand the importance of responsive web development, not just in terms of website functionality but also for the user experience. We have seen firsthand how businesses that invest in responsive web development reap the benefits of increased engagement and conversions</p><br></br>
-        <p className="enthusiasts">But what exactly is responsive web development, and what are the best practices to ensure success in 2024 and beyond?</p><br></br>
-        <h2 className="article-heading">Responsive web development refers to building websites that adapt and respond appropriately on all different screen sizes and devices. It involves creating a single website that can adjust to fit the user's screen, whether he or she is using a desktop, tablet, or smartphone. The aim is to provide a great user experience across all devices without sacrificing functionality or design.</h2>
-        <p className="enthusiasts">In this blog post, we'll explore the best practices and tips for responsive web development to help you become more competitive and drive more traffic to your website. To achieve successful, responsive web development in 2024, here are some tips and tricks to keep in mind</p><br></br>
-       
-<br></br>
-  <div className="containerTopInner">
-  <div className="reloxs">
-    
-    <div className="col-container">
-    <CustomStickySocialIcons/>
-      <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-        <PostNavigation />
-      </div>
-      <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-        <div className="post-content">
-          <BestPractices/>
+        <p className="enthusiasts">Hey there, tech enthusiasts and aspiring entrepreneurs! Are you considering diving into the exciting world of mobile app development? Today, we're going to explore the journey of building a successful mobile app, from the initial idea all the way to its grand launch and beyond. So grab your favorite caffeinated beverage, and let's get started</p><br></br>
+        
+        <div className="containerTopInner">
+        <div className="reloxs">
+            
+            <div className="col-container">
+            <CustomStickySocialIcons/>
+            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <HowToBuildPostNavigation />
+            </div>
+            <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div className="post-content">
+                <HowToBuildContent />
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>   
-<h2 className="article-heading">Spread the Knowledge, Share the Value</h2>
-        <p className="discovered">
+        </div>   
+        <h2 className="article-heading">Spread the Knowledge, Share the Value</h2>
+                <p className="discovered">
         We trust that you discovered valuable insights in this blog about 
         <span class="crafting">
           Formulating a Successful Digital Transformation Strategy
@@ -85,5 +79,4 @@ const Page6 = () => {
   );
 };
 
-export default Page6;
-
+export default HowToBuild;

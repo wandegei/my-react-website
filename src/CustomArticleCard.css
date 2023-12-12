@@ -1,11 +1,13 @@
 /* CustomArticleCard.css */
 .custom-col-md-4 {
-  flex-basis: 33.3333%; /* Adjust the width based on your preference */
+  flex-basis: 30%;
+  margin-right: 15px; /* Adjust the margin as needed to create space */
 }
 .custom-card-title{
   font-size: 20px;
   color: black;
   margin-left: 20px;
+  white-space: nowrap;
 }
 .custom-card-text{
   font-family: Roboto;
@@ -14,11 +16,14 @@
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(184, 42, 42);
   margin-top: 49px;
   padding: 17px;
+}
 
-
+.custom-card-text:hover {
+  color: var(--hover-text-color, #004080); 
+   transform: scale(var(--hover-scale, 1.05)); 
 }
 .custom-link{
   text-decoration: none;
@@ -47,7 +52,8 @@
 
 /* Additional adjustments for original columns */
 .col-md-4 {
-  flex-basis: 33.3333%; /* Adjust the width based on your preference */
+  flex-basis: 32.3%;
+  margin: 3px;
 }
 
 @media (max-width: 767px) {
@@ -58,9 +64,9 @@
 
 /* Added styles for image size */
 .custom-card-img-top {
-  max-width: 101%;
   height: 203px;
   width: 377px;
+  max-width: 104%;
 }
 
 /* CustomArticleCard.css */
@@ -74,7 +80,57 @@
 .small-image-text {
   margin-left: 5px; /* Adjust the margin as needed */
   font-size: 14px; /* Adjust the font size as needed */
+  position: relative;
+  display: inline-block;
+  font-size: 16px; /* Set your desired font size */
+  color: var(--text-color, #007bff); /* Initial text color */
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; /* Remove default underline */
+  overflow: hidden;
+  /* transition: color 0.3s ease, transform 0.3s ease; */
+  white-space: nowrap;
 }
+.small-image-text::before,
+.small-image-text::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleY(var(--underline-scale, 0));
+  width: 100%;
+  height: 2px; /* Height of the underline */
+ 
+  transform-origin: bottom center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.small-image-text::before {
+  transform-origin: bottom left;
+}
+
+.small-image-text::after {
+  transform-origin: bottom right;
+  background-color: var(--hover-color, #004080); /* Change underline color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+
+
+/* .small-image-text:hover::before,
+.small-image-text:hover::after {
+  transform: translateX(-50%) scaleY(var(--hover-underline-scale, 1));
+}
+
+.small-image-text:hover::before {
+  transform-origin: bottom right;
+}
+
+.small-image-text:hover::after {
+  transform-origin: bottom left;
+} */
+
 
 .image-wrapper {
   display: flex;

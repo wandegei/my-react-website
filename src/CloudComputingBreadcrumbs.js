@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Breadcrumbs = ({ path, heading }) => {
+const CloudComputingBreadcrumbs = ({ path, heading }) => {
   const pathSegments = path.split('>').filter((segment) => segment !== '');
 
   return (
@@ -12,7 +12,7 @@ const Breadcrumbs = ({ path, heading }) => {
           <Link to="/">Home</Link>
         </li>
         <li className="breadcrumb-item">
-          <Link to="/Home">softwaredevelopment</Link>
+          <Link to="/CloudComputing">Cloud Computing</Link>
         </li>
         {pathSegments.map((segment, index) => (
           <React.Fragment key={segment}>
@@ -34,4 +34,4 @@ const Breadcrumbs = ({ path, heading }) => {
   );
 };
 
-export default Breadcrumbs;
+export default CloudComputingBreadcrumbs;
